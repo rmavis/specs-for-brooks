@@ -1,0 +1,106 @@
+$font_stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$base_font_size: 11pt;
+$base_line_height: 1.45;
+$body_text: #{$base_font_size}/#{$base_line_height};
+$small_text: #{$base_font_size * 0.85}/#{$base_line_height};
+
+$color_text_dark: #444444;
+$color_background_light: #FFFFFF;
+
+$full_height: 100%;
+$full_width: 100%;
+
+$box_padding: 1em;
+$capt_padding: 0.5em;
+$nav_padding: 2em 1em;
+
+$box_margin: 0 5em;
+
+
+
+
+* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+body, html {height: $full_height;}
+
+body {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		background-color: $color_background_light;
+		color: $color_text_dark;
+		font {
+				family: $font_stack;
+				size: $body_text;
+		}
+		height: $full_height;
+		width: $full_width;
+		overflow-x: scroll;
+    overflow-y: hidden;
+		white-space: nowrap;
+}
+
+
+#slide-case {
+		height: $full_height;
+		width: $full_width;
+}
+
+.slide-box {
+		position: relative;
+		display: inline-block;
+		height: $full_height;
+		padding: $box_padding;
+		margin: $box_margin;
+}
+
+.slide-img {
+		height: $full_height;
+}
+
+.slide-caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: $capt_padding;
+		background-color: $color_text_dark;
+		color: $color_background_light;
+		font: $small_text;
+}
+
+
+img {max-width: 100%;}
+
+
+
+#nav-case {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: $full_height;
+		margin: 0;
+		padding: $nav_padding;
+		background-color: transparentize($color_text_dark, 0.7);
+}
+
+#nav-title {
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+}
+
+#nav-bar {
+		margin: 0;
+		padding: 0;
+}
+
+.nav-item {
+		border-top: 1px solid;
+}
