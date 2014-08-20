@@ -14,6 +14,8 @@ $header_small: #{$base_font_size * 1.5};
 
 $nav_title_size: ($base_font_size * 2);
 $nav_item_size: ($base_font_size * 1.5);
+$nav_title_small: ($base_font_size * 1.5);
+$nav_item_small: ($base_font_size * 1.25);
 $nav_tog_size: ($base_font_size * 4);
 $nav_tog_right: 0.25em;
 
@@ -254,7 +256,12 @@ a.box-link {
 		position: relative;
 		margin: 0;
 		padding: 0;
-		font-size: $nav_title_size;
+		@media screen and (max-width: ($scale_break * 2)) {
+				font-size: $nav_title_small;
+		}
+		@media screen and (min-width: (($scale_break * 2) + 1)) {
+				font-size: $nav_title_size;
+		}
 }
 
 #nav-title a {
@@ -281,6 +288,12 @@ a.box-link {
 		padding: $nav_item_padding;
 		font-size: $nav_item_size;
 		border-bottom: 2px solid $color_white;
+		@media screen and (max-width: ($scale_break * 2)) {
+				font-size: $nav_item_small;
+		}
+		@media screen and (min-width: (($scale_break * 2) + 1)) {
+				font-size: $nav_item_size;
+		}
 }
 #nav-bar a:last-child {
 		border-bottom: 0;

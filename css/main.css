@@ -132,8 +132,13 @@ a.box-link {
 #nav-title {
   position: relative;
   margin: 0;
-  padding: 0;
-  font-size: 24pt; }
+  padding: 0; }
+  @media screen and (max-width: 800px) {
+    #nav-title {
+      font-size: 18pt; } }
+  @media screen and (min-width: 801px) {
+    #nav-title {
+      font-size: 24pt; } }
 
 #nav-title a {
   color: #444444; }
@@ -159,6 +164,12 @@ a.box-link {
   padding: 0.5em 0;
   font-size: 18pt;
   border-bottom: 2px solid white; }
+  @media screen and (max-width: 800px) {
+    #nav-bar a {
+      font-size: 15pt; } }
+  @media screen and (min-width: 801px) {
+    #nav-bar a {
+      font-size: 18pt; } }
 
 #nav-bar a:last-child {
   border-bottom: 0; }
