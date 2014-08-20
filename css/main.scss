@@ -2,9 +2,20 @@ $font_stack: 'Palatino', 'Times New Roman', 'Times', serif;
 
 $base_font_size: 12pt;
 $base_line_height: 1.45;
+
 $stripe_text: #{$base_font_size * 2}/#{$base_line_height / 1.5};
 $body_text: #{$base_font_size}/#{$base_line_height};
 $small_text: #{$base_font_size * 0.85}/#{$base_line_height};
+
+$header_full: #{$base_font_size * 4};
+$header_most: #{$base_font_size * 3};
+$header_half: #{$base_font_size * 2};
+$header_small: #{$base_font_size * 1.5};
+
+$nav_title_size: ($base_font_size * 2);
+$nav_item_size: ($base_font_size * 1.5);
+$nav_tog_size: ($base_font_size * 4);
+$nav_tog_right: 0.25em;
 
 $stripe_font_line: normal normal bold $stripe_text $font_stack;
 $caption_font_line: normal normal bold $small_text $font_stack;
@@ -14,12 +25,21 @@ $color_black: #444444;
 $color_white: #FFFFFF;
 $color_yellow: #FFFF00;
 $color_red: #FF0000;
+$color_cyan: #00FFFF;
+$color_magenta: #FF00FF;
 
 $black_overlay_full: transparentize($color_black, 0);
+$black_overlay_near_full: transparentize($color_black, 0.05);
 $black_overlay_heavy: transparentize($color_black, 0.3);
 $black_overlay_half: transparentize($color_black, 0.5);
 $black_overlay_light: transparentize($color_black, 0.75);
 $black_overlay_none: transparentize($color_black, 1);
+
+$white_overlay_full: transparentize($color_white, 0);
+$white_overlay_heavy: transparentize($color_white, 0.3);
+$white_overlay_half: transparentize($color_white, 0.5);
+$white_overlay_light: transparentize($color_white, 0.75);
+$white_overlay_none: transparentize($color_white, 1);
 
 $yellow_overlay_full: transparentize($color_yellow, 0);
 $yellow_overlay_heavy: transparentize($color_yellow, 0.3);
@@ -50,11 +70,16 @@ $scale_break: 400px;
 $box_padding: 1em;
 $capt_padding: 0.5em;
 $stripe_padding: 0.5em;
-$nav_padding: 2em 1em;
-$text_block_padding: 1em;
+$nav_case_padding: 1em;
+$nav_bar_padding: 0 1em;
+$nav_item_padding: 0.5em 0;
+$text_block_padding: 0 1em;
+$header_padding: 0 0.5em;
+
+$header_line_height: 96%;
 
 $box_margin: 0 5em;
-$blocks_margin: ($p_margin * 2);
+$blocks_margin: ($p_margin * 3);
 
 
 
@@ -169,50 +194,10 @@ img {max-width: $full_width;}
 }
 
 
-a {
-		text-decoration: none;
-		border: none
-}
 
-
-a.box-link {
-		margin: 0;
-		padding: 0;
-}
-
-
-
-#nav-case {
-		position: fixed;
-		top: 0;
-		left: 0;
-		margin: 0;
-		padding: $nav_padding;
-		background-color: transparentize($color_black, 0.7);
-}
-
-#nav-title {
-		font-weight: bold;
-		margin: 0;
-		padding: 0;
-}
-
-#nav-bar {
-		margin: 0;
-		padding: 0;
-}
-
-.nav-item {
-		border-top: 1px solid;
-}
-
-
-
-#carapace {
+.bordered {
 		position: relative;
 		margin: 0 auto;
-		padding: ($p_margin * 3) 0;
-		text-align: center;
 		@media screen and (max-width: $scale_break) {
 				width: $full_width;
 				border: 0;
@@ -227,6 +212,131 @@ a.box-link {
 				}
 		}
 }
+
+
+
+a {
+		text-decoration: none;
+		border: none
+}
+
+
+a.box-link {
+		margin: 0;
+		padding: 0;
+}
+
+
+
+#nav-exo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: $full_width;
+		text-align: center;
+}
+
+#nav-case {
+		@extend .bordered;
+		padding: $nav_case_padding;
+		background-color: $white_overlay_heavy;
+}
+
+.nav-click {
+		text-align: left;
+		font-weight: bold;
+}
+
+#nav-title {
+		@extend .nav-click;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		font-size: $nav_title_size;
+}
+
+#nav-title a {
+		color: $color_black;
+}
+
+#nav-bar {
+		position: absolute;
+		top: $most_height;
+		left: 0;
+		margin: 0;
+		padding: $nav_bar_padding;
+		width: $full_width;
+		background-color: $black_overlay_near_full;
+}
+
+#nav-bar[active=n] {display: none;}
+#nav-bar[active=y] {display: block;}
+
+#nav-bar a {
+		@extend .nav-click;
+		display: block;
+		margin: 0;
+		padding: $nav_item_padding;
+		font-size: $nav_item_size;
+		border-bottom: 2px solid $color_white;
+}
+#nav-bar a:last-child {
+		border-bottom: 0;
+}
+
+#nav-bar a:link, #nav-bar a:visited {
+		color: $color_white;
+}
+#nav-title a:hover, #nav-bar a:hover {
+		@extend #nav-bar-toggle:hover;
+}
+#nav-title a:active, #nav-bar a:active {
+		@extend #nav-bar-toggle:active;
+}
+
+#nav-bar-toggle {
+		position: absolute;
+		right: 0.28em;
+		top: 0.25em;
+		margin: 0;
+		padding: 0;
+		font-size: $nav_tog_size;
+		line-height: 0;
+		cursor: pointer;
+}
+
+#nav-bar-toggle:hover {
+		color: $color_magenta;
+}
+#nav-bar-toggle:active {
+		color: $color_cyan;
+}
+
+
+#carapace {
+		@extend .bordered;
+		padding: ($p_margin * 5) 0;
+		text-align: center;
+}
+
+
+h1 {
+		position: relative;
+		margin: 0;
+		padding: $header_padding;
+		line-height: $header_line_height;
+		font-weight: bold;
+		text-transform: uppercase;
+		@media screen and (max-width: ($scale_break * 2)) {
+				font-size: $header_half;
+		}
+		@media screen and (min-width: (($scale_break * 2) + 1)) {
+				font-size: $header_full;
+		}
+}
+
 
 .text-block, .image-block {
 		position: relative;

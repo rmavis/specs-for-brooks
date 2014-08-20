@@ -89,6 +89,21 @@ img {
   background-position: 50% 50%;
   z-index: 0; }
 
+.bordered, #nav-case, #carapace {
+  position: relative;
+  margin: 0 auto; }
+  @media screen and (max-width: 400px) {
+    .bordered, #nav-case, #carapace {
+      width: 100%;
+      border: 0; } }
+  @media screen and (min-width: 401px) {
+    .bordered, #nav-case, #carapace {
+      max-width: 800px; } }
+  @media screen and (min-width: 800px) {
+    .bordered, #nav-case, #carapace {
+      border-left: 5px solid #444444;
+      border-right: 5px solid #444444; } }
+
 a {
   text-decoration: none;
   border: none; }
@@ -97,49 +112,100 @@ a.box-link {
   margin: 0;
   padding: 0; }
 
-#nav-case {
+#nav-exo {
   position: fixed;
   top: 0;
   left: 0;
   margin: 0;
-  padding: 2em 1em;
-  background-color: rgba(68, 68, 68, 0.3); }
+  padding: 0;
+  width: 100%;
+  text-align: center; }
+
+#nav-case {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.nav-click, #nav-title, #nav-bar a {
+  text-align: left;
+  font-weight: bold; }
 
 #nav-title {
-  font-weight: bold;
+  position: relative;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-size: 24pt; }
+
+#nav-title a {
+  color: #444444; }
 
 #nav-bar {
+  position: absolute;
+  top: 85%;
+  left: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0 1em;
+  width: 100%;
+  background-color: rgba(68, 68, 68, 0.95); }
 
-.nav-item {
-  border-top: 1px solid; }
+#nav-bar[active=n] {
+  display: none; }
+
+#nav-bar[active=y] {
+  display: block; }
+
+#nav-bar a {
+  display: block;
+  margin: 0;
+  padding: 0.5em 0;
+  font-size: 18pt;
+  border-bottom: 2px solid white; }
+
+#nav-bar a:last-child {
+  border-bottom: 0; }
+
+#nav-bar a:link, #nav-bar a:visited {
+  color: white; }
+
+#nav-bar-toggle {
+  position: absolute;
+  right: 0.28em;
+  top: 0.25em;
+  margin: 0;
+  padding: 0;
+  font-size: 48pt;
+  line-height: 0;
+  cursor: pointer; }
+
+#nav-bar-toggle:hover, #nav-title a:hover, #nav-bar a:hover {
+  color: magenta; }
+
+#nav-bar-toggle:active, #nav-title a:active, #nav-bar a:active {
+  color: cyan; }
 
 #carapace {
-  position: relative;
-  margin: 0 auto;
-  padding: 4.5em 0;
+  padding: 7.5em 0;
   text-align: center; }
-  @media screen and (max-width: 400px) {
-    #carapace {
-      width: 100%;
-      border: 0; } }
-  @media screen and (min-width: 401px) {
-    #carapace {
-      max-width: 800px; } }
-  @media screen and (min-width: 800px) {
-    #carapace {
-      border-left: 5px solid #444444;
-      border-right: 5px solid #444444; } }
+
+h1 {
+  position: relative;
+  margin: 0;
+  padding: 0 0.5em;
+  line-height: 96%;
+  font-weight: bold;
+  text-transform: uppercase; }
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 24pt; } }
+  @media screen and (min-width: 801px) {
+    h1 {
+      font-size: 48pt; } }
 
 .text-block, .image-block {
   position: relative;
-  margin: 3em 0; }
+  margin: 4.5em 0; }
 
 .text-block {
-  padding: 1em; }
+  padding: 0 1em; }
 
 .text-block p {
   text-align: justify;
