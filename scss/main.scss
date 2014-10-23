@@ -1,0 +1,234 @@
+@import "base/blocks";
+@import "base/colors";
+@import "base/fonts";
+
+
+
+* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+
+html, body {
+		height: $full_height;
+		min-height: $full_height;
+}
+
+body {
+		position: relative;
+		width: $full_width;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		background-color: $color_white;
+		color: $color_black;
+		font: {
+				family: $font_stack;
+				size: $body_text_size;
+		}
+}
+
+
+
+/*
+ * This is extended by both #carapace and #nav-case.
+ */
+
+.bordered {
+		position: relative;
+		margin: 0 auto;
+
+		@media screen and (max-width: $scale_break) {
+				width: $full_width;
+				border: 0;
+		}
+
+		@media screen and (min-width: ($scale_break + 1)) {
+				max-width: #{$scale_break_n * 2}#{block_unit};
+		}
+
+		@media screen and (min-width: #{$scale_break_n * 2}#{block_unit}) {
+				border: {
+						left: 5px solid $color_black;
+						right: 5px solid $color_black;
+				}
+		}
+}
+
+
+#carapace {
+		@extend .bordered;
+		padding: block_margin(8, 0);
+		text-align: center;
+}
+
+
+img {max-width: $full_width;}
+
+
+
+a {
+		text-decoration: none;
+		border: none
+}
+
+
+a.box-link {
+		margin: 0;
+		padding: 0;
+}
+
+
+
+#nav-exo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: $full_width;
+		text-align: center;
+}
+
+#nav-case {
+		@extend .bordered;
+		@include block_padding(20);
+		background-color: $white_overlay_heavy;
+}
+
+.nav-click {
+		text-align: left;
+		font-weight: bold;
+}
+
+#nav-title {
+		@extend .nav-click;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
+				font-size: $nav_title_small;
+		}
+		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
+				font-size: $nav_title_size;
+		}
+}
+
+#nav-title a {
+		color: $color_black;
+}
+
+#nav-bar {
+		position: absolute;
+		top: $most_height;
+		left: 0;
+		margin: 0;
+		@include block_padding(0, 2);
+		width: $full_width;
+		background-color: $black_overlay_near_full;
+}
+
+#nav-bar[active=n] {display: none;}
+#nav-bar[active=y] {display: block;}
+
+#nav-bar a {
+		@extend .nav-click;
+		display: block;
+		margin: 0;
+		@include block_padding(1, 0);
+		font-size: $nav_item_size;
+		border-bottom: 2px solid $color_white;
+		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
+				font-size: $nav_item_small;
+		}
+		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
+				font-size: $nav_item_size;
+		}
+}
+#nav-bar a:last-child {
+		border-bottom: 0;
+}
+
+#nav-bar a:link, #nav-bar a:visited {
+		color: $color_white;
+}
+#nav-title a:hover, #nav-bar a:hover {
+		@extend #nav-bar-toggle:hover;
+}
+#nav-title a:active, #nav-bar a:active {
+		@extend #nav-bar-toggle:active;
+}
+
+#nav-bar-toggle {
+		position: absolute;
+		right: 0.28em;
+		top: 0.25em;
+		margin: 0;
+		padding: 0;
+		font-size: $nav_tog_size;
+		line-height: 0;
+		cursor: pointer;
+}
+
+#nav-bar-toggle:hover {
+		color: $color_magenta;
+}
+#nav-bar-toggle:active {
+		color: $color_cyan;
+}
+
+
+
+
+
+h1 {
+		position: relative;
+		@include block_margin(0);
+		@include block_padding(0, 1);
+		line-height: 96%;
+		font-weight: bold;
+		text-transform: uppercase;
+		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
+				font-size: $header_half;
+		}
+		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
+				font-size: $header_full;
+		}
+}
+
+
+.text-block, .image-block {
+		position: relative;
+		@include block_margin(4, 0);
+}
+
+.image-block {
+		height: 100vh;
+}
+
+.text-block {
+		@include block_padding(0, 2);
+}
+
+.text-block p {
+		text-align: justify;
+		max-width: grid_spacing(4.5);
+		@include block_margin(1.5, auto);
+		padding: 0;
+		font: $body_font_line;
+}
+
+.image-block img {
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+		max-width: $full_width;
+		max-height: ($full_height - 10%);
+}
+
+.image-caption {
+		font: $small_font_line;
+}

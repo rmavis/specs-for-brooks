@@ -1,0 +1,49 @@
+$full_width: 100%;
+$most_width: 85%;
+$half_width: 50%;
+$quarter_width: 25%;
+
+$full_height: 100%;
+$most_height: 85%;
+$half_height: 50%;
+$third_height: 33%;
+$quarter_height: 25%;
+
+
+$block_base_n: 10;
+
+$block_unit: px;
+
+$scale_break_n: 400;
+$scale_break: #{$scale_break_n}#{$block_unit};
+
+
+
+@function grid_spacing($n: 1) {
+		@return #{$block_base_n * $n}#{$block_unit};
+}
+
+
+@mixin block_margin($top: 0, $right: null, $bottom: null, $left: null) {
+		$right: if($right == null, $top, $right);
+		$bottom: if($bottom == null, $top, $bottom);
+		$left: if($bottom == null, 0, $right);
+
+		margin: #{$top}#{$block_unit} #{$right}#{$block_unit} #{$bottom}#{$block_unit} #{$left}#{$block_unit};
+}
+
+
+@mixin block_padding($top: 0, $right: null, $bottom: null, $left: null) {
+		$right: if($right == null, $top, $right);
+		$bottom: if($bottom == null, $top, $bottom);
+		$left: if($bottom == null, 0, $right);
+
+		padding: #{$top}#{$block_unit} #{$right}#{$block_unit} #{$bottom}#{$block_unit} #{$left}#{$block_unit};
+}
+
+
+
+@mixin translate($lr, $tb) {
+		transform: translate($lr, $tb);
+		-webkit-transform: translate($lr, $tb);
+}

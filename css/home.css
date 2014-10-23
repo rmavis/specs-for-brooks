@@ -173,3 +173,71 @@ h1 {
 
 .image-caption {
   font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
+
+#show-case {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0px autopx 0px autopx; }
+
+.show-box {
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  display: inline-block;
+  text-align: center; }
+  @media screen and (max-width: 400px) {
+    .show-box {
+      width: 100%;
+      height: 85%; } }
+  @media screen and (min-width: 400px 1) and (max-width: 1200block _unit) {
+    .show-box {
+      width: 49%;
+      height: 85%; } }
+  @media screen and (min-width: 1200block _unit (+1)) and (max-width: 1600block _unit) {
+    .show-box {
+      width: 24%;
+      height: 100%; } }
+
+.show-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68, 68, 68, 0.25);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  z-index: 10; }
+
+.show-screen:hover {
+  background-color: rgba(68, 68, 68, 0);
+  transition: background-color 0.2s ease, color 0.2s ease; }
+
+.show-caption {
+  position: absolute;
+  top: 32%;
+  left: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  width: 100%;
+  margin: 0px autopx 0px autopx;
+  padding: 2px 2px 2px 2px;
+  z-index: 10;
+  font: normal normal bold 32px/0.96667 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif;
+  color: white;
+  background-color: rgba(255, 255, 0, 0); }
+
+.show-screen:hover .show-caption {
+  color: red;
+  background-color: yellow;
+  transition: background-color 0.2s ease, color 0.2s ease; }
+
+.show-img {
+  width: 100%;
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  z-index: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  text-align: center; }
