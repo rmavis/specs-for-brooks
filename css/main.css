@@ -28,16 +28,17 @@ body {
     .bordered, #carapace, #nav-case {
       width: 100%;
       border: 0; } }
-  @media screen and (min-width: 400px 1) {
+  @media screen and (min-width: 400px) {
     .bordered, #carapace, #nav-case {
-      max-width: 800block_unit; } }
-  @media screen and (min-width: 800block _unit) {
+      max-width: 800px; } }
+  @media screen and (min-width: 800px) {
     .bordered, #carapace, #nav-case {
+      width: 100%;
       border-left: 5px solid #444444;
       border-right: 5px solid #444444; } }
 
 #carapace {
-  padding: block_margin(8, 0);
+  padding: 120px 0 80px 0;
   text-align: center; }
 
 img {
@@ -61,8 +62,9 @@ a.box-link {
   text-align: center; }
 
 #nav-case {
-  padding: 20px 20px 20px 20px;
-  background-color: rgba(255, 255, 255, 0.7); }
+  margin: 10px auto 10px auto;
+  padding: 5px 20px 5px 20px;
+  background-color: rgba(255, 255, 255, 0.25); }
 
 .nav-click, #nav-title, #nav-bar a {
   text-align: left;
@@ -72,12 +74,12 @@ a.box-link {
   position: relative;
   margin: 0;
   padding: 0; }
-  @media screen and (max-width: 800block _unit) {
+  @media screen and (max-width: 800px) {
+    #nav-title {
+      font-size: 16px; } }
+  @media screen and (min-width: 800px) {
     #nav-title {
       font-size: 24px; } }
-  @media screen and (min-width: 800block _unit (+1)) {
-    #nav-title {
-      font-size: 32px; } }
 
 #nav-title a {
   color: #444444; }
@@ -86,8 +88,8 @@ a.box-link {
   position: absolute;
   top: 85%;
   left: 0;
-  margin: 0;
-  padding: 0px 2px 0px 2px;
+  margin: 10px 0 0 0;
+  padding: 0 20px 0 20px;
   width: 100%;
   background-color: rgba(68, 68, 68, 0.95); }
 
@@ -100,13 +102,13 @@ a.box-link {
 #nav-bar a {
   display: block;
   margin: 0;
-  padding: 1px 0px 1px 0px;
+  padding: 10px 0 10px 0;
   font-size: 24px;
   border-bottom: 2px solid white; }
-  @media screen and (max-width: 800block _unit) {
+  @media screen and (max-width: 800px) {
     #nav-bar a {
-      font-size: 20px; } }
-  @media screen and (min-width: 800block _unit (+1)) {
+      font-size: 16px; } }
+  @media screen and (min-width: 800px) {
     #nav-bar a {
       font-size: 24px; } }
 
@@ -122,7 +124,7 @@ a.box-link {
   top: 0.25em;
   margin: 0;
   padding: 0;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 0;
   cursor: pointer; }
 
@@ -134,32 +136,32 @@ a.box-link {
 
 h1 {
   position: relative;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 1px 0px 1px;
+  margin: 0 0 0 0;
+  padding: 0 10px 0 10px;
   line-height: 96%;
   font-weight: bold;
   text-transform: uppercase; }
-  @media screen and (max-width: 800block _unit) {
+  @media screen and (max-width: 800px) {
     h1 {
       font-size: 32px/1.45; } }
-  @media screen and (min-width: 800block _unit (+1)) {
+  @media screen and (min-width: 800px) {
     h1 {
       font-size: 64px/1.45; } }
 
 .text-block, .image-block {
   position: relative;
-  margin: 4px 0px 4px 0px; }
+  margin: 40px 0 40px 0; }
 
 .image-block {
   height: 100vh; }
 
 .text-block {
-  padding: 0px 2px 0px 2px; }
+  padding: 0 20px 0 20px; }
 
 .text-block p {
   text-align: justify;
-  max-width: 45px;
-  margin: 1.5px autopx 1.5px autopx;
+  max-width: 450px;
+  margin: 15px auto 15px auto;
   padding: 0;
   font: normal normal normal 16px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
 

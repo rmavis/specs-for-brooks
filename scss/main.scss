@@ -40,16 +40,17 @@ body {
 		position: relative;
 		margin: 0 auto;
 
-		@media screen and (max-width: $scale_break) {
+		@media screen and (max-width: scale_break(1)) {
 				width: $full_width;
 				border: 0;
 		}
 
-		@media screen and (min-width: ($scale_break + 1)) {
-				max-width: #{$scale_break_n * 2}#{block_unit};
+		@media screen and (min-width: scale_break(1)) {
+				max-width: scale_break(2);
 		}
 
-		@media screen and (min-width: #{$scale_break_n * 2}#{block_unit}) {
+		@media screen and (min-width: scale_break(2)) {
+				width: $full_width;
 				border: {
 						left: 5px solid $color_black;
 						right: 5px solid $color_black;
@@ -60,7 +61,7 @@ body {
 
 #carapace {
 		@extend .bordered;
-		padding: block_margin(8, 0);
+		padding: block_spacing(12, 0, 8, 0);
 		text-align: center;
 }
 
@@ -94,8 +95,9 @@ a.box-link {
 
 #nav-case {
 		@extend .bordered;
-		@include block_padding(20);
-		background-color: $white_overlay_heavy;
+		margin: block_spacing(1, auto);
+		padding: block_spacing(0.5, 2);
+		background-color: $white_overlay_light;
 }
 
 .nav-click {
@@ -108,11 +110,11 @@ a.box-link {
 		position: relative;
 		margin: 0;
 		padding: 0;
-		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
-				font-size: $nav_title_small;
+		@media screen and (max-width: scale_break(2)) {
+				font-size: font_size(1);
 		}
-		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
-				font-size: $nav_title_size;
+		@media screen and (min-width: scale_break(2)) {
+				font-size: font_size(1.5);
 		}
 }
 
@@ -124,8 +126,8 @@ a.box-link {
 		position: absolute;
 		top: $most_height;
 		left: 0;
-		margin: 0;
-		@include block_padding(0, 2);
+		margin: block_spacing(1, 0, 0);
+		padding: block_spacing(0, 2);
 		width: $full_width;
 		background-color: $black_overlay_near_full;
 }
@@ -137,14 +139,14 @@ a.box-link {
 		@extend .nav-click;
 		display: block;
 		margin: 0;
-		@include block_padding(1, 0);
-		font-size: $nav_item_size;
+		padding: block_spacing(1, 0);
+		font-size: font_size(1.5);
 		border-bottom: 2px solid $color_white;
-		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
-				font-size: $nav_item_small;
+		@media screen and (max-width: scale_break(2)) {
+				font-size: font_size(1);
 		}
-		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
-				font-size: $nav_item_size;
+		@media screen and (min-width: scale_break(2)) {
+				font-size: font_size(1.5);
 		}
 }
 #nav-bar a:last-child {
@@ -167,7 +169,7 @@ a.box-link {
 		top: 0.25em;
 		margin: 0;
 		padding: 0;
-		font-size: $nav_tog_size;
+		font-size: font_size(3);
 		line-height: 0;
 		cursor: pointer;
 }
@@ -185,15 +187,15 @@ a.box-link {
 
 h1 {
 		position: relative;
-		@include block_margin(0);
-		@include block_padding(0, 1);
+		margin: block_spacing(0);
+		padding: block_spacing(0, 1);
 		line-height: 96%;
 		font-weight: bold;
 		text-transform: uppercase;
-		@media screen and (max-width: #{$scale_break_n * 2}#{block_unit}) {
+		@media screen and (max-width: scale_break(2)) {
 				font-size: $header_half;
 		}
-		@media screen and (min-width: (#{$scale_break_n * 2}#{block_unit} + 1)) {
+		@media screen and (min-width: scale_break(2)) {
 				font-size: $header_full;
 		}
 }
@@ -201,7 +203,7 @@ h1 {
 
 .text-block, .image-block {
 		position: relative;
-		@include block_margin(4, 0);
+		margin: block_spacing(4, 0);
 }
 
 .image-block {
@@ -209,13 +211,13 @@ h1 {
 }
 
 .text-block {
-		@include block_padding(0, 2);
+		padding: block_spacing(0, 2);
 }
 
 .text-block p {
 		text-align: justify;
-		max-width: grid_spacing(4.5);
-		@include block_margin(1.5, auto);
+		max-width: grid_spacing(45);
+		margin: block_spacing(1.5, auto);
 		padding: 0;
 		font: $body_font_line;
 }

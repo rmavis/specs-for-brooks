@@ -5,28 +5,28 @@
 		width: $full_width;
 		height: $full_height;
 		min-height: $full_height;
-		@include block_margin(0, auto);
+		margin: block_spacing(0, auto);
 }
 
 
 .show-box {
 		position: relative;
-		@include block_padding(0);
-		@include block_margin(0);
+		padding: block_spacing(0);
+		margin: block_spacing(0);
 		display: inline-block;
 		text-align: center;
 
-		@media screen and (max-width: $scale_break) {
+		@media screen and (max-width: scale_break(1)) {
 				width: $full_width;
 				height: $most_height;
 		}
 
-		@media screen and (min-width: ($scale_break + 1)) and (max-width: #{$scale_break_n * 3}#{block_unit}) {
+		@media screen and (min-width: scale_break(1)) {
 				width: ($half_width - 1);
 				height: $most_height;
 		}
 
-		@media screen and (min-width: (#{$scale_break_n * 3}#{block_unit} + 1)) and (max-width: #{$scale_break_n * 4}#{block_unit}) {
+		@media screen and (min-width: scale_break(3)) {
 				width: ($quarter_width - 1);
 				height: $full_height;
 		}
@@ -56,8 +56,8 @@
 		left: 0;
 		@include translate(0, -50%);
 		width: $full_width;
-		@include block_margin(0, auto);
-		@include block_padding(2);
+		margin: block_spacing(0, auto);
+		padding: block_spacing(2);
 		z-index: 10;
 		font: $stripe_font_line;
 		color: $color_white;
@@ -74,8 +74,8 @@
 .show-img {
 		width: $full_width;
 		height: $full_height;
-		@include block_margin(0);
-		@include block_padding(0);
+		margin: block_spacing(0);
+		padding: block_spacing(0);
 		z-index: 0;
 		background: {
 				size: cover;

@@ -19,26 +19,36 @@ $scale_break: #{$scale_break_n}#{$block_unit};
 
 
 
+@function scale_break($n: 1) {
+		@return #{$scale_break_n * $n}#{$block_unit};
+}
+
+
+
 @function grid_spacing($n: 1) {
 		@return #{$block_base_n * $n}#{$block_unit};
 }
 
 
-@mixin block_margin($top: 0, $right: null, $bottom: null, $left: null) {
+@function block_spacing($top: 0, $right: null, $bottom: null, $left: null) {
 		$right: if($right == null, $top, $right);
 		$bottom: if($bottom == null, $top, $bottom);
 		$left: if($bottom == null, 0, $right);
 
-		margin: #{$top}#{$block_unit} #{$right}#{$block_unit} #{$bottom}#{$block_unit} #{$left}#{$block_unit};
-}
+		$top_p: if($top == 0, 0, #{$top * $block_base_n}#{$block_unit});
+		$bottom_p: if($bottom == 0, 0, #{$bottom * $block_base_n}#{$block_unit});
+		$right_p: $right;
+		$left_p: $left;
 
+		@if $right == auto {$right_p: $right;}
+		@else if $right == 0 {$right_p: 0;}
+		@else {$right_p: #{$right * $block_base_n}#{$block_unit};}
 
-@mixin block_padding($top: 0, $right: null, $bottom: null, $left: null) {
-		$right: if($right == null, $top, $right);
-		$bottom: if($bottom == null, $top, $bottom);
-		$left: if($bottom == null, 0, $right);
+		@if $left == auto {$left_p: $left;}
+		@else if $left == 0 {$left_p: 0;}
+		@else {$left_p: #{$left * $block_base_n}#{$block_unit};}
 
-		padding: #{$top}#{$block_unit} #{$right}#{$block_unit} #{$bottom}#{$block_unit} #{$left}#{$block_unit};
+		@return $top_p $right_p $bottom_p $left_p;
 }
 
 
