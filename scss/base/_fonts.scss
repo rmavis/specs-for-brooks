@@ -20,8 +20,3 @@ $small_text_size: font_size(0.85)/#{$base_line_height};
 $body_font_line: normal normal normal $body_text_size $font_stack;
 $stripe_font_line: normal normal bold $stripe_text_size $font_stack;
 $small_font_line: normal normal bold $small_text_size $font_stack;
-
-$header_full: #{font_size(4)}/#{$base_line_height};
-$header_most: #{font_size(3)}/#{$base_line_height};
-$header_half: #{font_size(2)}/#{$base_line_height};
-$header_small: #{font_size(1.5)}/#{$base_line_height};

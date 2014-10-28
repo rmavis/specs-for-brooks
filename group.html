@@ -7,9 +7,13 @@
 		<meta name="viewport" content="initial-scale=1, width=device-width">
 		<script>
 			function toggleNav() {
-			var bar = document.getElementById('nav-bar');
+			var btn = document.getElementById('nav-toggle');
+			var cls = (btn.className == 'off') ? 'on' : 'off';
+			var bar = document.getElementById('nav-screen');
 			var act = (bar.getAttribute('active') == 'y') ? 'n' : 'y';
 			bar.setAttribute('active', act);
+			btn.className = cls;
+			return false;
 			}
 		</script>
   </head>
@@ -25,23 +29,31 @@
 			</div>
 
 			<div class="image-block">
-				<img src="images/tecumseh.jpg" />
-				<p class="image-caption">Tecumseh</p>
+				<div class="img-case">
+					<img src="images/tecumseh.jpg" />
+					<p class="image-caption">Tecumseh</p>
+				</div>
 			</div>
 
 			<div class="image-block">
-				<img src="images/Apollo-1_Brooks-Cashbaugh.jpg" />
-				<p class="image-caption">Apollo 1</p>
+				<div class="img-case">
+					<img src="images/Apollo-1_Brooks-Cashbaugh.jpg" />
+					<p class="image-caption">Apollo 1</p>
+				</div>
 			</div>
 
 			<div class="image-block">
-				<img src="images/Constructing-Keystones_Brooks-Cashbaugh.jpg" />
-				<p class="image-caption">Constructing Keystones</p>
+				<div class="img-case">
+					<img src="images/Constructing-Keystones_Brooks-Cashbaugh.jpg" />
+					<p class="image-caption">Constructing Keystones</p>
+				</div>
 			</div>
 
 			<div class="image-block">
-				<img src="images/Our-Lady-The-Convert_Brooks_Cashbaugh.jpg" />
-				<p class="image-caption">Our Lady The Convert</p>
+				<div class="img-case">
+					<img src="images/Our-Lady-The-Convert_Brooks_Cashbaugh.jpg" />
+					<p class="image-caption">Our Lady The Convert</p>
+				</div>
 			</div>
 
 			<div class="text-block">
@@ -52,19 +64,18 @@
 		</div>
 
 
-		<div id="nav-exo">
-			<div id="nav-case">
-				<div id="nav-title">
-					<div id="nav-title-text"><a href="index.html">Brooks Cashbaugh</a></div><div id="nav-bar-toggle" onclick="toggleNav()">&lowast;</div>
-				</div>
-				<div id="nav-bar" active="n">
-					<a href="group.html">Recent Work</a>
-					<a href="group.html">Demotic Emolument</a>
-					<a href="group.html">Sketches</a>
-					<a href="group.html">Curriculum vitae</a>
-				</div>
-			</div>
+		<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
+			<div id="nav-tog-button"></div>
+		</a>
 
+		<div id="nav-screen" active="n">
+			<ul id="nav-bar">
+				<a class="nav-item" href="group.html"><li>Recent Work</li></a>
+				<a class="nav-item" href="group.html"><li>Demotic Emolument</li></a>
+				<a class="nav-item" href="group.html"><li>Sketches</li></a>
+				<a class="nav-item" href="group.html"><li>Curriculum vitae</li></a>
+			</ul>
 		</div>
+
 	</body>
 </html>
