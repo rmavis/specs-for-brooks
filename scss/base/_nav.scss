@@ -1,6 +1,6 @@
 #nav-toggle {
 		display: block;
-		position: fixed;
+		position: absolute;
 		top: grid_spacing(2);
 		right: grid_spacing(2);
 		padding: block_spacing(2);
@@ -8,32 +8,6 @@
 		z-index: 10;
 }
 
-#nav-toggle.on {
-		#nav-tog-button {
-				background: none !important;
-		}
-		#nav-tog-button::before {
-				visibility: visible;
-				top: 0px;
-				transform: rotate(-135deg);
-		}
-		#nav-tog-button::after {
-				visibility: visible;
-				bottom: 0px;
-				transform: rotate(135deg);
-		}
-}
-
-#nav-toggle.on > #nav-tog-button,
-#nav-toggle.on > #nav-tog-button::before,
-#nav-toggle.on > #nav-tog-button::after {
-		transition: all 0.2s ease;
-}
-#nav-toggle.off > #nav-tog-button,
-#nav-toggle.off > #nav-tog-button::before,
-#nav-toggle.off > #nav-tog-button::after {
-		transition: all 0.2s ease;
-}
 
 #nav-tog-button,
 #nav-tog-button::before,
@@ -42,7 +16,6 @@
 		height: grid_spacing(0.4);
 		margin: 0;
 		padding: 0;
-		background-color: $color_magenta;
 }
 
 #nav-tog-button {
@@ -56,36 +29,85 @@
 		content: '';
 }
 
-#nav-tog-button::before {
-		top: grid_spacing(-0.8);
+
+#nav-toggle.off {
+		#nav-tog-button,
+		#nav-tog-button::before,
+		#nav-tog-button::after {
+				background-color: $color_cyan;
+				transition: all 0.2s ease;
+		}
+
+		&:hover #nav-tog-button,
+		&:hover #nav-tog-button::before,
+		&:hover #nav-tog-button::after {
+				background-color: $color_magenta;
+		}
+
+		&:active #nav-tog-button,
+		&:active #nav-tog-button::before,
+		&:active #nav-tog-button::after {
+				background-color: $color_yellow;
+		}
+		
+		#nav-tog-button {
+		}
+
+		#nav-tog-button::before {
+				top: grid_spacing(-0.8);
+		}
+
+		#nav-tog-button::after {
+				bottom: grid_spacing(-0.8);
+		}
 }
 
-#nav-tog-button::after {
-		bottom: grid_spacing(-0.8);
-}
 
-#nav-toggle.off:hover > #nav-tog-button,
-#nav-toggle.off:hover > #nav-tog-button::before,
-#nav-toggle.off:hover > #nav-tog-button::after {
-		background-color: $color_cyan;
-}
 
-#nav-toggle.on:hover > #nav-tog-button,
-#nav-toggle.on:hover > #nav-tog-button::before,
-#nav-toggle.on:hover > #nav-tog-button::after {
-		background-color: $color_yellow;
-}
+#nav-toggle.on {
+		#nav-tog-button,
+		#nav-tog-button::before,
+		#nav-tog-button::after {
+				background-color: $color_magenta;
+				transition: all 0.2s ease;
+		}
 
-#nav-toggle:active > #nav-tog-button,
-#nav-toggle:active > #nav-tog-button::before,
-#nav-toggle:active > #nav-tog-button::after {
-		background-color: $color_red;
+		&:hover #nav-tog-button,
+		&:hover #nav-tog-button::before,
+		&:hover #nav-tog-button::after {
+				background-color: $color_red;
+		}
+
+		&:active #nav-tog-button,
+		&:active #nav-tog-button::before,
+		&:active #nav-tog-button::after {
+				background-color: $color_yellow;
+		}
+		
+		#nav-tog-button {
+				background-color: inherit !important;
+		}
+
+		#nav-tog-button::before,
+		#nav-tog-button::after {
+				visibility: visible;
+		}
+
+		#nav-tog-button::before {
+				top: 0px;
+				@include rotate(-135deg);
+		}
+
+		#nav-tog-button::after {
+				bottom: 0px;
+				@include rotate(135deg);
+		}
 }
 
 
 
 #nav-screen {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		margin: 0;
@@ -115,9 +137,9 @@
 
 
 #nav-bar {
-		position: fixed;
+		position: relative;
 		display: block;
-		top: grid-spacing(10);
+		top: grid_spacing(10);
 		left: 50%;
 		margin: 0;
 		padding: 0;
@@ -125,6 +147,9 @@
 		@include translate(-50%, 0);
 		text-align: center;
 		list-style: none;
+		@media screen and (max-width: scale_break(1)) {
+				top: grid_spacing(6) ;
+		}
 }
 
 .nav-item,

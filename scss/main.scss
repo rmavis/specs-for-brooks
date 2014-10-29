@@ -12,11 +12,6 @@
 }
 
 
-html, body {
-		height: $full_height;
-		min-height: $full_height;
-}
-
 body {
 		position: relative;
 		width: $full_width;
@@ -119,9 +114,20 @@ h1, .nav-item {
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		padding: 7% 5%;
 		margin: 0;
-		padding: 7% 0;
 		text-align: center;
+		@media screen and (max-width: scale_break(2)) {
+				padding: 7% 0;
+				font-size: font-size(2);
+		}
+		@media screen and (min-width: scale_break(2)) {
+				padding: 7% 3%;
+				font-size: font-size(2);
+		}
+		@media screen and (min-width: scale_break(2)) {
+				font-size: font-size(3);
+		}
 }
 
 .text-block {

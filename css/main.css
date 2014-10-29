@@ -1,32 +1,11 @@
 #nav-toggle {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   padding: 20px 20px 20px 20px;
   margin: 0;
   z-index: 10; }
-
-#nav-toggle.on #nav-tog-button {
-  background: none !important; }
-#nav-toggle.on #nav-tog-button::before {
-  visibility: visible;
-  top: 0px;
-  transform: rotate(-135deg); }
-#nav-toggle.on #nav-tog-button::after {
-  visibility: visible;
-  bottom: 0px;
-  transform: rotate(135deg); }
-
-#nav-toggle.on > #nav-tog-button,
-#nav-toggle.on > #nav-tog-button::before,
-#nav-toggle.on > #nav-tog-button::after {
-  transition: all 0.2s ease; }
-
-#nav-toggle.off > #nav-tog-button,
-#nav-toggle.off > #nav-tog-button::before,
-#nav-toggle.off > #nav-tog-button::after {
-  transition: all 0.2s ease; }
 
 #nav-tog-button,
 #nav-tog-button::before,
@@ -34,8 +13,7 @@
   width: 23px;
   height: 4px;
   margin: 0;
-  padding: 0;
-  background-color: magenta; }
+  padding: 0; }
 
 #nav-tog-button {
   position: relative; }
@@ -46,29 +24,45 @@
   left: 0;
   content: ''; }
 
-#nav-tog-button::before {
+#nav-toggle.off #nav-tog-button,
+#nav-toggle.off #nav-tog-button::before,
+#nav-toggle.off #nav-tog-button::after {
+  background-color: cyan;
+  transition: all 0.2s ease; }
+#nav-toggle.off:hover #nav-tog-button, #nav-toggle.off:hover #nav-tog-button::before, #nav-toggle.off:hover #nav-tog-button::after {
+  background-color: magenta; }
+#nav-toggle.off:active #nav-tog-button, #nav-toggle.off:active #nav-tog-button::before, #nav-toggle.off:active #nav-tog-button::after {
+  background-color: yellow; }
+#nav-toggle.off #nav-tog-button::before {
   top: -8px; }
-
-#nav-tog-button::after {
+#nav-toggle.off #nav-tog-button::after {
   bottom: -8px; }
 
-#nav-toggle.off:hover > #nav-tog-button,
-#nav-toggle.off:hover > #nav-tog-button::before,
-#nav-toggle.off:hover > #nav-tog-button::after {
-  background-color: cyan; }
-
-#nav-toggle.on:hover > #nav-tog-button,
-#nav-toggle.on:hover > #nav-tog-button::before,
-#nav-toggle.on:hover > #nav-tog-button::after {
-  background-color: yellow; }
-
-#nav-toggle:active > #nav-tog-button,
-#nav-toggle:active > #nav-tog-button::before,
-#nav-toggle:active > #nav-tog-button::after {
+#nav-toggle.on #nav-tog-button,
+#nav-toggle.on #nav-tog-button::before,
+#nav-toggle.on #nav-tog-button::after {
+  background-color: magenta;
+  transition: all 0.2s ease; }
+#nav-toggle.on:hover #nav-tog-button, #nav-toggle.on:hover #nav-tog-button::before, #nav-toggle.on:hover #nav-tog-button::after {
   background-color: red; }
+#nav-toggle.on:active #nav-tog-button, #nav-toggle.on:active #nav-tog-button::before, #nav-toggle.on:active #nav-tog-button::after {
+  background-color: yellow; }
+#nav-toggle.on #nav-tog-button {
+  background-color: inherit !important; }
+#nav-toggle.on #nav-tog-button::before,
+#nav-toggle.on #nav-tog-button::after {
+  visibility: visible; }
+#nav-toggle.on #nav-tog-button::before {
+  top: 0px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg); }
+#nav-toggle.on #nav-tog-button::after {
+  bottom: 0px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg); }
 
 #nav-screen {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   margin: 0;
@@ -94,7 +88,7 @@
   transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s; }
 
 #nav-bar {
-  position: fixed;
+  position: relative;
   display: block;
   top: 100px;
   left: 50%;
@@ -105,6 +99,9 @@
   -webkit-transform: translate(-50%, 0);
   text-align: center;
   list-style: none; }
+  @media screen and (max-width: 400px) {
+    #nav-bar {
+      top: 60px; } }
 
 .nav-item,
 .nav-item:link,
@@ -126,10 +123,6 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-
-html, body {
-  height: 100%;
-  min-height: 100%; }
 
 body {
   position: relative;
@@ -206,9 +199,20 @@ h1, .nav-item {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 7% 5%;
   margin: 0;
-  padding: 7% 0;
   text-align: center; }
+  @media screen and (max-width: 800px) {
+    .img-case {
+      padding: 7% 0;
+      font-size: 32px; } }
+  @media screen and (min-width: 800px) {
+    .img-case {
+      padding: 7% 3%;
+      font-size: 32px; } }
+  @media screen and (min-width: 800px) {
+    .img-case {
+      font-size: 48px; } }
 
 .text-block {
   padding: 0 20px 0 20px; }
