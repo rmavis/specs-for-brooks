@@ -34,14 +34,14 @@
 		#nav-tog-button,
 		#nav-tog-button::before,
 		#nav-tog-button::after {
-				background-color: $color_cyan;
+				background-color: $color_magenta;
 				transition: all 0.2s ease;
 		}
 
 		&:hover #nav-tog-button,
 		&:hover #nav-tog-button::before,
 		&:hover #nav-tog-button::after {
-				background-color: $color_magenta;
+				background-color: $color_cyan;
 		}
 
 		&:active #nav-tog-button,
@@ -75,13 +75,13 @@
 		&:hover #nav-tog-button,
 		&:hover #nav-tog-button::before,
 		&:hover #nav-tog-button::after {
-				background-color: $color_red;
+				background-color: $color_yellow;
 		}
 
 		&:active #nav-tog-button,
 		&:active #nav-tog-button::before,
 		&:active #nav-tog-button::after {
-				background-color: $color_yellow;
+				background-color: $color_red;
 		}
 		
 		#nav-tog-button {
