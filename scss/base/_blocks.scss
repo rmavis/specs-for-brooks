@@ -63,10 +63,16 @@ $scale_break: #{$scale_break_n}#{$block_unit};
 
 @mixin translate($lr, $tb) {
 		transform: translate($lr, $tb);
+		-o-transform: translate($lr, $tb);
+		-ms-transform: translate($lr, $tb);
+		-moz-transform: translate($lr, $tb);
 		-webkit-transform: translate($lr, $tb);
 }
 
 @mixin rotate($n) {
 		transform: rotate($n);
+		-o-transform: rotate($n);
+		-ms-transform: rotate($n);
+		-moz-transform: rotate($n);
 		-webkit-transform: rotate($n);
 }
