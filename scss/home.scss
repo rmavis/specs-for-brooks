@@ -1,85 +1,71 @@
 @import "main";
 
 
+body {
+    background-image:url('images/Apollo-1_Brooks-Cashbaugh.jpg');
+}
+
+
+
 #show-case {
-		width: $full_width;
-		height: $full_height;
-		min-height: $full_height;
-		margin: block_spacing(0, auto);
-}
+    margin: block_spacing(1);
+    padding: block_spacing(1);
 
+    background-color: $color_white;
 
-.show-box {
-		position: relative;
-		padding: block_spacing(0);
-		margin: block_spacing(0);
-		display: inline-block;
-		text-align: center;
-
-		@media screen and (max-width: scale_break(1)) {
+		@media screen and (max-width: scale_break(2)) {
+        position: relative;
 				width: $full_width;
-				height: $most_height;
 		}
 
-		@media screen and (min-width: scale_break(1)) {
-				width: ($half_width - 1);
-				height: $most_height;
-		}
-
-		@media screen and (min-width: scale_break(3)) {
+		@media screen and (min-width: scale_break(2)) {
+        position: absolute;
+        top: grid_spacing(2);
+        left: grid_spacing(2);
 				width: ($quarter_width - 1);
-				height: $full_height;
 		}
 }
 
 
-.show-screen {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: $full_width;
-		height: $full_height;
-		background-color: $black_overlay_light;
-		transition: $overlay_transition;
-		z-index: 10;
-}
 
-.show-screen:hover {
-		background-color: $black_overlay_none;
-		transition: $overlay_transition;
-}
-
-
-.show-caption {
-		position: absolute;
-		top: 32%;
-		left: 0;
-		@include translate(0, -50%);
-		width: $full_width;
+#nav-case {
+		position: relative;
+		padding: block_spacing(1);
 		margin: block_spacing(0, auto);
-		padding: block_spacing(2);
-		z-index: 10;
-		font: $stripe_font_line;
-		color: $color_white;
-		background-color: $yellow_overlay_none;
-}
-
-.show-screen:hover .show-caption {
-		color: $color_red;
-		background-color: $yellow_overlay_full;
-		transition: $overlay_transition;
-}
-
-
-.show-img {
-		width: $full_width;
-		height: $full_height;
-		margin: block_spacing(0);
-		padding: block_spacing(0);
-		z-index: 0;
-		background: {
-				size: cover;
-				position: 50% 50%;
-		}
 		text-align: center;
+}
+
+
+
+.nav-item {
+    display: inline-block;
+    margin: block_spacing(0, 0.5);
+    padding: 0;
+}
+
+
+
+#copy-case {
+    position: relative;
+		padding: block_spacing(1);
+		margin: block_spacing(0, auto);
+		text-align: left;
+}
+
+
+.home-head {
+    position: relative;
+    margin: block_spacing(1, 0);
+    padding: 0;
+    font-size: 200%;
+    font-weight: 500;
+}
+
+
+
+#copy-case p {
+		text-align: justify;
+		margin: block_spacing(1.5, 0);
+		padding: 0;
+		font: $body_font_line;
 }
