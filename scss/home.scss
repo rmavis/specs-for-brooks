@@ -1,8 +1,14 @@
 @import "main";
 
 
-body {
-    background: top center url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
+#home-slide {
+    position: fixed;
+    left: 0;
+    top: grid_spacing(2);
+    height: 90vh;
+    width: 100vw;
+    background: center top url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
+    z-index: 0;
 }
 
 
@@ -24,6 +30,7 @@ body {
 		}
 
 		@media screen and (min-width: scale_break(2)) {
+		    padding: block_spacing(4, 0, 8, 0);
 				width: $full_width;
 		}
 }
@@ -42,8 +49,6 @@ body {
 
 		@media screen and (min-width: scale_break(2)) {
         position: relative;
-        top: grid_spacing(2);
-        left: grid_spacing(2);
 				width: ($half_width - 1);
 		}
 }
