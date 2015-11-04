@@ -249,7 +249,7 @@ h1, .nav-item {
   font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
 
 body {
-  background-image: url("images/Apollo-1_Brooks-Cashbaugh.jpg"); }
+  background-image: url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }
 
 #show-case {
   margin: 10px 10px 10px 10px;
@@ -272,7 +272,7 @@ body {
   margin: 0 auto 0 auto;
   text-align: center; }
 
-.nav-item {
+.nav-link {
   display: inline-block;
   margin: 0 5px 0 5px;
   padding: 0; }
