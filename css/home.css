@@ -257,7 +257,7 @@ body {
 
 #home-case {
   position: relative;
-  padding: 120px 0 80px 0;
+  padding: 80px 0 80px 0;
   margin: 0 auto;
   text-align: center; }
   @media screen and (max-width: 400px) {
@@ -280,7 +280,7 @@ body {
       position: relative; } }
   @media screen and (min-width: 800px) {
     #show-case {
-      position: absolute;
+      position: relative;
       top: 20px;
       left: 20px;
       width: 49%; } }
