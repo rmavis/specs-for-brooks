@@ -7,6 +7,29 @@ body {
 
 
 
+#home-case {
+		position: relative;
+		padding: block_spacing(6, 0, 8, 0);
+		margin: 0 auto;
+
+		text-align: center;
+
+		@media screen and (max-width: scale_break(1)) {
+				width: $full_width;
+				border: 0;
+		}
+
+		@media screen and (min-width: scale_break(1)) {
+				max-width: scale_break(2);
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+				width: $full_width;
+		}
+}
+
+
+
 #show-case {
     margin: block_spacing(1);
     padding: block_spacing(1);
@@ -18,7 +41,7 @@ body {
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-        position: absolute;
+        position: relative;
         top: grid_spacing(2);
         left: grid_spacing(2);
 				width: ($half_width - 1);
@@ -56,8 +79,15 @@ body {
     position: relative;
     margin: block_spacing(1, 0);
     padding: 0;
-    font-size: 200%;
-    font-weight: 500;
+    font-weight: 800;
+
+		@media screen and (max-width: scale_break(2)) {
+				font-size: font-size(2);
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+				font-size: font-size(3);
+		}
 }
 
 
@@ -67,4 +97,8 @@ body {
 		margin: block_spacing(1.5, 0);
 		padding: 0;
 		font: $body_font_line;
+
+    &:last-child {
+        margin-bottom: grid_spacing(1);
+    }
 }
