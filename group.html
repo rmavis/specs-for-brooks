@@ -2,20 +2,10 @@
 <html lang="en">
 
   <head>
-		<title>Brooks Cashbaugh | Style test | Index</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>Brooks Cashbaugh | Style test</title>
 		<meta name="viewport" content="initial-scale=1, width=device-width">
-		<script>
-			function toggleNav() {
-			var btn = document.getElementById('nav-toggle');
-			var cls = (btn.className == 'off') ? 'on' : 'off';
-			var bar = document.getElementById('nav-screen');
-			var act = (bar.getAttribute('active') == 'y') ? 'n' : 'y';
-			bar.setAttribute('active', act);
-			btn.className = cls;
-			return false;
-			}
-		</script>
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <script type="text/javascript" src="/js/main.js"></script>
   </head>
 
 
@@ -78,6 +68,7 @@
 
 		<div id="nav-screen" active="n">
 			<ul id="nav-bar">
+				<a class="nav-item" href="index.html"><li>Home</li></a>
 				<a class="nav-item" href="group.html"><li>Recent Work</li></a>
 				<a class="nav-item" href="group.html"><li>Demotic Emolument</li></a>
 				<a class="nav-item" href="group.html"><li>Sketches</li></a>

@@ -3,26 +3,47 @@
 
   <head>
 		<title>Brooks Cashbaugh | Style test</title>
-		<link rel="stylesheet" type="text/css" href="/css/home.css" />
 		<meta name="viewport" content="initial-scale=1, width=device-width">
+		<link rel="stylesheet" type="text/css" href="/css/home.css" />
+    <script type="text/javascript" src="/js/main.js"></script>
   </head>
 
 
   <body>
-		<div id="show-case">
+		<div id="carapace">
 
-      <div id="nav-case">
-			  <a class="nav-link" href="group.html">Recent Work</a>
-			  <a class="nav-link" href="group.html">Demotic Emolument</a>
-			  <a class="nav-link" href="group.html">Sketches</a>
-			  <a class="nav-link" href="group.html">Curriculum vitae</a>
+		  <div id="show-case">
+        <div id="nav-case">
+			    <a class="nav-link" href="group.html">Recent Work</a>
+			    <a class="nav-link" href="group.html">Demotic Emolument</a>
+			    <a class="nav-link" href="group.html">Sketches</a>
+			    <a class="nav-link" href="group.html">Curriculum vitae</a>
+        </div>
+
+        <div id="copy-case">
+          <h1 class="home-head">This is the business.</h1>
+          <p>Richard David James (born 18 August 1971), best known by his alias Aphex Twin, is an Irish-born British electronic musician and composer. He is also the co-founder of Rephlex Records with Grant Wilson-Claridge.[1] James has also released a number of EPs as AFX since 1991 including the Analogue Bubblebath and Analord series of EPs. James has also used and continues to use several other aliases, such as Polygon Window, Caustic Window, and the Tuss.</p>
+        </div>
       </div>
 
-      <div id="copy-case">
-        <h1 class="home-head">This is the business.</h1>
-        <p>Richard David James (born 18 August 1971), best known by his alias Aphex Twin, is an Irish-born British electronic musician and composer. He is also the co-founder of Rephlex Records with Grant Wilson-Claridge.[1] James has also released a number of EPs as AFX since 1991 including the Analogue Bubblebath and Analord series of EPs. James has also used and continues to use several other aliases, such as Polygon Window, Caustic Window, and the Tuss.</p>
-      </div>
+
+			<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
+				<div id="nav-tog-button"></div>
+			</a>
+
     </div>
+
+
+
+		<div id="nav-screen" active="n">
+			<ul id="nav-bar">
+				<a class="nav-item" href="index.html"><li>Home</li></a>
+				<a class="nav-item" href="group.html"><li>Recent Work</li></a>
+				<a class="nav-item" href="group.html"><li>Demotic Emolument</li></a>
+				<a class="nav-item" href="group.html"><li>Sketches</li></a>
+				<a class="nav-item" href="group.html"><li>Curriculum vitae</li></a>
+			</ul>
+		</div>
 
 	</body>
 

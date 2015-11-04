@@ -249,7 +249,7 @@ h1, .nav-item {
   font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
 
 body {
-  background-image: url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }
+  background: top center url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }
 
 #show-case {
   margin: 10px 10px 10px 10px;
@@ -257,14 +257,13 @@ body {
   background-color: white; }
   @media screen and (max-width: 800px) {
     #show-case {
-      position: relative;
-      width: 100%; } }
+      position: relative; } }
   @media screen and (min-width: 800px) {
     #show-case {
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 24%; } }
+      width: 49%; } }
 
 #nav-case {
   position: relative;

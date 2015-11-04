@@ -2,7 +2,7 @@
 
 
 body {
-    background-image:url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
+    background: top center url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
 }
 
 
@@ -15,14 +15,13 @@ body {
 
 		@media screen and (max-width: scale_break(2)) {
         position: relative;
-				width: $full_width;
 		}
 
 		@media screen and (min-width: scale_break(2)) {
         position: absolute;
         top: grid_spacing(2);
         left: grid_spacing(2);
-				width: ($quarter_width - 1);
+				width: ($half_width - 1);
 		}
 }
 
