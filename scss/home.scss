@@ -2,36 +2,55 @@
 
 
 #home-slide {
-    position: fixed;
-    left: 0;
-    top: grid_spacing(2);
-    height: 90vh;
+    position: relative;
     width: 100vw;
-    background: center top url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
-    z-index: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: center top url('/images/Apollo-1_Brooks-Cashbaugh.jpg') fixed;
 }
 
 
 
-#home-case {
+#home-bar-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: grid_spacing(8);
+    background-color: $color_white;
+}
+
+
+
+.body-bar {
 		position: relative;
-		padding: block_spacing(8, 0, 8, 0);
 		margin: 0 auto;
 
 		text-align: center;
 
 		@media screen and (max-width: scale_break(1)) {
 				width: $full_width;
+        padding: block_spacing(5, 0);
 				border: 0;
+
+        &.footer-bar {
+		        padding: block_spacing(2, 1);
+        }
 		}
 
 		@media screen and (min-width: scale_break(1)) {
+		    padding: block_spacing(5, 0);
 				max-width: scale_break(2);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-		    padding: block_spacing(4, 0, 8, 0);
 				width: $full_width;
+		    padding: block_spacing(8, 0, 8, 0);
+
+        &.footer-bar {
+		        padding: block_spacing(4, 1);
+        }
 		}
 }
 
@@ -55,29 +74,31 @@
 
 
 
-#nav-case {
-		position: relative;
-		padding: block_spacing(1);
-		margin: block_spacing(0, auto);
-		text-align: center;
-}
-
-
-
-.nav-link {
-    display: inline-block;
-    margin: block_spacing(0, 0.5);
-    padding: 0;
-}
-
-
-
 #copy-case {
-    position: relative;
 		padding: block_spacing(1);
-		margin: block_spacing(0, auto);
+    background-color: $color_white;
 		text-align: left;
+
+		@media screen and (max-width: scale_break(1)) {
+        position: relative;
+        margin: 0;
+        width: 100%;
+				font-size: font-size(2);
+		}
+
+		@media screen and (min-width: scale_break(1)) and (max-width: scale_break(2)) {
+        max-width: 75%;
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+        position: absolute;
+        top: grid_spacing(2);
+        left: 0;
+        max-width: $half_width;
+				font-size: font-size(3);
+		}
 }
+
 
 
 .home-head {
@@ -106,4 +127,12 @@
     &:last-child {
         margin-bottom: grid_spacing(1);
     }
+}
+
+
+
+#home-bar-bot {
+    position: relative;
+    width: 100%;
+    background-color: $color_white;
 }

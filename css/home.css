@@ -255,30 +255,42 @@ h1, .nav-item {
   font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
 
 #home-slide {
-  position: fixed;
-  left: 0;
-  top: 20px;
-  height: 90vh;
-  width: 100vw;
-  background: center top url("/images/Apollo-1_Brooks-Cashbaugh.jpg");
-  z-index: 0; }
-
-#home-case {
   position: relative;
-  padding: 80px 0 80px 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: center top url("../images/Apollo-1_Brooks-Cashbaugh.jpg") fixed; }
+
+#home-bar-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: white; }
+
+.body-bar {
+  position: relative;
   margin: 0 auto;
   text-align: center; }
   @media screen and (max-width: 400px) {
-    #home-case {
+    .body-bar {
       width: 100%;
-      border: 0; } }
+      padding: 50px 0 50px 0;
+      border: 0; }
+      .body-bar.footer-bar {
+        padding: 20px 10px 20px 10px; } }
   @media screen and (min-width: 400px) {
-    #home-case {
+    .body-bar {
+      padding: 50px 0 50px 0;
       max-width: 800px; } }
   @media screen and (min-width: 800px) {
-    #home-case {
-      padding: 40px 0 80px 0;
-      width: 100%; } }
+    .body-bar {
+      width: 100%;
+      padding: 80px 0 80px 0; }
+      .body-bar.footer-bar {
+        padding: 40px 10px 40px 10px; } }
 
 #show-case {
   margin: 10px 10px 10px 10px;
@@ -292,22 +304,26 @@ h1, .nav-item {
       position: relative;
       width: 49%; } }
 
-#nav-case {
-  position: relative;
-  padding: 10px 10px 10px 10px;
-  margin: 0 auto 0 auto;
-  text-align: center; }
-
-.nav-link {
-  display: inline-block;
-  margin: 0 5px 0 5px;
-  padding: 0; }
-
 #copy-case {
-  position: relative;
   padding: 10px 10px 10px 10px;
-  margin: 0 auto 0 auto;
+  background-color: white;
   text-align: left; }
+  @media screen and (max-width: 400px) {
+    #copy-case {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      font-size: 32px; } }
+  @media screen and (min-width: 400px) and (max-width: 800px) {
+    #copy-case {
+      max-width: 75%; } }
+  @media screen and (min-width: 800px) {
+    #copy-case {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      max-width: 50%;
+      font-size: 48px; } }
 
 .home-head {
   position: relative;
@@ -328,3 +344,8 @@ h1, .nav-item {
   font: normal normal normal 16px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
   #copy-case p:last-child {
     margin-bottom: 10px; }
+
+#home-bar-bot {
+  position: relative;
+  width: 100%;
+  background-color: white; }
