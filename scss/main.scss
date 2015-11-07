@@ -63,6 +63,10 @@ body {
 
 		text-align: center;
 
+    &.slim {
+		    padding: block_spacing(8, 0, 0, 0);
+    }
+
 		@media screen and (max-width: scale_break(1)) {
 				width: $full_width;
         padding: block_spacing(5, 0);
@@ -333,3 +337,14 @@ h1, .nav-item {
         min-height: 100vh;
     }
 }
+
+
+
+
+.fullscreen-slide {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: center center / cover fixed no-repeat;
+}
+
