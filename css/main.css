@@ -384,4 +384,4 @@ h1, .nav-item {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: center center / cover fixed no-repeat; }
+  background: center top / cover fixed no-repeat; }
