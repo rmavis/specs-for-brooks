@@ -5,7 +5,7 @@
   right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
-  background-color: white;
+  background-color: #FFFFFF;
   z-index: 10; }
 
 #nav-tog-button,
@@ -26,34 +26,34 @@
   content: ''; }
 
 #nav-toggle.off {
-  background-color: white;
+  background-color: #FFFFFF;
   transition: background-color 0.2s ease; }
   #nav-toggle.off #nav-tog-button,
   #nav-toggle.off #nav-tog-button::before,
   #nav-toggle.off #nav-tog-button::after {
-    background-color: magenta;
+    background-color: #FF00FF;
     transition: all 0.2s ease; }
   #nav-toggle.off:hover #nav-tog-button, #nav-toggle.off:hover #nav-tog-button::before, #nav-toggle.off:hover #nav-tog-button::after {
-    background-color: cyan; }
+    background-color: #00FFFF; }
   #nav-toggle.off:active #nav-tog-button, #nav-toggle.off:active #nav-tog-button::before, #nav-toggle.off:active #nav-tog-button::after {
-    background-color: yellow; }
+    background-color: #FFFF00; }
   #nav-toggle.off #nav-tog-button::before {
     top: -8px; }
   #nav-toggle.off #nav-tog-button::after {
     bottom: -8px; }
 
 #nav-toggle.on {
-  background-color: cyan;
+  background-color: #00FFFF;
   transition: background-color 0.2s ease; }
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
   #nav-toggle.on #nav-tog-button::after {
-    background-color: magenta;
+    background-color: #FF00FF;
     transition: all 0.2s ease; }
   #nav-toggle.on:hover #nav-tog-button, #nav-toggle.on:hover #nav-tog-button::before, #nav-toggle.on:hover #nav-tog-button::after {
-    background-color: yellow; }
+    background-color: #FFFF00; }
   #nav-toggle.on:active #nav-tog-button, #nav-toggle.on:active #nav-tog-button::before, #nav-toggle.on:active #nav-tog-button::after {
-    background-color: red; }
+    background-color: #FF0000; }
   #nav-toggle.on #nav-tog-button {
     background-color: inherit !important; }
   #nav-toggle.on #nav-tog-button::before,
@@ -99,7 +99,7 @@
   visibility: visible;
   opacity: 1;
   color: #444444;
-  background-color: cyan;
+  background-color: #00FFFF;
   transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s; }
 
 #nav-bar {
@@ -130,12 +130,12 @@
   color: inherit; }
 
 .nav-item:hover {
-  color: white;
+  color: #FFFFFF;
   background-color: #444444; }
 
 .nav-item:active {
-  color: magenta;
-  background-color: yellow; }
+  color: #FF00FF;
+  background-color: #FFFF00; }
 
 * {
   -moz-box-sizing: border-box;
@@ -148,7 +148,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: white;
+  background-color: #FFFFFF;
   color: #444444;
   font-family: "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif;
   font-size: 16px/1.45; }
@@ -159,7 +159,7 @@ body {
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: white; }
+  background-color: #FFFFFF; }
 
 #home-slide {
   position: relative;
@@ -199,7 +199,7 @@ body {
 #show-case {
   margin: 10px 10px 10px 10px;
   padding: 10px 10px 10px 10px;
-  background-color: white; }
+  background-color: #FFFFFF; }
   @media screen and (max-width: 800px) {
     #show-case {
       position: relative; } }
@@ -210,7 +210,7 @@ body {
 
 #copy-case {
   padding: 10px 10px 10px 10px;
-  background-color: white;
+  background-color: #FFFFFF;
   text-align: left; }
   @media screen and (max-width: 400px) {
     #copy-case {
@@ -252,7 +252,7 @@ body {
 #home-bar-bot {
   position: relative;
   width: 100%;
-  background-color: white; }
+  background-color: #FFFFFF; }
 
 /*
  * This is extended by both #carapace and #nav-case.
@@ -274,7 +274,7 @@ body {
       border-right: 5px solid #444444; } }
 
 #carapace {
-  padding: 120px 0 80px 0;
+  padding: 100px 0 80px 0;
   text-align: center; }
 
 .background > #carapace {
@@ -288,7 +288,7 @@ body {
 
 .whiteback {
   padding: 40px 0 20px 0;
-  background-color: white; }
+  background-color: #FFFFFF; }
 
 /*
 img {
@@ -374,6 +374,15 @@ h1, .nav-item {
 .image-caption {
   margin-bottom: 0;
   font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
+  .image-caption + .image-caption {
+    margin-top: 0; }
+  .image-caption.title {
+    font-weight: bold; }
+  .image-caption.details {
+    font-weight: normal; }
+  .image-caption.detailz {
+    font-weight: normal;
+    font-style: italic; }
 
 .background {
   background: center top url("../images/Apollo-1_Brooks-Cashbaugh.jpg") fixed no-repeat; }
@@ -385,3 +394,5 @@ h1, .nav-item {
   height: 100vh;
   width: 100vw;
   background: center top / cover fixed no-repeat; }
+
+/*# sourceMappingURL=main.css.map */
