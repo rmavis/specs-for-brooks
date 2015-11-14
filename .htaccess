@@ -10,10 +10,10 @@ RewriteEngine On
 
 RewriteRule ^\.htaccess$ - [F]
 
-RewriteRule ^css/(.+)$ /css/$1 [NC]
-RewriteRule ^images/(.+)$ /images/$1 [NC]
-RewriteRule ^js/(.+)$ /js/$1 [NC]
-RewriteRule ^misc/(.+)$ /misc/$1 [NC]
+# RewriteRule ^css/(.+)$ /css/$1 [NC]
+# RewriteRule ^images/(.+)$ /images/$1 [NC]
+# RewriteRule ^js/(.+)$ /js/$1 [NC]
+# RewriteRule ^misc/(.+)$ /misc/$1 [NC]
 
 
 
