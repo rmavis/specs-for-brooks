@@ -1,0 +1,25 @@
+Options +FollowSymlinks
+
+DirectoryIndex /pages/home.html
+ErrorDocument 404 /pages/404.html
+
+
+
+RewriteEngine On
+
+
+RewriteRule ^\.htaccess$ - [F]
+
+RewriteRule ^css/(.+)$ /css/$1 [NC]
+RewriteRule ^images/(.+)$ /images/$1 [NC]
+RewriteRule ^js/(.+)$ /js/$1 [NC]
+RewriteRule ^misc/(.+)$ /misc/$1 [NC]
+
+
+
+# If it's not an existing directory...
+RewriteCond %{REQUEST_FILENAME} !-d
+# and not an existing file...
+RewriteCond %{REQUEST_FILENAME} !-f
+# then assume it's a page.
+RewriteRule ^([-A-Z0-9a-z]+)$ /pages/$1.html [L]
