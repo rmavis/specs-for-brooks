@@ -271,15 +271,14 @@ a {
     font-weight: normal; }
 
 .fullscreen-slide {
-  position: relative; }
+  position: relative;
+  height: 100vh;
+  width: 100vw; }
   @media screen and (max-width: 400px) {
     .fullscreen-slide {
-      width: 100%;
-      background: center top / contain fixed no-repeat; } }
+      background: center center / contain fixed no-repeat; } }
   @media screen and (min-width: 400px) {
     .fullscreen-slide {
-      height: 100vh;
-      width: 100vw;
       background: center top / cover fixed no-repeat; } }
 
 #slide-apollo {
