@@ -4,26 +4,3 @@ $color_yellow: #FFFF00;
 $color_red: #FF0000;
 $color_cyan: #00FFFF;
 $color_magenta: #FF00FF;
-
-
-$black_overlay_full: transparentize($color_black, 0);
-$black_overlay_near_full: transparentize($color_black, 0.05);
-$black_overlay_heavy: transparentize($color_black, 0.3);
-$black_overlay_half: transparentize($color_black, 0.5);
-$black_overlay_light: transparentize($color_black, 0.75);
-$black_overlay_none: transparentize($color_black, 1);
-
-$white_overlay_full: transparentize($color_white, 0);
-$white_overlay_heavy: transparentize($color_white, 0.3);
-$white_overlay_half: transparentize($color_white, 0.5);
-$white_overlay_light: transparentize($color_white, 0.75);
-$white_overlay_none: transparentize($color_white, 1);
-
-$yellow_overlay_full: transparentize($color_yellow, 0);
-$yellow_overlay_heavy: transparentize($color_yellow, 0.3);
-$yellow_overlay_half: transparentize($color_yellow, 0.5);
-$yellow_overlay_light: transparentize($color_yellow, 0.75);
-$yellow_overlay_none: transparentize($color_yellow, 1);
-
-
-$overlay_transition: background-color 0.2s ease, color 0.2s ease;

@@ -1,12 +1,18 @@
 #nav-toggle {
   display: block;
   position: absolute;
-  top: 20px;
+  top: 35px;
   right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
   background-color: #FFFFFF;
   z-index: 10; }
+  @media screen and (max-width: 400px) {
+    #nav-toggle {
+      top: 20px; } }
+  @media screen and (min-width: 400px) {
+    #nav-toggle {
+      top: 35px; } }
 
 #nav-tog-button,
 #nav-tog-button::before,
@@ -150,18 +156,19 @@ body {
   text-align: center;
   background-color: #FFFFFF;
   color: #444444;
-  font-family: "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif;
-  font-size: 16px/1.45; }
+  font-family: "Palatino", "Palatino Linotype", "Times", "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 23.2px; }
 
 .carapace {
   position: relative;
   margin: 0 auto;
-  padding: 80px 0 80px 0;
+  padding: 40px 0 0 0;
   text-align: center; }
   @media screen and (max-width: 400px) {
     .carapace {
       width: 100%;
-      padding: 50px 0 50px 0;
+      padding: 80px 0 0 0;
       border: 0; }
       .carapace.bordered {
         border: 0; }
@@ -208,7 +215,8 @@ body {
     margin: 15px auto 15px auto;
     padding: 0;
     text-align: justify;
-    font: normal normal normal 16px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
+    font-size: 16px;
+    line-height: 23.2px; }
     .text-block p:last-child {
       margin-bottom: 0; }
 
@@ -254,7 +262,9 @@ a {
 
 .image-caption {
   margin-bottom: 0;
-  font: normal normal bold 13.6px/1.45 "Palatino", "Palatino Linotype", "Times New Roman", "Times", serif; }
+  font-weight: bold;
+  font-size: 13.6px;
+  line-height: 23.2px; }
   .image-caption + .image-caption {
     margin-top: 0; }
   .image-caption.title {

@@ -15,7 +15,7 @@
 
 body {
 		position: relative;
-		width: $full_width;
+		width: 100%;
 		margin: 0;
 		padding: 0;
 
@@ -26,8 +26,10 @@ body {
 
 		font: {
 				family: $font_stack;
-				size: $body_text_size;
+				size: font_size();
 		}
+
+    line-height: font_size(1.45);
 }
 
 
@@ -35,13 +37,13 @@ body {
 .carapace {
 		position: relative;
 		margin: 0 auto;
-		padding: block_spacing(8, 0, 8, 0);
+		padding: block_spacing(4, 0, 0, 0);
 
 		text-align: center;
 
 		@media screen and (max-width: scale_break(1)) {
-				width: $full_width;
-        padding: block_spacing(5, 0);
+				width: 100%;
+        padding: block_spacing(8, 0, 0, 0);
 				border: 0;
 
         &.bordered {
@@ -59,7 +61,7 @@ body {
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-				width: $full_width;
+				width: 100%;
 		    padding: block_spacing(8, 0, 8, 0);
 
         &.bordered {
@@ -111,7 +113,8 @@ body {
 		    padding: 0;
 
 		    text-align: justify;
-		    font: $body_font_line;
+		    font-size: font_size();
+        line-height: font_size(1.45);
 
         &:last-child {
             margin-bottom: 0;
@@ -180,7 +183,9 @@ a {
 
 .image-caption {
     margin-bottom: 0;
-		font: $small_font_line;
+		font-weight: bold;
+    font-size: font_size(0.85);
+    line-height: font_size(1.45);
 
     & + & {
         margin-top: 0;
