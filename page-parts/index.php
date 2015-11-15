@@ -4,7 +4,7 @@ $opts = [
          'title' => 'Home',
 
          'nav' => [
-                   'url' => '/',
+                   'url' => '/home',
                    'order' => 0,
                    ],
 

@@ -5,7 +5,7 @@ $opts = [
 
          'nav' => [
                    'order' => 5,
-                   'url' => 'cv'
+                   'url' => '/cv'
                    ],
 
          'body_wrap' => [

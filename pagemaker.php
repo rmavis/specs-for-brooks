@@ -18,7 +18,10 @@ class Pagemaker
       $filename = self::make_filename($ttl_url);
 
       if (array_key_exists('nav', $opts)) {
-        if (!array_key_exists('url', $opts['nav'])) {
+        if (array_key_exists('url', $opts['nav'])) {
+          $filename = self::make_filename($opts['nav']['url']);
+        }
+        else {
           $opts['nav']['url'] = '/'.$ttl_url;
         }
 
