@@ -46,7 +46,7 @@
     bottom: -8px; }
 
 #nav-toggle.on {
-  background-color: #00FFFF;
+  background-color: #CBD3D2;
   transition: background-color 0.2s ease; }
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
