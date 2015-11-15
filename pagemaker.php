@@ -132,24 +132,25 @@ HTML;
   // Body blocks that have extra need to add their own footers.
   public static function body_section($body, $navs) {
     if ($body['extra']) {
-      $append =
-        self::nav_menu($navs).
-        $body['extra'];
+      $body_html =
+        $body['body'].
+        self::nav_button();
     }
 
     else {
-      $append = 
-        self::footer_section().
-        self::nav_menu($navs);
+      $body_html = 
+        $body['body'].
+        self::nav_button().
+        self::footer_section();
     }
 
     return self::html_element('body',
                               [],
                               self::html_element('div',
                                                  $body['wrap'],
-                                                 $body['body'].
-                                                 self::nav_button()).
-                              $append);
+                                                 $body_html).
+                              self::nav_menu($navs).
+                              $body['extra']);
   }
 
 
