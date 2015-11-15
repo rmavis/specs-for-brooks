@@ -37,14 +37,12 @@ body {
 .carapace {
 		position: relative;
 		margin: 0 auto;
-		padding: block_spacing(4, 0, 0, 0);
+		width: 100%;
 
 		text-align: center;
 
 		@media screen and (max-width: scale_break(1)) {
-				width: 100%;
-        padding: block_spacing(8, 0, 0, 0);
-				border: 0;
+        padding: block_spacing(6, 0, 0, 0);
 
         &.bordered {
             border: 0;
@@ -56,12 +54,12 @@ body {
 		}
 
 		@media screen and (min-width: scale_break(1)) {
-		    padding: block_spacing(5, 0, 0, 0);
+		    padding: block_spacing(6, 0, 0, 0);
 				max-width: scale_break(2);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-				width: 100%;
+		    padding: block_spacing(4, 0, 0, 0);
 
         &.bordered {
 		        border: {

@@ -1,15 +1,13 @@
 #nav-toggle {
   display: block;
   position: absolute;
+  top: 20px;
   right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
   background-color: #FFFFFF;
   z-index: 10; }
-  @media screen and (max-width: 400px) {
-    #nav-toggle {
-      top: 20px; } }
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 800px) {
     #nav-toggle {
       top: 35px; } }
 
@@ -162,24 +160,22 @@ body {
 .carapace {
   position: relative;
   margin: 0 auto;
-  padding: 40px 0 0 0;
+  width: 100%;
   text-align: center; }
   @media screen and (max-width: 400px) {
     .carapace {
-      width: 100%;
-      padding: 80px 0 0 0;
-      border: 0; }
+      padding: 60px 0 0 0; }
       .carapace.bordered {
         border: 0; }
       .carapace.footer-bar {
         padding: 20px 10px 20px 10px; } }
   @media screen and (min-width: 400px) {
     .carapace {
-      padding: 50px 0 0 0;
+      padding: 60px 0 0 0;
       max-width: 800px; } }
   @media screen and (min-width: 800px) {
     .carapace {
-      width: 100%; }
+      padding: 40px 0 0 0; }
       .carapace.bordered {
         border-left: 5px solid #444444;
         border-right: 5px solid #444444; }
