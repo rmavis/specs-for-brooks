@@ -174,7 +174,7 @@
 		position: relative;
 		display: block;
 
-		top: grid_spacing(10);
+		top: grid_spacing(8);
 		left: 50%;
 		margin: 0;
 		padding: 0;
@@ -186,7 +186,6 @@
 		list-style: none;
 
 		@media screen and (max-width: scale_break(1)) {
-				top: grid_spacing(8) ;
 		}
 }
 
