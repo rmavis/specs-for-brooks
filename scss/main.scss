@@ -208,7 +208,7 @@ a {
     width: 100vw;
 
 		@media screen and (max-width: scale_break(1)) {
-        background: center center / contain fixed no-repeat;
+        background: center center / contain no-repeat;
     }
 
 		@media screen and (min-width: scale_break(1)) {
