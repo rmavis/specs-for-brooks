@@ -43,9 +43,6 @@
     top: -8px; }
   #nav-toggle.off #nav-tog-button::after {
     bottom: -8px; }
-  #nav-toggle.off #nav-bar {
-    opacity: 0;
-    transition: opacity 0.2s ease; }
 
 #nav-toggle.on {
   background: none; }
@@ -99,12 +96,18 @@
     opacity: 0;
     background-color: rgba(203, 211, 210, 0);
     transition: all 0.3s ease; }
+    #nav-screen[active=n] #nav-bar {
+      opacity: 0;
+      transition: opacity 0.2s ease; }
   #nav-screen[active=y] {
     z-index: 5;
     visibility: visible;
     opacity: 1;
     background-color: #CBD3D2;
     transition: opacity 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s; }
+    #nav-screen[active=y] #nav-bar {
+      opacity: 1;
+      transition: opacity 0.2s ease; }
 
 #nav-bar {
   position: relative;

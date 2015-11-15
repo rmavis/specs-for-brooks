@@ -74,11 +74,6 @@
 		#nav-tog-button::after {
 				bottom: grid_spacing(-0.8);
 		}
-
-    #nav-bar {
-        opacity: 0;
-        transition: opacity 0.2s ease;
-    }
 }
 
 
@@ -153,6 +148,11 @@
 		    opacity: 0;
 		    background-color: transparentize($color_light_grey, 1);
 		    transition: all 0.3s ease;
+
+        #nav-bar {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
     }
 
     &[active=y] {
@@ -161,6 +161,11 @@
 		    opacity: 1;
 		    background-color: $color_light_grey;
 		    transition: opacity 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
+
+        #nav-bar {
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
     }
 }
 
