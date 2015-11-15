@@ -18,9 +18,12 @@ body {
 		width: $full_width;
 		margin: 0;
 		padding: 0;
+
 		text-align: center;
+
 		background-color: $color_white;
 		color: $color_black;
+
 		font: {
 				family: $font_stack;
 				size: $body_text_size;
@@ -29,48 +32,21 @@ body {
 
 
 
-#home-bar-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: grid_spacing(8);
-    background-color: $color_white;
-}
-
-
-
-#home-slide {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: center top url('../images/Apollo-1_Brooks-Cashbaugh.jpg') fixed;
-}
-
-
-
-.background {
-    background: center top url('../images/Apollo-1_Brooks-Cashbaugh.jpg') fixed no-repeat;
-}
-
-
-
-.body-bar {
+.carapace {
 		position: relative;
 		margin: 0 auto;
+		padding: block_spacing(8, 0, 8, 0);
 
 		text-align: center;
-
-    &.slim {
-		    padding: block_spacing(8, 0, 0, 0);
-    }
 
 		@media screen and (max-width: scale_break(1)) {
 				width: $full_width;
         padding: block_spacing(5, 0);
 				border: 0;
+
+        &.bordered {
+            border: 0;
+        }
 
         &.footer-bar {
 		        padding: block_spacing(2, 1);
@@ -86,6 +62,13 @@ body {
 				width: $full_width;
 		    padding: block_spacing(8, 0, 8, 0);
 
+        &.bordered {
+		        border: {
+						left: 5px solid $color_black;
+						right: 5px solid $color_black;
+				}
+        }
+
         &.footer-bar {
 		        padding: block_spacing(4, 1);
         }
@@ -94,56 +77,17 @@ body {
 
 
 
-#show-case {
-    margin: block_spacing(1);
-    padding: block_spacing(1);
+.page-head,
+.nav-item {
+		display: block;
+		position: relative;
+		margin: block_spacing(0);
+		padding: block_spacing(0, 1);
 
-    background-color: $color_white;
+		line-height: 90%;
 
-		@media screen and (max-width: scale_break(2)) {
-        position: relative;
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-        position: relative;
-				width: ($half_width - 1);
-		}
-}
-
-
-
-#copy-case {
-		padding: block_spacing(1);
-    background-color: $color_white;
-		text-align: left;
-
-		@media screen and (max-width: scale_break(1)) {
-        position: relative;
-        margin: 0;
-        width: 100%;
-				font-size: font-size(2);
-		}
-
-		@media screen and (min-width: scale_break(1)) and (max-width: scale_break(2)) {
-        max-width: 75%;
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-        position: absolute;
-        top: grid_spacing(2);
-        left: 0;
-        max-width: $half_width;
-				font-size: font-size(3);
-		}
-}
-
-
-
-.home-head {
-    position: relative;
-    margin: block_spacing(1, 0);
-    padding: 0;
-    font-weight: 800;
+		font-weight: bold;
+		text-transform: uppercase;
 
 		@media screen and (max-width: scale_break(2)) {
 				font-size: font-size(2);
@@ -156,16 +100,35 @@ body {
 
 
 
-#copy-case p {
-		text-align: justify;
-		margin: block_spacing(1.5, 0);
-		padding: 0;
-		font: $body_font_line;
+.text-block {
+		position: relative;
+		margin: block_spacing(4, 0);
+		padding: block_spacing(0, 2);
 
-    &:last-child {
-        margin-bottom: grid_spacing(1);
+    & p {
+		    max-width: grid_spacing(45);
+		    margin: block_spacing(1.5, auto);
+		    padding: 0;
+
+		    text-align: justify;
+		    font: $body_font_line;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
+
+
+
+a {
+		text-decoration: none;
+		border: none
+}
+
+
+
+
 
 
 
@@ -177,151 +140,43 @@ body {
 
 
 
-/*
- * This is extended by both #carapace and #nav-case.
- */
-
-.bordered {
-		position: relative;
-		margin: 0 auto;
-
-		@media screen and (max-width: scale_break(1)) {
-				width: $full_width;
-				border: 0;
-		}
-
-		@media screen and (min-width: scale_break(1)) {
-				max-width: scale_break(2);
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-				width: $full_width;
-				border: {
-						left: 5px solid $color_black;
-						right: 5px solid $color_black;
-				}
-		}
-}
-
-
-#carapace {
-		@extend .bordered;
-		padding: block_spacing(10, 0, 8, 0);
-		text-align: center;
-}
-
-.background > #carapace {
-    padding-top: grid_spacing(10);
-    padding-bottom: 0;
-}
-
-
-
-.sheath {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-}
-
-
-.whiteback {
-    padding: block_spacing(4, 0, 2, 0);
-    background-color: $color_white;
-}
-
-
-/*
-img {
-		max-width: 100%;
-		max-height: 100%;
-}
-*/
-
-
-a {
-		text-decoration: none;
-		border: none
-}
-
-
-a.box-link {
-		margin: 0;
-		padding: 0;
-}
-
-
-h1, .nav-item {
-		display: block;
-		position: relative;
-		margin: block_spacing(0);
-		padding: block_spacing(0, 1);
-		line-height: 96%;
-		font-weight: bold;
-		text-transform: uppercase;
-		line-height: 90%;
-
-		@media screen and (max-width: scale_break(2)) {
-				font-size: font-size(2);
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-				font-size: font-size(3);
-		}
-}
-
-
-.text-block {
-		position: relative;
-		margin: block_spacing(4, 0);
-}
 
 .image-block {
 		position: relative;
 		min-height: 100vh;
 		width: 100%;
 		margin: block_spacing(6, 0);
-
-		/* border: { */
-		/* 		top: 1px solid; */
-		/* 		bottom: 1px solid; */
-		/* } */
 }
+
+
 
 .img-wrap {
 		@include abs_cent;
 		width: 100%;
 }
 
+
+
 .slide-img {
 		display: block;
+
 		max-width: 90%;
 		max-height: 85vh;
 		margin: block_spacing(0, auto);
 		padding: 0;
+
 		text-align: center;
+
 		@media screen and (max-width: scale_break(2)) {
 				max-width: 100%;
 		}
+
 		@media screen and (min-width: scale_break(2)) {
 				max-width: 90%;
 		}
 }
 
-.text-block {
-		padding: block_spacing(0, 2);
-}
 
-.text-block p {
-		text-align: justify;
-		max-width: grid_spacing(45);
-		margin: block_spacing(1.5, auto);
-		padding: 0;
-		font: $body_font_line;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
 
 .image-caption {
     margin-bottom: 0;
@@ -347,17 +202,6 @@ h1, .nav-item {
 
 
 
-.background {
-    background: center top url('../images/Apollo-1_Brooks-Cashbaugh.jpg') fixed no-repeat;
-
-    #carapace {
-        min-height: 100vh;
-    }
-}
-
-
-
-
 .fullscreen-slide {
     position: relative;
     height: 100vh;
@@ -365,3 +209,7 @@ h1, .nav-item {
     background: center top / cover fixed no-repeat;
 }
 
+
+#slide-apollo {
+    background-image: url('/images/Apollo-1_Brooks-Cashbaugh.jpg');
+}

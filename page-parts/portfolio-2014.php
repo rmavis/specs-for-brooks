@@ -1,14 +1,14 @@
 <?php
 
 $opts = [
-         'title' => "Portfolio 2014",
+         'title' => "2014",
 
          'nav' => [
                    'order' => 2,
                    ],
 
          'body_wrap' => [
-                         'class' => 'carapace',
+                         'class' => 'carapace bordered',
                          ],
          ];
 
@@ -47,7 +47,7 @@ $img_html = implode("\n", $images);
 
 $body = <<<HTML
 
-<h1>Portfolio 2014</h1>
+<h1 class="page-head">2014</h1>
 
 {$img_html}
 

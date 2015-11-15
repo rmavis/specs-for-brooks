@@ -1,22 +1,22 @@
 <?php
 
 $opts = [
-         'title' => "Portfolio 2009-2011",
+         'title' => "2009-2011",
 
          'nav' => [
                    'order' => 4,
                    ],
 
          'body_wrap' => [
-                         'class' => 'carapace',
+                         'class' => 'carapace bordered',
                          ],
          ];
 
 
 
 
-
-$images = [
+$
+images = [
            Pagemaker::image_block('/images/tecumseh.jpg',
                                   'Tecumseh',
                                   "12' x 12', color on a plane, 2015"),
@@ -47,7 +47,7 @@ $img_html = implode("\n", $images);
 
 $body = <<<HTML
 
-<h1>Portfolio 2009&mdash;2011</h1>
+<h1 class="page-head">2009&mdash;2011</h1>
 
 {$img_html}
 

@@ -76,12 +76,8 @@ HTML;
 
   public static function head_section($opts = false) {
     if (is_array($opts)) {
-      if (array_key_exists('extra-title', $opts)) {
-        $title = self::default_page_title().' // '.$opts['extra-title'];
-      }
-
-      elseif (array_key_exists('title', $opts)) {
-        $title = $opts['title'];
+      if (array_key_exists('title', $opts)) {
+        $title = self::default_page_title().' // '.$opts['title'];
       }
 
       else {
@@ -133,15 +129,27 @@ HTML;
 
 
 
+  // Body blocks that have extra need to add their own footers.
   public static function body_section($body, $navs) {
+    if ($body['extra']) {
+      $append =
+        self::nav_menu($navs).
+        $body['extra'];
+    }
+
+    else {
+      $append = 
+        self::footer_section().
+        self::nav_menu($navs);
+    }
+
     return self::html_element('body',
                               [],
                               self::html_element('div',
                                                  $body['wrap'],
                                                  $body['body'].
                                                  self::nav_button()).
-                              self::nav_menu($navs).
-                              $body['extra']);
+                              $append);
   }
 
 
@@ -161,9 +169,14 @@ HTML;
                                          $details);
     }
 
+    $capt_html = '';
+    foreach ($capt_parts as $part) {
+      $capt_html .= $part.'. ';
+    }
+
     $caption = self::html_element('p',
                                   ['class' => 'image-caption'],
-                                  implode(' ', $capt_parts));
+                                  trim($capt_html));
 
     $block = <<<HTML
 <div class="image-block">
@@ -220,7 +233,7 @@ HTML;
                                     );
     }
 
-    $navs = implode('', $items);
+    $navs = implode("\n", $items);
 
     $menu = <<<HTML
 <div id="nav-screen" active="n">
@@ -284,6 +297,21 @@ HTML;
 
   public static function clean_string_for_url($str) {
     return preg_replace('/[^-A-Z0-9a-z_]/', '-', trim(strtolower($str)));
+  }
+
+
+
+  public static function footer_section() {
+    $html = <<<HTML
+
+<div class="body-bar footer-bar">
+  <p>The Flammarion engraving is a wood engraving by an unknown artist</p>
+  <p>Links to Instagram, etc</p>
+</div>
+
+HTML;
+
+    return $html;
   }
 
 }
