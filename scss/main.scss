@@ -62,7 +62,6 @@ body {
 
 		@media screen and (min-width: scale_break(2)) {
 				width: 100%;
-		    padding: block_spacing(8, 0, 0, 0);
 
         &.bordered {
 		        border: {
@@ -92,6 +91,7 @@ body {
 		text-transform: uppercase;
 
 		@media screen and (max-width: scale_break(2)) {
+		    margin-top: grid_spacing(3);
 				font-size: font-size(2);
 		}
 
