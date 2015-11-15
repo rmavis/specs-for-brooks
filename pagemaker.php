@@ -22,7 +22,9 @@ class Pagemaker
           $opts['nav']['url'] = '/'.$ttl_url;
         }
 
-        $opts['nav']['title'] = $opts['title'];
+        if (!array_key_exists('title', $opts['nav'])) {
+          $opts['nav']['title'] = $opts['title'];
+        }
       }
 
       $nav_parts[] = $opts['nav'];
