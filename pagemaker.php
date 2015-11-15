@@ -297,7 +297,10 @@ HTML;
 
 
   public static function clean_string_for_url($str) {
-    return preg_replace('/[^-A-Z0-9a-z_]/', '-', trim(strtolower($str)));
+    return trim(preg_replace('/[^-A-Z0-9a-z_]/',
+                             '-',
+                             trim(strtolower($str))),
+                '-');
   }
 
 
