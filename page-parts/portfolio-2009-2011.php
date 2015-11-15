@@ -15,8 +15,7 @@ $opts = [
 
 
 
-$
-images = [
+$images = [
            Pagemaker::image_block('/images/tecumseh.jpg',
                                   'Tecumseh',
                                   "12' x 12', color on a plane, 2015"),
