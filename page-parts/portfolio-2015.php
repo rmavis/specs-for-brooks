@@ -49,7 +49,7 @@ $img_html = implode("\n", $images);
 
 $body = <<<HTML
 
-<h1 class="page-head">2015</h1>
+<h1 class="page-head">{$opts['title']}</h1>
 
 {$img_html}
 

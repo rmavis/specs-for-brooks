@@ -79,7 +79,7 @@ HTML;
 
 
 
-  public static function head_section($opts = false) {
+  public static function head_section($opts) {
     if (is_array($opts)) {
       if (array_key_exists('title', $opts)) {
         $title = self::default_page_title().' // '.$opts['title'];
