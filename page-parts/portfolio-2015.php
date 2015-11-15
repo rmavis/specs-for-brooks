@@ -1,9 +1,11 @@
 <?php
 
 $opts = [
-         'title' => "2015",
+         'title' => "Brooks Cashbaugh<br />2015",
 
          'nav' => [
+                   'title' => '2015',
+                   'url' => '2015',
                    'order' => 1,
                    ],
 

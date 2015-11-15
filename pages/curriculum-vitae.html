@@ -1,25 +1,12 @@
-<?php
-
-$opts = [
-         'title' => 'Curriculum vitae',
-
-         'nav' => [
-                   'order' => 5,
-                   'url' => 'cv'
-                   ],
-
-         'body_wrap' => [
-                         'class' => 'carapace',
-                         ],
-];
-
-
-$body = [ ];
-
-
-
-$body = <<<HTML
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Brooks Cashbaugh // Curriculum vitae</title>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <script type="text/javascript" src="/js/main.js"></script>
+</head>
+  <body><div class="carapace">
 <h1 class="page-head">Brooks Cashbaugh C.V.</h1>
 
 <div class="text-block">
@@ -29,5 +16,21 @@ $body = <<<HTML
 
   <p>The Scheme language is standardized in the official IEEE standard[2] and a de facto standard called the Revisedn Report on the Algorithmic Language Scheme (RnRS). The most widely implemented standard is R5RS (1998);[3] a new standard, R6RS,[4] was ratified in 2007.[5] Scheme has a diverse user base due to its compactness and elegance, but its minimalist philosophy has also caused wide divergence between practical implementations, so much that the Scheme Steering Committee calls it "the world's most unportable programming language" and "a family of dialects" rather than a single language.[6]</p>
 </div>
-
-HTML;
+<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
+  <div id="nav-tog-button"></div>
+</a>
+<div class="carapace footer-bar">
+  <p>The Flammarion engraving is a wood engraving by an unknown artist</p>
+  <p>Links to Instagram, etc</p>
+</div>
+</div><div id="nav-screen" active="n">
+  <ul id="nav-bar">
+	  <a class="nav-item" href="/"><li>Home</li></a>
+<a class="nav-item" href="2015"><li>2015</li></a>
+<a class="nav-item" href="2014"><li>2014</li></a>
+<a class="nav-item" href="2012-2013"><li>2012&ndash;2013</li></a>
+<a class="nav-item" href="2009-2011"><li>2009&ndash;2011</li></a>
+<a class="nav-item" href="cv"><li>Curriculum vitae</li></a>
+  </ul>
+</div></body>
+</html>

@@ -1,10 +1,11 @@
 <?php
 
 $opts = [
-         'title' => "2012-2013",
+         'title' => "Brooks Cashbaugh<br />2012&ndash;2013",
 
          'nav' => [
                    'title' => "2012&ndash;2013",
+                   'url' => '2012-2013',
                    'order' => 3,
                    ],
 
@@ -48,7 +49,7 @@ $img_html = implode("\n", $images);
 
 $body = <<<HTML
 
-<h1 class="page-head">{$opts['nav']['title']}</h1>
+<h1 class="page-head">{$opts['title']}</h1>
 
 {$img_html}
 
