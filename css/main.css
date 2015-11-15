@@ -257,13 +257,10 @@ a {
   line-height: 23.2px; }
   .image-caption + .image-caption {
     margin-top: 0; }
-  .image-caption.title {
+  .image-caption .img-capt-ttl {
     font-weight: bold; }
-  .image-caption.details {
+  .image-caption .img-capt-dtls {
     font-weight: normal; }
-  .image-caption.detailz {
-    font-weight: normal;
-    font-style: italic; }
 
 .fullscreen-slide {
   position: relative;

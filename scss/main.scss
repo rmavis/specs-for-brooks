@@ -189,17 +189,12 @@ a {
         margin-top: 0;
     }
 
-    &.title {
+    & .img-capt-ttl {
         font-weight: bold;
     }
 
-    &.details {
+    & .img-capt-dtls {
         font-weight: normal;
-    }
-
-    &.detailz {
-        font-weight: normal;
-        font-style: italic;
     }
 }
 
