@@ -27,6 +27,14 @@ class Pagemaker
 
       $nav_parts[] = $opts['nav'];
 
+      if (!is_array($body)) {
+        $body = self::make_body_array($body);
+      }
+
+      if (array_key_exists('body_wrap', $opts)) {
+        $body['wrap'] = $opts['body_wrap'];
+      }
+
       $pages[] = [
                   'filename' => $filename,
                   'opts' => $opts,
@@ -51,7 +59,7 @@ class Pagemaker
 
   public static function make_page($opts, $body, $navs) {
     $head = self::head_section($opts);
-    $body = self::body_section($body.self::nav_menu($navs));
+    $body = self::body_section($body, $navs);
 
     $html = <<<HTML
 <!DOCTYPE html>
@@ -105,10 +113,35 @@ HTML;
 
 
 
-  public static function body_section($part) {
+  public static function default_body_wrap() {
+    return [
+            'class' => 'carapace',
+            ];
+  }
+
+
+
+  public static function make_body_array($body_str) {
+    $ret = [ ];
+
+    $ret['wrap'] = self::default_body_wrap();
+    $ret['body'] = $body_str;
+    $ret['extra'] = false;
+
+    return $ret;
+  }
+
+
+
+  public static function body_section($body, $navs) {
     return self::html_element('body',
                               [],
-                              $part);
+                              self::html_element('div',
+                                                 $body['wrap'],
+                                                 $body['body'].
+                                                 self::nav_button()).
+                              self::nav_menu($navs).
+                              $body['extra']);
   }
 
 

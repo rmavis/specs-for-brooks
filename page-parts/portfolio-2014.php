@@ -2,10 +2,17 @@
 
 $opts = [
          'title' => "Portfolio 2014",
+
          'nav' => [
                    'order' => 2,
                    ],
+
+         'body_wrap' => [
+                         'class' => 'carapace',
+                         ],
          ];
+
+
 
 
 
@@ -33,23 +40,20 @@ $images = [
            ];
 
 $img_html = implode("\n", $images);
-$nav_btn = Pagemaker::nav_button();
+
+
 
 
 
 $body = <<<HTML
-<div id="carapace">
 
-	<h1>Portfolio 2014</h1>
+<h1>Portfolio 2014</h1>
 
-  {$img_html}
+{$img_html}
 
-	<div class="text-block">
-		<p>The most influential Unix shells have been the Bourne shell and the C shell, These shells have both been used as the coding base and model for many derivative and work-alike shells with extended feature sets.</p>
-		<p>The Bourne shell, sh, was written by Stephen Bourne at AT&amp;T as the original Unix command line interpreter; it introduced the basic features common to all the Unix shells, including piping, here documents, command substitution, variables, control structures for condition-testing and looping and filename wildcarding. The language, including the use of a reversed keyword to mark the end of a block, was influenced by ALGOL 68.</p>
-	</div>
-
-    {$nav_btn}
-
+<div class="text-block">
+  <p>The most influential Unix shells have been the Bourne shell and the C shell, These shells have both been used as the coding base and model for many derivative and work-alike shells with extended feature sets.</p>
+  <p>The Bourne shell, sh, was written by Stephen Bourne at AT&amp;T as the original Unix command line interpreter; it introduced the basic features common to all the Unix shells, including piping, here documents, command substitution, variables, control structures for condition-testing and looping and filename wildcarding. The language, including the use of a reversed keyword to mark the end of a block, was influenced by ALGOL 68.</p>
 </div>
+
 HTML;
