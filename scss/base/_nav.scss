@@ -147,11 +147,11 @@
 		    visibility: hidden;
 		    opacity: 0;
 		    background-color: transparentize($color_light_grey, 1);
-		    transition: all 0.3s ease;
+		    transition: all 0.2s ease;
 
         #nav-bar {
             opacity: 0;
-            transition: opacity 0.2s ease;
+            transition: opacity 0.3s ease;
         }
     }
 
@@ -160,11 +160,11 @@
 		    visibility: visible;
 		    opacity: 1;
 		    background-color: $color_light_grey;
-		    transition: opacity 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
+		    transition: opacity 0.2s ease, background-color 0.2s ease, z-index 0s, visibility 0s;
 
         #nav-bar {
             opacity: 1;
-            transition: opacity 0.2s ease;
+            transition: opacity 0.3s ease;
         }
     }
 }
