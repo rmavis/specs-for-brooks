@@ -81,8 +81,19 @@ HTML;
 
   public static function head_section($opts) {
     if (is_array($opts)) {
-      if (array_key_exists('title', $opts)) {
-        $title = self::default_page_title().' // '.$opts['title'];
+      if ((array_key_exists('nav', $opts)) &&
+          (array_key_exists('title', $opts['nav']))) {
+        $title =
+          self::default_page_title().
+          ' // '.
+          self::clean_string_for_titlebar($opts['nav']['title']);
+      }
+
+      elseif (array_key_exists('title', $opts)) {
+        $title =
+          self::default_page_title().
+          ' // '.
+          self::clean_string_for_titlebar($opts['title']);
       }
 
       else {
@@ -305,6 +316,19 @@ HTML;
     return trim(preg_replace('/[^-A-Z0-9a-z_]/',
                              '-',
                              trim(strtolower($str))),
+                '-');
+  }
+
+
+
+  public static function clean_string_for_titlebar($str) {
+    return trim(preg_replace('/[ ]+/',
+                             ' ',
+                             preg_replace('/[^-A-Z0-9a-z_]/',
+                                          ' ',
+                                          preg_replace('/&[A-Z0-9a-z]+;/',
+                                                       '-',
+                                                       trim($str)))),
                 '-');
   }
 
