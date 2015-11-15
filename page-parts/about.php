@@ -1,17 +1,18 @@
 <?php
 
 $opts = [
-         'title' => 'Curriculum vitae',
+         'title' => "Brooks Cashbaugh<br />C.V.",
 
          'nav' => [
+                   'title' => 'C.V.',
                    'order' => 5,
-                   'url' => '/cv'
+                   'url' => '/cv',
                    ],
 
          'body_wrap' => [
                          'class' => 'carapace',
                          ],
-];
+         ];
 
 
 $body = [ ];
@@ -20,7 +21,7 @@ $body = [ ];
 
 $body = <<<HTML
 
-<h1 class="page-head">Brooks Cashbaugh C.V.</h1>
+<h1 class="page-head">{$opts['title']}</h1>
 
 <div class="text-block">
   <p>Scheme and Common Lisp are the two principal dialects of the computer programming language Lisp. Unlike Common Lisp, however, Scheme follows a minimalist design philosophy that specifies a small standard core accompanied by powerful tools for language extension.</p>
