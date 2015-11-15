@@ -138,12 +138,12 @@
 		text-align: center;
 
 		color: transparentize($color_nav_sreen_bg, 1);
-		background-color: transparentize($color_nav_sreen_bg, 1);
 
     &[active=n] {
 		    z-index: -5;
 		    visibility: hidden;
 		    opacity: 0;
+		    background-color: transparentize($color_nav_sreen_bg, 1);
 		    transition: all 0.3s ease;
     }
 
@@ -151,6 +151,7 @@
 		    z-index: 5;
 		    visibility: visible;
 		    opacity: 1;
+		    background-color: $color_nav_sreen_bg;
 		    transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
     }
 }

@@ -88,17 +88,18 @@
   height: 100%;
   min-height: 100vh;
   text-align: center;
-  color: rgba(203, 211, 210, 0);
-  background-color: rgba(203, 211, 210, 0); }
+  color: rgba(203, 211, 210, 0); }
   #nav-screen[active=n] {
     z-index: -5;
     visibility: hidden;
     opacity: 0;
+    background-color: rgba(203, 211, 210, 0);
     transition: all 0.3s ease; }
   #nav-screen[active=y] {
     z-index: 5;
     visibility: visible;
     opacity: 1;
+    background-color: #CBD3D2;
     transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s; }
 
 #nav-bar {
