@@ -56,13 +56,13 @@ body {
 		}
 
 		@media screen and (min-width: scale_break(1)) {
-		    padding: block_spacing(5, 0);
+		    padding: block_spacing(5, 0, 0, 0);
 				max-width: scale_break(2);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
 				width: 100%;
-		    padding: block_spacing(8, 0, 8, 0);
+		    padding: block_spacing(8, 0, 0, 0);
 
         &.bordered {
 		        border: {
