@@ -49,12 +49,12 @@
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
   #nav-toggle.on #nav-tog-button::after {
-    background-color: #FF00FF;
+    background-color: #C8512F;
     transition: all 0.2s ease; }
   #nav-toggle.on:hover #nav-tog-button, #nav-toggle.on:hover #nav-tog-button::before, #nav-toggle.on:hover #nav-tog-button::after {
-    background-color: #FFFF00; }
+    background-color: #FFFFFF; }
   #nav-toggle.on:active #nav-tog-button, #nav-toggle.on:active #nav-tog-button::before, #nav-toggle.on:active #nav-tog-button::after {
-    background-color: #FF0000; }
+    background-color: #FFFF00; }
   #nav-toggle.on #nav-tog-button {
     background-color: inherit !important; }
   #nav-toggle.on #nav-tog-button::before,

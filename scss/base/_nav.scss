@@ -44,7 +44,6 @@
 
 #nav-toggle.off {
     background: none;
-		// transition: background-color 0.2s ease;
 
 		#nav-tog-button,
 		#nav-tog-button::before,
@@ -80,25 +79,24 @@
 
 #nav-toggle.on {
     background: none;
-		// transition: background-color 0.2s ease;
 
 		#nav-tog-button,
 		#nav-tog-button::before,
 		#nav-tog-button::after {
-				background-color: $color_magenta;
+				background-color: $color_red;
 				transition: all 0.2s ease;
 		}
 
 		&:hover #nav-tog-button,
 		&:hover #nav-tog-button::before,
 		&:hover #nav-tog-button::after {
-				background-color: $color_yellow;
+				background-color: $color_white;
 		}
 
 		&:active #nav-tog-button,
 		&:active #nav-tog-button::before,
 		&:active #nav-tog-button::after {
-				background-color: $color_red;
+				background-color: $color_yellow;
 		}
 		
 		#nav-tog-button {
@@ -137,13 +135,13 @@
 
 		text-align: center;
 
-		color: transparentize($color_nav_sreen_bg, 1);
+		color: transparentize($color_light_grey, 1);
 
     &[active=n] {
 		    z-index: -5;
 		    visibility: hidden;
 		    opacity: 0;
-		    background-color: transparentize($color_nav_sreen_bg, 1);
+		    background-color: transparentize($color_light_grey, 1);
 		    transition: all 0.3s ease;
     }
 
@@ -151,7 +149,7 @@
 		    z-index: 5;
 		    visibility: visible;
 		    opacity: 1;
-		    background-color: $color_nav_sreen_bg;
+		    background-color: $color_light_grey;
 		    transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
     }
 }
@@ -183,15 +181,15 @@
 		display: block;
 		margin: block_spacing(0, auto);
 		padding: block_spacing(2, 0);
-		color: $color_nav_sreen_fg;
+		color: $color_dark_red;
 }
 
 .nav-item:hover {
 		color: $color_white;
-		background-color: $color_nav_sreen_fg;
+		background-color: $color_dark_red;
 }
 
 .nav-item:active {
 		background-color: $color_white;
-    color: $color_nav_sreen_fg;
+    color: $color_dark_red;
 }
