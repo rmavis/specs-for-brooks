@@ -74,6 +74,11 @@
 		#nav-tog-button::after {
 				bottom: grid_spacing(-0.8);
 		}
+
+    #nav-bar {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
 }
 
 
@@ -117,6 +122,11 @@
 				bottom: 0px;
 				@include rotate(135deg);
 		}
+
+    #nav-bar {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
 }
 
 
@@ -150,7 +160,7 @@
 		    visibility: visible;
 		    opacity: 1;
 		    background-color: $color_light_grey;
-		    transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
+		    transition: opacity 0.3s ease, background-color 0.3s ease, z-index 0s, visibility 0s;
     }
 }
 
