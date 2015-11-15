@@ -15,7 +15,7 @@
     }
 
 		@media screen and (min-width: scale_break(2)) {
-		    top: grid_spacing(3.5);
+		    top: grid_spacing(3.9);
     }
 }
 
@@ -174,7 +174,7 @@
 		position: relative;
 		display: block;
 
-		top: grid_spacing(8);
+		top: grid_spacing(9);
 		left: 50%;
 		margin: 0;
 		padding: 0;
@@ -194,7 +194,7 @@
 .nav-item:visited {
 		display: block;
 		margin: block_spacing(0, auto);
-		padding: block_spacing(2, 0);
+		padding: block_spacing(1.2, 0);
 		color: $color_dark_red;
 }
 
