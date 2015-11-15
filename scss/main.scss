@@ -181,7 +181,8 @@ a {
 
 
 .image-caption {
-    margin-bottom: 0;
+    margin: block_spacing(1, 1.5);
+    padding: 0;
 		font-weight: bold;
     font-size: font_size(0.85);
     line-height: font_size(1.45);

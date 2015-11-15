@@ -33,12 +33,12 @@
   #nav-toggle.off #nav-tog-button,
   #nav-toggle.off #nav-tog-button::before,
   #nav-toggle.off #nav-tog-button::after {
-    background-color: #FF00FF;
+    background-color: #00FFFF;
     transition: all 0.2s ease; }
   #nav-toggle.off:hover #nav-tog-button, #nav-toggle.off:hover #nav-tog-button::before, #nav-toggle.off:hover #nav-tog-button::after {
     background-color: #00FFFF; }
   #nav-toggle.off:active #nav-tog-button, #nav-toggle.off:active #nav-tog-button::before, #nav-toggle.off:active #nav-tog-button::after {
-    background-color: #FFFF00; }
+    background-color: #FF00FF; }
   #nav-toggle.off #nav-tog-button::before {
     top: -8px; }
   #nav-toggle.off #nav-tog-button::after {
@@ -52,9 +52,9 @@
     background-color: #C8512F;
     transition: all 0.2s ease; }
   #nav-toggle.on:hover #nav-tog-button, #nav-toggle.on:hover #nav-tog-button::before, #nav-toggle.on:hover #nav-tog-button::after {
-    background-color: #FFFFFF; }
+    background-color: #C8512F; }
   #nav-toggle.on:active #nav-tog-button, #nav-toggle.on:active #nav-tog-button::before, #nav-toggle.on:active #nav-tog-button::after {
-    background-color: #FFFF00; }
+    background-color: #00FFFF; }
   #nav-toggle.on #nav-tog-button {
     background-color: inherit !important; }
   #nav-toggle.on #nav-tog-button::before,
@@ -258,7 +258,8 @@ a {
       max-width: 90%; } }
 
 .image-caption {
-  margin-bottom: 0;
+  margin: 10px 15px 10px 15px;
+  padding: 0;
   font-weight: bold;
   font-size: 13.6px;
   line-height: 23.2px; }
