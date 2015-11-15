@@ -43,8 +43,8 @@
 
 
 #nav-toggle.off {
-    background-color: $color_white;
-		transition: background-color 0.2s ease;
+    background: none;
+		// transition: background-color 0.2s ease;
 
 		#nav-tog-button,
 		#nav-tog-button::before,
@@ -79,8 +79,8 @@
 
 
 #nav-toggle.on {
-    background-color: $color_nav_sreen_bg;
-		transition: background-color 0.2s ease;
+    background: none;
+		// transition: background-color 0.2s ease;
 
 		#nav-tog-button,
 		#nav-tog-button::before,

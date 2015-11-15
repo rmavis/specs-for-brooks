@@ -29,8 +29,7 @@
   content: ''; }
 
 #nav-toggle.off {
-  background-color: #FFFFFF;
-  transition: background-color 0.2s ease; }
+  background: none; }
   #nav-toggle.off #nav-tog-button,
   #nav-toggle.off #nav-tog-button::before,
   #nav-toggle.off #nav-tog-button::after {
@@ -46,8 +45,7 @@
     bottom: -8px; }
 
 #nav-toggle.on {
-  background-color: #CBD3D2;
-  transition: background-color 0.2s ease; }
+  background: none; }
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
   #nav-toggle.on #nav-tog-button::after {
