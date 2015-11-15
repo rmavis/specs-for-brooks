@@ -159,16 +159,20 @@
 #nav-bar {
 		position: relative;
 		display: block;
+
 		top: grid_spacing(10);
 		left: 50%;
 		margin: 0;
 		padding: 0;
 		width: 100%;
+
 		@include translate(-50%, 0);
+
 		text-align: center;
 		list-style: none;
+
 		@media screen and (max-width: scale_break(1)) {
-				top: grid_spacing(6) ;
+				top: grid_spacing(8) ;
 		}
 }
 
