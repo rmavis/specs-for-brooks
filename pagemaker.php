@@ -304,7 +304,7 @@ HTML;
   public static function footer_section() {
     $html = <<<HTML
 
-<div class="body-bar footer-bar">
+<div class="carapace footer-bar">
   <p>The Flammarion engraving is a wood engraving by an unknown artist</p>
   <p>Links to Instagram, etc</p>
 </div>
