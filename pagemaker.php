@@ -344,7 +344,7 @@ HTML;
 
 <div class="carapace footer-bar">
   <p>The Flammarion engraving is a wood engraving by an unknown artist</p>
-  <p>Links to Instagram, etc</p>
+  <p>Links to <a href="https://www.instagram.com/brookscashbaugh/" target="_blank">Instagram</a>, etc</p>
 </div>
 
 HTML;
