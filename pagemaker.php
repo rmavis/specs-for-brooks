@@ -12,39 +12,44 @@ class Pagemaker
     $pages = [ ];
 
     foreach (glob(self::PAGES_SOURCE_DIR.'*.php') as $file) {
+      $live = true;
       include($file);
 
-      $ttl_url = self::clean_string_for_url($opts['title']);
-      $filename = self::make_filename($ttl_url);
+      // Each page can set its own value for this. To prevent a page
+      // from being included, just set its `live` variable to false.
+      if ($live) {
+        $ttl_url = self::clean_string_for_url($opts['title']);
+        $filename = self::make_filename($ttl_url);
 
-      if (array_key_exists('nav', $opts)) {
-        if (array_key_exists('url', $opts['nav'])) {
-          $filename = self::make_filename($opts['nav']['url']);
+        if (array_key_exists('nav', $opts)) {
+          if (array_key_exists('url', $opts['nav'])) {
+            $filename = self::make_filename($opts['nav']['url']);
+          }
+          else {
+            $opts['nav']['url'] = '/'.$ttl_url;
+          }
+
+          if (!array_key_exists('title', $opts['nav'])) {
+            $opts['nav']['title'] = $opts['title'];
+          }
         }
-        else {
-          $opts['nav']['url'] = '/'.$ttl_url;
+
+        $nav_parts[] = $opts['nav'];
+
+        if (!is_array($body)) {
+          $body = self::make_body_array($body);
         }
 
-        if (!array_key_exists('title', $opts['nav'])) {
-          $opts['nav']['title'] = $opts['title'];
+        if (array_key_exists('body_wrap', $opts)) {
+          $body['wrap'] = $opts['body_wrap'];
         }
+
+        $pages[] = [
+                    'filename' => $filename,
+                    'opts' => $opts,
+                    'body' => $body,
+                    ];
       }
-
-      $nav_parts[] = $opts['nav'];
-
-      if (!is_array($body)) {
-        $body = self::make_body_array($body);
-      }
-
-      if (array_key_exists('body_wrap', $opts)) {
-        $body['wrap'] = $opts['body_wrap'];
-      }
-
-      $pages[] = [
-                  'filename' => $filename,
-                  'opts' => $opts,
-                  'body' => $body,
-                  ];
     }
 
     $nav_parts = self::sort_on_key('order', $nav_parts);
