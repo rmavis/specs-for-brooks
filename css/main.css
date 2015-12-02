@@ -223,11 +223,12 @@ body {
 a {
   text-decoration: none;
   border: none;
-  color: #8ac7c7; }
+  color: #8ac7c7;
+  /* &:visited { */
+  /*     color: $color_cyan; */
+  /* } */ }
   a:hover, a:active {
     color: #c78aa8; }
-  a:visited {
-    color: #8ac7c7; }
 
 #home-bar-bot {
   position: relative;
