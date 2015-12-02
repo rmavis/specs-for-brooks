@@ -1,11 +1,9 @@
-$color_black: #444444;
-$color_white: #FFFFFF;
-$color_yellow: #FFFF00;
+$color_black: hsl(332, 33%, 17%);
+$color_white: hsl(0, 50%, 100%);
 
-$color_cyan: #00FFFF;
-$color_magenta: #FF00FF;
+$color_cyan: hsl(180, 35%, 66%);
+$color_magenta: hsl(330, 35%, 66%);
+$color_red: hsl(0, 35%, 66%);  // #C8512F;
 
 $color_light_grey: #CBD3D2;
 $color_dark_red: #3B1C29;
-
-$color_red: #C8512F;

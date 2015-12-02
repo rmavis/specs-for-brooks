@@ -5,7 +5,7 @@
   right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: white;
   z-index: 10; }
   @media screen and (min-width: 800px) {
     #nav-toggle {
@@ -33,12 +33,12 @@
   #nav-toggle.off #nav-tog-button,
   #nav-toggle.off #nav-tog-button::before,
   #nav-toggle.off #nav-tog-button::after {
-    background-color: #00FFFF;
+    background-color: #8ac7c7;
     transition: all 0.2s ease; }
   #nav-toggle.off:hover #nav-tog-button, #nav-toggle.off:hover #nav-tog-button::before, #nav-toggle.off:hover #nav-tog-button::after {
-    background-color: #00FFFF; }
+    background-color: #8ac7c7; }
   #nav-toggle.off:active #nav-tog-button, #nav-toggle.off:active #nav-tog-button::before, #nav-toggle.off:active #nav-tog-button::after {
-    background-color: #FF00FF; }
+    background-color: #c78aa8; }
   #nav-toggle.off #nav-tog-button::before {
     top: -8px; }
   #nav-toggle.off #nav-tog-button::after {
@@ -49,12 +49,12 @@
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
   #nav-toggle.on #nav-tog-button::after {
-    background-color: #C8512F;
+    background-color: #c78a8a;
     transition: all 0.2s ease; }
   #nav-toggle.on:hover #nav-tog-button, #nav-toggle.on:hover #nav-tog-button::before, #nav-toggle.on:hover #nav-tog-button::after {
-    background-color: #C8512F; }
+    background-color: #c78a8a; }
   #nav-toggle.on:active #nav-tog-button, #nav-toggle.on:active #nav-tog-button::before, #nav-toggle.on:active #nav-tog-button::after {
-    background-color: #00FFFF; }
+    background-color: #8ac7c7; }
   #nav-toggle.on #nav-tog-button {
     background-color: inherit !important; }
   #nav-toggle.on #nav-tog-button::before,
@@ -134,11 +134,11 @@
   color: #3B1C29; }
 
 .nav-item:hover {
-  color: #FFFFFF;
+  color: white;
   background-color: #3B1C29; }
 
 .nav-item:active {
-  background-color: #FFFFFF;
+  background-color: white;
   color: #3B1C29; }
 
 * {
@@ -152,8 +152,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #FFFFFF;
-  color: #444444;
+  background-color: white;
+  color: #3a1d2a;
   font-family: "Palatino", "Palatino Linotype", "Times", "Times New Roman", serif;
   font-size: 16px;
   line-height: 23.2px; }
@@ -178,8 +178,8 @@ body {
     .carapace {
       padding: 40px 0 0 0; }
       .carapace.bordered {
-        border-left: 5px solid #444444;
-        border-right: 5px solid #444444; }
+        border-left: 5px solid #3a1d2a;
+        border-right: 5px solid #3a1d2a; }
       .carapace.footer-bar {
         padding: 40px 10px 40px 10px; } }
 
@@ -227,7 +227,7 @@ a {
 #home-bar-bot {
   position: relative;
   width: 100%;
-  background-color: #FFFFFF; }
+  background-color: white; }
 
 .image-block {
   position: relative;
