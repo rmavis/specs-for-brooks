@@ -222,7 +222,12 @@ body {
 
 a {
   text-decoration: none;
-  border: none; }
+  border: none;
+  color: #8ac7c7; }
+  a:hover, a:active {
+    color: #c78aa8; }
+  a:visited {
+    color: #8ac7c7; }
 
 #home-bar-bot {
   position: relative;
