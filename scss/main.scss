@@ -172,7 +172,9 @@ body {
     }
 
     &.home-block {
-        text-align: center;
+        p {
+            text-align: center;
+        }
     }
 }
 
