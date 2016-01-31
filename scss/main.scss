@@ -171,7 +171,11 @@ body {
         display: none;
     }
 
+
     &.home-block {
+        margin: block_spacing(6, 0);
+        font-family: $head_font;
+
         p {
             text-align: center;
         }

@@ -243,8 +243,11 @@ body {
     line-height: 23.2px; }
   .text-block:empty {
     display: none; }
-  .text-block.home-block p {
-    text-align: center; }
+  .text-block.home-block {
+    margin: 60px 0 60px 0;
+    font-family: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif; }
+    .text-block.home-block p {
+      text-align: center; }
 
 a {
   text-decoration: none;
