@@ -85,7 +85,7 @@ body {
 .page-head,
 .head-group,
 .head-section,
-.site-title,
+#site-title,
 .nav-item {
 		display: block;
 		position: relative;
@@ -101,7 +101,7 @@ body {
 
 
 
-.site-title {
+#site-title {
 		@media screen and (max-width: scale_break(2)) {
 		    margin-top: grid_spacing(6);
 				font-size: font-size(3);

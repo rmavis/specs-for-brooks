@@ -20,7 +20,7 @@ $body = [ ];
 
 $body['body'] = <<<HTML
 
-<h1 class="site-title page-head">Brooks Cashbaugh</h1>
+<h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
 
 <div class="text-block"></div>
 

@@ -189,7 +189,7 @@ body {
 .page-head,
 .head-group,
 .head-section,
-.site-title,
+#site-title,
 .nav-item {
   display: block;
   position: relative;
@@ -201,11 +201,11 @@ body {
   text-transform: uppercase; }
 
 @media screen and (max-width: 800px) {
-  .site-title {
+  #site-title {
     margin-top: 60px;
     font-size: 48px; } }
 @media screen and (min-width: 800px) {
-  .site-title {
+  #site-title {
     margin-top: 80px;
     font-size: 80px; } }
 
