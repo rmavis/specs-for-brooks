@@ -198,13 +198,19 @@ a {
     position: fixed;
     width: 100%;
     bottom: grid_spacing(2);
+    font-style: normal;
+
+    & a {
+        font-weight: bold;
+    }
 
     & a,
     & a:hover {
-        color: $color_magenta;
+        color: $color_black;
     }
+
     & a:active {
-        color: $color_cyan;
+        color: $color_magenta;
     }
 }
 
