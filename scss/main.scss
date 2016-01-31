@@ -198,6 +198,14 @@ a {
     position: fixed;
     width: 100%;
     bottom: grid_spacing(2);
+
+    & a,
+    & a:hover {
+        color: $color_magenta;
+    }
+    & a:active {
+        color: $color_cyan;
+    }
 }
 
 
