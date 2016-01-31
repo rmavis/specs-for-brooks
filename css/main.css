@@ -187,6 +187,8 @@ body {
   font-style: italic; }
 
 .page-head,
+.head-group,
+.head-record,
 .nav-item {
   display: block;
   position: relative;
@@ -196,29 +198,49 @@ body {
   font-family: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
-  @media screen and (max-width: 800px) {
-    .page-head,
-    .nav-item {
-      margin-top: 10px;
-      font-size: 32px; } }
-  @media screen and (min-width: 800px) {
-    .page-head,
-    .nav-item {
-      font-size: 36px; } }
+
+@media screen and (max-width: 800px) {
+  .page-head,
+  .nav-item {
+    margin-top: 10px;
+    font-size: 32px; } }
+@media screen and (min-width: 800px) {
+  .page-head,
+  .nav-item {
+    font-size: 36px; } }
+
+@media screen and (max-width: 800px) {
+  .head-group {
+    margin-top: 10px;
+    font-size: 21.6px; } }
+@media screen and (min-width: 800px) {
+  .head-group {
+    font-size: 23px; } }
+
+@media screen and (max-width: 800px) {
+  .head-record {
+    margin-top: 10px;
+    font-size: 16px; } }
+@media screen and (min-width: 800px) {
+  .head-record {
+    font-size: 16px; } }
 
 .text-block {
   position: relative;
   margin: 40px 0 40px 0;
   padding: 0 20px 0 20px; }
-  .text-block p {
+  .text-block p, .text-block ul, .text-block ol {
     max-width: 450px;
     margin: 15px auto 15px auto;
-    padding: 0;
+    padding: 0; }
+    .text-block p:last-child, .text-block ul:last-child, .text-block ol:last-child {
+      margin-bottom: 0; }
+  .text-block p, .text-block li {
     text-align: justify;
     font-size: 16px;
     line-height: 23.2px; }
-    .text-block p:last-child {
-      margin-bottom: 0; }
+  .text-block:empty {
+    display: none; }
 
 a {
   text-decoration: none;
@@ -289,6 +311,8 @@ a {
   @media screen and (min-width: 400px) {
     .fullscreen-slide {
       background: center top / cover fixed no-repeat; } }
+  .fullscreen-slide .slide-low {
+    background: center bottom / cover fixed no-repeat; }
 
 #slide-apollo {
   background-image: url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }

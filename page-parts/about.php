@@ -27,20 +27,20 @@ $body = <<<HTML
   <h2 class="head-group">Exhibitions</h2>
 
 
-  <h2 class="head-section">2014</h3>
+  <h3 class="head-section">2014</h3>
 <ul>
   <li>Over the Edge. Williamsburg Art and Historical Center. New York, NY</li>
 </ul>
 
 
-<h2 class="head-section">2013</h3>
+<h3 class="head-section">2013</h3>
 <ul>
   <li>Carte de Visite Part Deux. Gigantic Gallery. Portland, OR</li>
   <li>From the Well. Gigantic Gallery. Portland, OR</li>
 </ul>
 
 
-<h2 class="head-section">2012</h3>
+<h3 class="head-section">2012</h3>
 <ul>
   <li>Bait-and-Switch. Chashama. New York, NY</li>
   <li>Demotic Emolument. Peter Miller Gallery. Chicago, IL</li>
@@ -50,7 +50,7 @@ $body = <<<HTML
 </ul>
 
 
-<h2 class="head-section">2011</h3>
+<h3 class="head-section">2011</h3>
 <ul>
   <li>We Are The Champions. Gigantic Gallery. Portland, OR</li>
   <li>Carnival. Paper Crane Gallery. Bloomington, IN</li>
@@ -63,7 +63,7 @@ $body = <<<HTML
 </ul>
 
 
-<h2 class="head-section">2010</h3>
+<h3 class="head-section">2010</h3>
 <ul>
   <li>Monster Art Show. Paper Crane Gallery. Bloomington, IN</li>
   <li>32nd Elkhart Juried Regional Show. Midwest Museum of American Art. Elkhart, IN</li>
@@ -73,7 +73,7 @@ $body = <<<HTML
 </ul>
 
 
-<p>2009</p>
+<h3 class="head-section">2009</h3>
 <ul>
   <li>Pulp: Works on Paper. Gallery Group. Bloomington, IN</li>
   <li>BFA Painting. SoFA Gallery, Indiana University. Bloomington, IN</li>
