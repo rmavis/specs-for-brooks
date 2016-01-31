@@ -8,6 +8,10 @@ $opts = [
                    'order' => 0,
                    ],
 
+         'body_mods' => [
+                         'id' => 'home-body',
+                         ],
+
          'body_wrap' => [
                          'class' => 'carapace',
                          ],

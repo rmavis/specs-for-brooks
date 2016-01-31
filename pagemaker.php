@@ -40,6 +40,10 @@ class Pagemaker
           $body = self::make_body_array($body);
         }
 
+        if (array_key_exists('body_mods', $opts)) {
+          $body['mods'] = $opts['body_mods'];
+        }
+
         if (array_key_exists('body_wrap', $opts)) {
           $body['wrap'] = $opts['body_wrap'];
         }
@@ -138,9 +142,16 @@ HTML;
 
 
 
+  public static function default_body_mods() {
+    return [ ];
+  }
+
+
+
   public static function make_body_array($body_str) {
     $ret = [ ];
 
+    $ret['mods'] = self::default_body_mods();
     $ret['wrap'] = self::default_body_wrap();
     $ret['body'] = $body_str;
     $ret['extra'] = false;
@@ -166,7 +177,7 @@ HTML;
     }
 
     return self::html_element('body',
-                              [],
+                              $body['mods'],
                               self::html_element('div',
                                                  $body['wrap'],
                                                  $body_html).

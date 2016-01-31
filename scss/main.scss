@@ -103,12 +103,12 @@ body {
 
 #site-title {
 		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(6);
+		    margin-top: grid_spacing(4);
 				font-size: font-size(3);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-		    margin-top: grid_spacing(8);
+		    margin-top: grid_spacing(6);
 				font-size: font-size(5);
 		}
 }
@@ -197,7 +197,7 @@ a {
 #home-bar-bot {
     position: relative;
     width: 100%;
-    background-color: $color_white;
+    // background-color: $color_white;
 }
 
 
@@ -274,10 +274,12 @@ a {
 		@media screen and (min-width: scale_break(1)) {
         background: center top / cover fixed no-repeat;
     }
+}
 
-    .slide-low {
-        background: center bottom / cover fixed no-repeat;
-    }
+
+.bg-body-wash {
+    background: center bottom / cover fixed no-repeat;
+    background-image: url('/images/wash-pink-orange.png');
 }
 
 

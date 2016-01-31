@@ -202,11 +202,11 @@ body {
 
 @media screen and (max-width: 800px) {
   #site-title {
-    margin-top: 60px;
+    margin-top: 40px;
     font-size: 48px; } }
 @media screen and (min-width: 800px) {
   #site-title {
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 80px; } }
 
 @media screen and (max-width: 800px) {
@@ -256,8 +256,7 @@ a {
 
 #home-bar-bot {
   position: relative;
-  width: 100%;
-  background-color: white; }
+  width: 100%; }
 
 .image-block {
   position: relative;
@@ -313,8 +312,10 @@ a {
   @media screen and (min-width: 400px) {
     .fullscreen-slide {
       background: center top / cover fixed no-repeat; } }
-  .fullscreen-slide .slide-low {
-    background: center bottom / cover fixed no-repeat; }
+
+.bg-body-wash {
+  background: center bottom / cover fixed no-repeat;
+  background-image: url("/images/wash-pink-orange.png"); }
 
 #slide-apollo {
   background-image: url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }
