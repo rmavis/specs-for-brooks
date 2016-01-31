@@ -9,7 +9,7 @@ $opts = [
                    ],
 
          'body_mods' => [
-                         'id' => 'home-body',
+                         'class' => 'bg-body-wash',
                          ],
 
          'body_wrap' => [
