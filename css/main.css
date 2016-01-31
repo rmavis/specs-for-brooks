@@ -188,7 +188,7 @@ body {
 
 .page-head,
 .head-group,
-.head-record,
+.head-section,
 .nav-item {
   display: block;
   position: relative;
@@ -218,11 +218,11 @@ body {
     font-size: 23px; } }
 
 @media screen and (max-width: 800px) {
-  .head-record {
+  .head-section {
     margin-top: 10px;
     font-size: 16px; } }
 @media screen and (min-width: 800px) {
-  .head-record {
+  .head-section {
     font-size: 16px; } }
 
 .text-block {

@@ -84,7 +84,7 @@ body {
 
 .page-head,
 .head-group,
-.head-record,
+.head-section,
 .nav-item {
 		display: block;
 		position: relative;
@@ -127,7 +127,7 @@ body {
 
 
 
-.head-record {
+.head-section {
 		@media screen and (max-width: scale_break(2)) {
 		    margin-top: grid_spacing(1);
 				font-size: font-size(1);
