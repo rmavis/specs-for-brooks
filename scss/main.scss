@@ -83,6 +83,8 @@ body {
 
 
 .page-head,
+.head-group,
+.head-record,
 .nav-item {
 		display: block;
 		position: relative;
@@ -94,7 +96,12 @@ body {
     font-family: $head_font;
 		font-weight: bold;
 		text-transform: uppercase;
+}
 
+
+
+.page-head,
+.nav-item {
 		@media screen and (max-width: scale_break(2)) {
 		    margin-top: grid_spacing(1);
 				font-size: font-size(2);
@@ -107,23 +114,58 @@ body {
 
 
 
+.head-group {
+		@media screen and (max-width: scale_break(2)) {
+		    margin-top: grid_spacing(1);
+				font-size: font-size(1.35);
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+				font-size: 23px;
+		}
+}
+
+
+
+.head-record {
+		@media screen and (max-width: scale_break(2)) {
+		    margin-top: grid_spacing(1);
+				font-size: font-size(1);
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+				font-size: 16px;
+		}
+}
+
+
+
 .text-block {
 		position: relative;
 		margin: block_spacing(4, 0);
 		padding: block_spacing(0, 2);
 
-    & p {
+    & p,
+    & ul,
+    & ol {
 		    max-width: grid_spacing(45);
 		    margin: block_spacing(1.5, auto);
 		    padding: 0;
 
-		    text-align: justify;
-		    font-size: font_size();
-        line-height: font_size(1.45);
-
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    & p,
+    & li {
+		    text-align: justify;
+		    font-size: font_size();
+        line-height: font_size(1.45);
+    }
+
+    &:empty {
+        display: none;
     }
 }
 
@@ -144,8 +186,6 @@ a {
     /*     color: $color_cyan; */
     /* } */
 }
-
-
 
 
 
@@ -230,6 +270,10 @@ a {
 
 		@media screen and (min-width: scale_break(1)) {
         background: center top / cover fixed no-repeat;
+    }
+
+    .slide-low {
+        background: center bottom / cover fixed no-repeat;
     }
 }
 

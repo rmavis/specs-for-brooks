@@ -24,11 +24,69 @@ $body = <<<HTML
 <h1 class="page-head">{$opts['title']}</h1>
 
 <div class="text-block">
-  <p>Scheme and Common Lisp are the two principal dialects of the computer programming language Lisp. Unlike Common Lisp, however, Scheme follows a minimalist design philosophy that specifies a small standard core accompanied by powerful tools for language extension.</p>
+  <h2 class="head-group">Exhibitions</h2>
 
-  <p>Scheme was created during the 1970s at the MIT AI Lab and released by its developers, Guy L. Steele and Gerald Jay Sussman, via a series of memos now known as the Lambda Papers. It was the first dialect of Lisp to choose lexical scope and the first to require implementations to perform tail-call optimization, giving stronger support for functional programming and associated techniques such as recursive algorithms. It was also one of the first programming languages to support first-class continuations. It had a significant influence on the effort that led to the development of Common Lisp.</p>
 
-  <p>The Scheme language is standardized in the official IEEE standard[2] and a de facto standard called the Revisedn Report on the Algorithmic Language Scheme (RnRS). The most widely implemented standard is R5RS (1998);[3] a new standard, R6RS,[4] was ratified in 2007.[5] Scheme has a diverse user base due to its compactness and elegance, but its minimalist philosophy has also caused wide divergence between practical implementations, so much that the Scheme Steering Committee calls it "the world's most unportable programming language" and "a family of dialects" rather than a single language.[6]</p>
+  <h2 class="head-section">2014</h3>
+<ul>
+  <li>Over the Edge. Williamsburg Art and Historical Center. New York, NY</li>
+</ul>
+
+
+<h2 class="head-section">2013</h3>
+<ul>
+  <li>Carte de Visite Part Deux. Gigantic Gallery. Portland, OR</li>
+  <li>From the Well. Gigantic Gallery. Portland, OR</li>
+</ul>
+
+
+<h2 class="head-section">2012</h3>
+<ul>
+  <li>Bait-and-Switch. Chashama. New York, NY</li>
+  <li>Demotic Emolument. Peter Miller Gallery. Chicago, IL</li>
+  <li>Figures. Peter Miller Gallery. Chicago, IL</li>
+  <li>Carte de Visite. Gigantic Gallery. Portland, OR</li>
+  <li>Winter Show. Peter Miller Gallery. Chicago, IL</li>
+</ul>
+
+
+<h2 class="head-section">2011</h3>
+<ul>
+  <li>We Are The Champions. Gigantic Gallery. Portland, OR</li>
+  <li>Carnival. Paper Crane Gallery. Bloomington, IN</li>
+  <li>Archetypes. Peter Miller Gallery. Chicago, IL</li>
+  <li>Reinvented America. Peter Miller Gallery. Chicago, IL</li>
+  <li>An America Where This Makes Sense. Gigantic Gallery. Portland, OR</li>
+  <li>Red Barn Reclamation. The Fuller Projects. Bloomington, IN</li>
+  <li>New Frontiers and Public Dreams. Paper Crane Gallery. Bloomington, IN</li>
+  <li>Gender Matters/ Matters of Gender. Freedman Gallery. Reading, PA</li>
+</ul>
+
+
+<h2 class="head-section">2010</h3>
+<ul>
+  <li>Monster Art Show. Paper Crane Gallery. Bloomington, IN</li>
+  <li>32nd Elkhart Juried Regional Show. Midwest Museum of American Art. Elkhart, IN</li>
+  <li>Shaping the Spectrum. Gallery Group. Bloomington, IN</li>
+  <li>Bash, Cashbaugh, English. Colfax Campus Gallery. South Bend, IN</li>
+  <li>Ruthrauff, Kuntz, Hard, Cashbaugh. New Galleries. South Bend, IN</li>
+</ul>
+
+
+<p>2009</p>
+<ul>
+  <li>Pulp: Works on Paper. Gallery Group. Bloomington, IN</li>
+  <li>BFA Painting. SoFA Gallery, Indiana University. Bloomington, IN</li>
+  <li>31st Elkhart Juried Regional Show. Midwest Museum of American Art. Elkhart, IN</li>
+  <li>BFA Painting. SoFA Gallery, Indiana University. Bloomington, IN</li>
+</ul>
+
+
+
+<h2 class="head-group">Education</h2>
+
+<p>2010 BFA, Indiana University, Bloomington, IN</p>
+
 </div>
 
 HTML;
