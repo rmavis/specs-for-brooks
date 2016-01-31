@@ -115,27 +115,15 @@ body {
 
 
 .head-group {
-		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(1);
-				font-size: font-size(1.35);
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-				font-size: 23px;
-		}
+		margin-top: grid_spacing(6);
+		font-size: font-size(1.35);
 }
 
 
 
 .head-section {
-		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(1);
-				font-size: font-size(1);
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-				font-size: 16px;
-		}
+		margin-top: grid_spacing(3);
+		font-size: font-size(1);
 }
 
 
