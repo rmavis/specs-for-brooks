@@ -23,21 +23,19 @@ $body = [ ];
 
 
 
-$footer = Pagemaker::html_element(
-                                  'div',
-                                  ['id' => 'home-bar-bot'],
-                                  Pagemaker::footer_section()
-                                  );
-
-
-
-
 $body['body'] = <<<HTML
 
 <h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
 
 <div class="text-block"></div>
 
-{$footer}
-
 HTML;
+
+
+
+
+$body['extra'] = Pagemaker::html_element(
+                                         'div',
+                                         ['id' => 'home-bar-bot'],
+                                         Pagemaker::footer_section()
+                                         );
