@@ -257,9 +257,9 @@ a {
 #home-bar-bot {
   position: fixed;
   width: 100%;
-  bottom: 20px;
-  font-style: normal; }
+  bottom: 20px; }
   #home-bar-bot a {
+    font-style: normal;
     font-weight: bold; }
   #home-bar-bot a, #home-bar-bot a:hover {
     color: #3a1d2a; }

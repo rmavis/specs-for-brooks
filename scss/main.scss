@@ -198,9 +198,9 @@ a {
     position: fixed;
     width: 100%;
     bottom: grid_spacing(2);
-    font-style: normal;
 
     & a {
+        font-style: normal;
         font-weight: bold;
     }
 
