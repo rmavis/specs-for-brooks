@@ -189,6 +189,7 @@ body {
 .page-head,
 .head-group,
 .head-section,
+.site-title,
 .nav-item {
   display: block;
   position: relative;
@@ -198,6 +199,15 @@ body {
   font-family: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase; }
+
+@media screen and (max-width: 800px) {
+  .site-title {
+    margin-top: 60px;
+    font-size: 48px; } }
+@media screen and (min-width: 800px) {
+  .site-title {
+    margin-top: 80px;
+    font-size: 80px; } }
 
 @media screen and (max-width: 800px) {
   .page-head,

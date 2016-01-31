@@ -85,6 +85,7 @@ body {
 .page-head,
 .head-group,
 .head-section,
+.site-title,
 .nav-item {
 		display: block;
 		position: relative;
@@ -96,6 +97,20 @@ body {
     font-family: $head_font;
 		font-weight: bold;
 		text-transform: uppercase;
+}
+
+
+
+.site-title {
+		@media screen and (max-width: scale_break(2)) {
+		    margin-top: grid_spacing(6);
+				font-size: font-size(3);
+		}
+
+		@media screen and (min-width: scale_break(2)) {
+		    margin-top: grid_spacing(8);
+				font-size: font-size(5);
+		}
 }
 
 
