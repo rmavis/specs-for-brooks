@@ -243,6 +243,8 @@ body {
     line-height: 23.2px; }
   .text-block:empty {
     display: none; }
+  .text-block.home-block {
+    text-align: center; }
 
 a {
   text-decoration: none;

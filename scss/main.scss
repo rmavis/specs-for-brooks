@@ -170,6 +170,10 @@ body {
     &:empty {
         display: none;
     }
+
+    &.home-block {
+        text-align: center;
+    }
 }
 
 
