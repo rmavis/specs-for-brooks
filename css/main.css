@@ -202,12 +202,12 @@ body {
 
 @media screen and (max-width: 800px) {
   #site-title {
-    margin-top: 40px;
-    font-size: 48px; } }
+    margin-top: 30px;
+    font-size: 64px; } }
 @media screen and (min-width: 800px) {
   #site-title {
-    margin-top: 60px;
-    font-size: 80px; } }
+    margin-top: 80px;
+    font-size: 96px; } }
 
 @media screen and (max-width: 800px) {
   .page-head,
@@ -255,8 +255,9 @@ a {
     color: #c78aa8; }
 
 #home-bar-bot {
-  position: relative;
-  width: 100%; }
+  position: fixed;
+  width: 100%;
+  bottom: 20px; }
 
 .image-block {
   position: relative;

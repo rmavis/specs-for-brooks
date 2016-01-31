@@ -39,6 +39,9 @@ class Pagemaker
         if (!is_array($body)) {
           $body = self::make_body_array($body);
         }
+        else {
+          $body = array_merge(self::make_body_array(''), $body);
+        }
 
         if (array_key_exists('body_mods', $opts)) {
           $body['mods'] = $opts['body_mods'];

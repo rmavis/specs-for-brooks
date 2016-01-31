@@ -103,13 +103,13 @@ body {
 
 #site-title {
 		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(4);
-				font-size: font-size(3);
+		    margin-top: grid_spacing(3);
+				font-size: font-size(4);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
-		    margin-top: grid_spacing(6);
-				font-size: font-size(5);
+		    margin-top: grid_spacing(8);
+				font-size: font-size(6);
 		}
 }
 
@@ -195,9 +195,9 @@ a {
 
 
 #home-bar-bot {
-    position: relative;
+    position: fixed;
     width: 100%;
-    // background-color: $color_white;
+    bottom: grid_spacing(2);
 }
 
 

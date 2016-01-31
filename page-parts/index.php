@@ -22,17 +22,6 @@ $body = [ ];
 
 
 
-$body['body'] = <<<HTML
-
-<h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
-
-<div class="text-block"></div>
-
-HTML;
-
-
-
-
 
 $footer = Pagemaker::html_element(
                                   'div',
@@ -41,9 +30,13 @@ $footer = Pagemaker::html_element(
                                   );
 
 
-$body['extra'] = <<<HTML
 
-<div class="fullscreen-slide slide-low" style="background-image:url('/images/wash-pink-orange.png')"></div>
+
+$body['body'] = <<<HTML
+
+<h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
+
+<div class="text-block"></div>
 
 {$footer}
 
