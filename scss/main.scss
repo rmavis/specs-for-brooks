@@ -104,12 +104,12 @@ body {
 #site-title {
 		@media screen and (max-width: scale_break(2)) {
 		    margin-top: grid_spacing(3);
-				font-size: font-size(4);
+				font-size: font-size(3);
 		}
 
 		@media screen and (min-width: scale_break(2)) {
 		    margin-top: grid_spacing(8);
-				font-size: font-size(6);
+				font-size: font-size(4);
 		}
 }
 

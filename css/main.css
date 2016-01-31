@@ -203,11 +203,11 @@ body {
 @media screen and (max-width: 800px) {
   #site-title {
     margin-top: 30px;
-    font-size: 64px; } }
+    font-size: 48px; } }
 @media screen and (min-width: 800px) {
   #site-title {
     margin-top: 80px;
-    font-size: 96px; } }
+    font-size: 64px; } }
 
 @media screen and (max-width: 800px) {
   .page-head,
