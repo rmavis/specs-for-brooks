@@ -1,15 +1,22 @@
 #nav-toggle {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 20px;
-  right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
   background-color: white;
   z-index: 10; }
+  @media screen and (max-width: 400px) {
+    #nav-toggle {
+      transform: translate(370px, 0);
+      right: 20px; } }
+  @media screen and (max-width: 600px) {
+    #nav-toggle {
+      right: 40px; } }
   @media screen and (min-width: 800px) {
     #nav-toggle {
-      top: 34px; } }
+      top: 34px;
+      transform: translate(370px, 0); } }
 
 #nav-tog-button,
 #nav-tog-button::before,
@@ -110,8 +117,8 @@
       transition: opacity 0.3s ease; }
 
 #nav-bar {
-  position: relative;
   display: block;
+  position: fixed;
   top: 90px;
   left: 50%;
   margin: 0;
@@ -305,13 +312,12 @@ a {
 .image-caption {
   margin: 10px 15px 10px 15px;
   padding: 0;
-  font-weight: bold;
   font-size: 13.6px;
   line-height: 23.2px; }
   .image-caption + .image-caption {
     margin-top: 0; }
   .image-caption .img-capt-ttl {
-    font-weight: bold; }
+    font-style: italic; }
   .image-caption .img-capt-dtls {
     font-weight: normal; }
 
