@@ -12,11 +12,10 @@
 		z-index: 10;
 
 		@media screen and (min-width: 0) and (max-width: scale_break(1)) {
-        right: grid_spacing(3);
     }
 
 		@media screen and (max-width: scale_break(1.5)) {
-        right: grid_spacing(4);
+        right: grid_spacing(3);
     }
 
 		@media screen and (min-width: scale_break(2)) {
