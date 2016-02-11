@@ -2,20 +2,21 @@
   display: block;
   position: fixed;
   top: 20px;
+  right: 20px;
   padding: 20px 10px 20px 10px;
   margin: 0;
   background-color: white;
   z-index: 10; }
   @media screen and (min-width: 0) and (max-width: 400px) {
     #nav-toggle {
-      transform: translate(370px, 0);
-      right: 20px; } }
+      right: 30px; } }
   @media screen and (max-width: 600px) {
     #nav-toggle {
       right: 40px; } }
   @media screen and (min-width: 800px) {
     #nav-toggle {
       top: 34px;
+      right: 50%;
       transform: translate(370px, 0); } }
 
 #nav-tog-button,
