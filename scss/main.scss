@@ -267,7 +267,7 @@ a {
 .image-caption {
     margin: block_spacing(1, 1.5);
     padding: 0;
-		font-weight: bold;
+
     font-size: font_size(0.85);
     line-height: font_size(1.45);
 
@@ -276,7 +276,7 @@ a {
     }
 
     & .img-capt-ttl {
-        font-weight: bold;
+		    font-style: italic;
     }
 
     & .img-capt-dtls {

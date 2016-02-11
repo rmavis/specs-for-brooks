@@ -1,9 +1,8 @@
 #nav-toggle {
 		display: block;
-		position: absolute;
+		position: fixed;
 
 		top: grid_spacing(2);
-		right: grid_spacing(2);
 
 		padding: block_spacing(2, 1);
 		margin: 0;
@@ -12,10 +11,17 @@
 		z-index: 10;
 
 		@media screen and (max-width: scale_break(1)) {
+        transform: translate(370px, 0);
+        right: grid_spacing(2);
+    }
+
+		@media screen and (max-width: scale_break(1.5)) {
+        right: grid_spacing(4);
     }
 
 		@media screen and (min-width: scale_break(2)) {
 		    top: grid_spacing(3.4);
+        transform: translate(370px, 0);
     }
 }
 
@@ -171,8 +177,8 @@
 
 
 #nav-bar {
-		position: relative;
 		display: block;
+		position: fixed;
 
 		top: grid_spacing(9);
 		left: 50%;
