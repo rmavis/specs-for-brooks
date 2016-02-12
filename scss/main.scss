@@ -169,7 +169,7 @@ body {
 
     & ul,
     & ol {
-		    padding: block(0, 0, 0, 1.5);
+		    padding: block_spacing(0, 0, 0, 1.5);
     }
 
     &:empty {
