@@ -167,6 +167,11 @@ body {
         line-height: font_size(1.45);
     }
 
+    & ul,
+    & ol {
+		    padding: block(0, 0, 0, 1.5);
+    }
+
     &:empty {
         display: none;
     }

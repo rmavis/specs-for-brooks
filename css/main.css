@@ -243,6 +243,8 @@ body {
     text-align: justify;
     font-size: 16px;
     line-height: 23.2px; }
+  .text-block ul, .text-block ol {
+    padding: block(0, 0, 0, 1.5); }
   .text-block:empty {
     display: none; }
   .text-block.home-block {
