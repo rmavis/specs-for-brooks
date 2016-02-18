@@ -213,7 +213,11 @@ a {
     position: fixed;
     width: 100%;
     bottom: grid_spacing(2);
+}
 
+
+
+.footer-bar {
     & a {
         font-style: normal;
         font-weight: bold;
@@ -228,7 +232,6 @@ a {
         color: $color_magenta;
     }
 }
-
 
 
 
