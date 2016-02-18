@@ -192,6 +192,8 @@ body {
   color: #3a1d2a; }
 .footer-bar a:active {
   color: #c78aa8; }
+.footer-bar p {
+  margin: 5px 0 5px 0; }
 
 .page-head,
 .head-group,

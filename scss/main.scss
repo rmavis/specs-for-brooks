@@ -90,6 +90,10 @@ body {
     & a:active {
         color: $color_magenta;
     }
+
+    p {
+        margin: block_spacing(0.5, 0);
+    }
 }
 
 
