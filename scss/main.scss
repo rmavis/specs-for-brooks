@@ -77,7 +77,19 @@ body {
 
 
 .footer-bar {
-		font-style: italic;
+    & a {
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    & a,
+    & a:hover {
+        color: $color_black;
+    }
+
+    & a:active {
+        color: $color_magenta;
+    }
 }
 
 
@@ -217,24 +229,6 @@ a {
 
 
 
-.footer-bar {
-    & a {
-        font-style: normal;
-        font-weight: bold;
-    }
-
-    & a,
-    & a:hover {
-        color: $color_black;
-    }
-
-    & a:active {
-        color: $color_magenta;
-    }
-}
-
-
-
 .image-block {
 		position: relative;
 		min-height: 100vh;
@@ -290,6 +284,13 @@ a {
     & .img-capt-dtls {
         font-weight: normal;
     }
+}
+
+
+
+.copyright-line {
+    font-size: font_size(0.85);
+    font-style: normal;
 }
 
 

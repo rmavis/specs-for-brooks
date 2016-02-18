@@ -360,7 +360,7 @@ HTML;
 
 <div class="carapace footer-bar">
   <p><a href="https://www.instagram.com/brookscashbaugh/" target="_blank">Instagram</a></p>
-  <p>&copy; 2012&ndash{$year} Brooks Cashbaugh. All rights reserved.</p>
+  <p class="copyright-line">&copy; 2012&ndash;{$year} Brooks Cashbaugh. All rights reserved.</p>
 </div>
 
 HTML;

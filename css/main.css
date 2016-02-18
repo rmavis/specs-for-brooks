@@ -185,8 +185,13 @@ body {
       .carapace.footer-bar {
         padding: 40px 10px 40px 10px; } }
 
-.footer-bar {
-  font-style: italic; }
+.footer-bar a {
+  font-style: normal;
+  font-weight: bold; }
+.footer-bar a, .footer-bar a:hover {
+  color: #3a1d2a; }
+.footer-bar a:active {
+  color: #c78aa8; }
 
 .page-head,
 .head-group,
@@ -268,14 +273,6 @@ a {
   width: 100%;
   bottom: 20px; }
 
-.footer-bar a {
-  font-style: normal;
-  font-weight: bold; }
-.footer-bar a, .footer-bar a:hover {
-  color: #3a1d2a; }
-.footer-bar a:active {
-  color: #c78aa8; }
-
 .image-block {
   position: relative;
   min-height: 100vh;
@@ -318,6 +315,10 @@ a {
     font-style: italic; }
   .image-caption .img-capt-dtls {
     font-weight: normal; }
+
+.copyright-line {
+  font-size: 13.6px;
+  font-style: normal; }
 
 .fullscreen-slide {
   position: relative;
