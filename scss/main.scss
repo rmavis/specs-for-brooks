@@ -237,10 +237,10 @@ a {
 		position: relative;
 		min-height: 100vh;
 		width: 100%;
-		margin: block_spacing(4, 0);
+		margin: block_spacing(8, 0);
 
     &:first-of-type {
-        margin-top: grid_spacing(8);
+        margin-top: grid_spacing(12);
     }
 }
 
