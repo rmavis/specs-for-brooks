@@ -255,11 +255,8 @@ HTML;
 var nav_btn = document.getElementById('nav-toggle');
 
 function makeNavVisible(pos) {
-console.log("making nav visible");
-console.log(pos);
     var classes = nav_btn.getAttribute('class').split(' ');
     if (classes.indexOf('hide') != -1) {
-console.log("has no hide");
         var new_classes = [ ];
         for (var o = 0, m = classes.length; o < m; o++) {
             if (classes[o] != 'hide') {
@@ -271,27 +268,23 @@ console.log("has no hide");
 }
 
 function makeNavInvisible(pos) {
-console.log("making nav invisible");
-console.log(pos);
     if (100 < pos.y) {
-console.log("greater than 100");
         var classes = nav_btn.getAttribute('class');
         if (classes.split(' ').indexOf('hide') == -1) {
-console.log("has no hide");
             nav_btn.setAttribute('class', classes+' hide');
         }
     }
 }
 
-var nav_mon_edges = new ScrollMonitor({
-  pos: 'y',
-  dist: 100,
-  func: makeNavVisible
-});
+// var nav_mon_edges = new ScrollMonitor({
+//   pos: 'y',
+//   dist: 100,
+//   func: makeNavVisible
+// });
 
 var nav_mon_down = new ScrollMonitor({
   dir: 'down',
-  dist: 25,
+  dist: 100,
   func: makeNavInvisible
 });
 
