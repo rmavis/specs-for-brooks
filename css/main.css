@@ -13,9 +13,6 @@
     top: -50px;
     opacity: 0;
     transition: top 0.3s ease, opacity 0.3s ease; }
-    #nav-toggle.hide #nav-tog-button, #nav-toggle.hide #nav-tog-button::before, #nav-toggle.hide #nav-tog-button::after {
-      background-color: #c7c78a;
-      transition: background-color 0.3s ease; }
   @media screen and (min-width: 800px) {
     #nav-toggle {
       top: 34px;
