@@ -12,12 +12,13 @@
 		z-index: 10;
 
     opacity: 1;
-    transition: top, 0.3s ease, opacity 0.3s ease;
+    transition: top 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 
     &.hide {
         top: grid_spacing(-5);
+        background-color: $color_yellow;
         opacity: 0;
-        transition: top, 0.3s ease, opacity 0.3s ease;
+        transition: top 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
     }
 
 		@media screen and (min-width: 0) and (max-width: scale_break(1)) {

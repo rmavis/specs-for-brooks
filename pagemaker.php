@@ -276,21 +276,15 @@ function makeNavInvisible(pos) {
     }
 }
 
-// var nav_mon_edges = new ScrollMonitor({
-//   pos: 'y',
-//   dist: 100,
-//   func: makeNavVisible
-// });
-
 var nav_mon_down = new ScrollMonitor({
   dir: 'down',
-  dist: 100,
+  dist: 50,
   func: makeNavInvisible
 });
 
 var nav_mon_up = new ScrollMonitor({
   dir: 'up',
-  dist: 50,
+  dist: 100,
   func: makeNavVisible
 });
 </script>
