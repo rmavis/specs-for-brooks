@@ -254,7 +254,18 @@ HTML;
 <script>
 var nav_btn = document.getElementById('nav-toggle');
 
-function makeNavVisible(pos) {
+function checkNavVisibility(m) {
+    // Headed down.
+    if ((0 < m.y.vect) && (100 < m.y.pos)) {
+        makeNavInvisible();
+    }
+    // Headed up.
+    else if (m.y.vect < 0) {
+        makeNavVisible();
+    }
+}
+
+function makeNavVisible() {
     var classes = nav_btn.getAttribute('class').split(' ');
     if (classes.indexOf('hide') != -1) {
         var new_classes = [ ];
@@ -267,26 +278,19 @@ function makeNavVisible(pos) {
     }
 }
 
-function makeNavInvisible(pos) {
-    if (100 < pos.y) {
-        var classes = nav_btn.getAttribute('class');
-        if (classes.split(' ').indexOf('hide') == -1) {
-            nav_btn.setAttribute('class', classes+' hide');
-        }
+function makeNavInvisible() {
+    var classes = nav_btn.getAttribute('class');
+    if (classes.split(' ').indexOf('hide') == -1) {
+        nav_btn.setAttribute('class', classes+' hide');
     }
 }
 
-var nav_mon_down = new ScrollMonitor({
-  dir: 'down',
+var nav_mon = new ScrollMonitor({
+  dir: 'y',
   dist: 50,
-  func: makeNavInvisible
+  func: checkNavVisibility
 });
 
-var nav_mon_up = new ScrollMonitor({
-  dir: 'up',
-  dist: 100,
-  func: makeNavVisible
-});
 </script>
 HTML;
 
