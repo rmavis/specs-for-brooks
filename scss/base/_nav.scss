@@ -15,7 +15,7 @@
     transition: top, 0.3s ease, opacity 0.3s ease;
 
     &.hide {
-        top: grid_spacing(-2);
+        top: grid_spacing(-5);
         opacity: 0;
         transition: top, 0.3s ease, opacity 0.3s ease;
     }
