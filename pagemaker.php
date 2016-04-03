@@ -279,8 +279,9 @@ function makeNavVisible() {
 }
 
 function makeNavInvisible() {
-    var classes = nav_btn.getAttribute('class');
-    if (classes.split(' ').indexOf('hide') == -1) {
+    var classes = nav_btn.getAttribute('class'),
+        _arr = classes.split(' ');
+    if ((_arr.indexOf('off') != -1) && (_arr.indexOf('hide') == -1) {
         nav_btn.setAttribute('class', classes+' hide');
     }
 }
