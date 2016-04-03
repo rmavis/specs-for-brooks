@@ -255,8 +255,10 @@ HTML;
 var nav_btn = document.getElementById('nav-toggle');
 
 function makeNavVisible(pos) {
+console.log("making nav visible");
     var classes = nav_btn.getAttribute('class').split(' ');
     if (classes.indexOf('hide') != -1) {
+console.log("has no hide");
         var new_classes = [ ];
         for (var o = 0, m = classes.length; o < m; o++) {
             if (classes[o] != 'hide') {
@@ -268,9 +270,12 @@ function makeNavVisible(pos) {
 }
 
 function makeNavInvisible(pos) {
+console.log("making nav visible");
     if (100 < pos.x) {
+console.log("greater than 100");
         var classes = nav_btn.getAttribute('class');
         if (classes.split(' ').indexOf('hide') == -1) {
+console.log("has no hide");
             nav_btn.setAttribute('class', classes+' hide');
         }
     }
