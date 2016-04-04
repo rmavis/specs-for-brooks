@@ -27,6 +27,12 @@ $body = <<<HTML
   <h2 class="head-group">Exhibitions</h2>
 
 
+  <h3 class="head-section">Upcoming</h3>
+<ul>
+  <li>Untitled Show. Judy Ferrara Gallery. Three Oaks, MI</li>
+</ul>
+
+
   <h3 class="head-section">2014</h3>
 <ul>
   <li>Over the Edge. Williamsburg Art and Historical Center. New York, NY</li>

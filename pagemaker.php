@@ -5,6 +5,9 @@ class Pagemaker
 
     const PAGES_SOURCE_DIR = "page-parts/";
     const PAGES_TARGET_DIR = "pages/";
+    const NAV_ITEMS_FILE = "nav_items.php";
+    const NAV_HTML_FILE = "nav_html.php";
+    const FOOTER_HTML_FILE = "footer_html.php";
 
 
     public static function make_all() {
@@ -59,7 +62,8 @@ class Pagemaker
             }
         }
 
-        $nav_parts = self::sort_on_key('order', $nav_parts);
+        $nav_parts = self::sort_on_key('order',
+                                       self::add_nav_extras($nav_parts));
 
         foreach ($pages as $page) {
             $html = self::make_page($page['opts'],
@@ -74,12 +78,19 @@ class Pagemaker
 
 
 
+    public static function add_nav_extras($navs) {
+        include(self::NAV_ITEMS_FILE);
+        return array_merge($navs, $nav_items);
+    }
+
+
+
     public static function make_page($opts, $body, $navs) {
         $head = self::head_section($opts);
         $body = self::body_section($body, $navs);
 
         $html = <<<HTML
-<!DOCTYPE html>
+              <!DOCTYPE html>
 <html lang="en">
   {$head}
   {$body}
@@ -96,16 +107,16 @@ HTML;
             if ((array_key_exists('nav', $opts)) &&
                 (array_key_exists('title', $opts['nav']))) {
                 $title =
-                self::default_page_title().
-                      ' // '.
-                      self::clean_string_for_titlebar($opts['nav']['title']);
+                       self::default_page_title().
+                       ' // '.
+                       self::clean_string_for_titlebar($opts['nav']['title']);
             }
 
             elseif (array_key_exists('title', $opts)) {
                 $title =
-                self::default_page_title().
-                      ' // '.
-                      self::clean_string_for_titlebar($opts['title']);
+                       self::default_page_title().
+                       ' // '.
+                       self::clean_string_for_titlebar($opts['title']);
             }
 
             else {
@@ -122,8 +133,8 @@ HTML;
   <title>{$title}</title>
   <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
-  <script type="text/javascript" src="/js/main.js"></script>
   <script type="text/javascript" src="/js/ScrollMonitor.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
 </head>
 HTML;
 
@@ -169,15 +180,15 @@ HTML;
     public static function body_section($body, $navs) {
         if ($body['extra']) {
             $body_html =
-            $body['body'].
-            self::nav_button();
+                       $body['body'].
+                       self::nav_button();
         }
 
         else {
             $body_html = 
-            $body['body'].
-            self::nav_button().
-                  self::footer_section();
+                       $body['body'].
+                       self::nav_button().
+                       self::footer_section();
         }
 
         return self::html_element('body',
@@ -185,8 +196,8 @@ HTML;
                                   self::html_element('div',
                                                      $body['wrap'],
                                                      $body_html).
-                                        self::nav_menu($navs).
-                                              $body['extra']);
+                                  self::nav_menu($navs).
+                                  $body['extra']);
     }
 
 
@@ -216,7 +227,7 @@ HTML;
                                       trim($capt_html));
 
         $block = <<<HTML
-<div class="image-block">
+               <div class="image-block">
   <div class="img-wrap">
     <img class="slide-img" src="{$file}" />
     {$caption}
@@ -246,55 +257,7 @@ HTML;
 
 
     public static function nav_button() {
-        $html = <<<HTML
-<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
-  <div id="nav-tog-button"></div>
-</a>
-
-<script>
-var nav_btn = document.getElementById('nav-toggle');
-
-function checkNavVisibility(m) {
-    // Headed down.
-    if ((0 < m.y.vect) && (100 < m.y.pos)) {
-        makeNavInvisible();
-    }
-    // Headed up.
-    else if (m.y.vect < 0) {
-        makeNavVisible();
-    }
-}
-
-function makeNavVisible() {
-    var classes = nav_btn.getAttribute('class').split(' ');
-    if (classes.indexOf('hide') != -1) {
-        var new_classes = [ ];
-        for (var o = 0, m = classes.length; o < m; o++) {
-            if (classes[o] != 'hide') {
-                new_classes.push(classes[o]);
-            }
-        }
-        nav_btn.setAttribute('class', new_classes.join(' '));
-    }
-}
-
-function makeNavInvisible() {
-    var classes = nav_btn.getAttribute('class'),
-        _arr = classes.split(' ');
-    if ((_arr.indexOf('off') != -1) && (_arr.indexOf('hide') == -1)) {
-        nav_btn.setAttribute('class', classes+' hide');
-    }
-}
-
-var nav_mon = new ScrollMonitor({
-  dir: 'y',
-  dist: 50,
-  func: checkNavVisibility
-});
-
-</script>
-HTML;
-
+        include(self::NAV_HTML_FILE);
         return $html;
     }
 
@@ -398,17 +361,7 @@ HTML;
 
 
     public static function footer_section() {
-        $year = date('Y');
-
-        $html = <<<HTML
-
-<div class="carapace footer-bar">
-  <p><a href="https://www.instagram.com/brookscashbaugh/" target="_blank">Instagram</a></p>
-  <p class="copyright-line">&copy; 2012&ndash;{$year} Brooks Cashbaugh. All rights reserved.</p>
-</div>
-
-HTML;
-
+        include(self::FOOTER_HTML_FILE);
         return $html;
     }
 
