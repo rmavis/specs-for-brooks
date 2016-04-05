@@ -43,10 +43,6 @@ body {
 
 		@media screen and (max-width: scale_break(1)) {
         padding: block_spacing(6, 0, 0, 0);
-
-        &.footer-bar {
-		        padding: block_spacing(2, 1);
-        }
 		}
 
 		@media screen and (min-width: scale_break(1)) {
@@ -56,10 +52,6 @@ body {
 
 		@media screen and (min-width: scale_break(2)) {
 		    padding: block_spacing(3.5, 0, 0, 0);
-
-        &.footer-bar {
-		        padding: block_spacing(4, 1, 2, 1);
-        }
 		}
 }
 
@@ -286,6 +278,7 @@ a {
 
 
 .copyright-line {
+		padding: block_spacing(4, 1, 2, 1);
     font-size: font_size(0.85);
     font-style: normal;
 }

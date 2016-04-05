@@ -173,18 +173,14 @@ body {
   text-align: center; }
   @media screen and (max-width: 400px) {
     .carapace {
-      padding: 60px 0 0 0; }
-      .carapace.footer-bar {
-        padding: 20px 10px 20px 10px; } }
+      padding: 60px 0 0 0; } }
   @media screen and (min-width: 400px) {
     .carapace {
       padding: 60px 0 0 0;
       max-width: 800px; } }
   @media screen and (min-width: 800px) {
     .carapace {
-      padding: 35px 0 0 0; }
-      .carapace.footer-bar {
-        padding: 40px 10px 20px 10px; } }
+      padding: 35px 0 0 0; } }
 
 .footer-bar a {
   font-style: normal;
@@ -314,6 +310,7 @@ a {
     font-weight: normal; }
 
 .copyright-line {
+  padding: 40px 10px 20px 10px;
   font-size: 13.6px;
   font-style: normal; }
 
