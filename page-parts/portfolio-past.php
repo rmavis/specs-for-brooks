@@ -53,8 +53,8 @@ $images = [
                                   "2012, acrylic, spray paint and paint marker on canvas, 60 x 48 inches"),
 
            Pagemaker::image_block('/images/past_9.jpg',
-                                  "Our Lady",
-                                  "the Convert, 2012, acrylic, spray paint and paint marker on canvas, 84 x 60 inches"),
+                                  "Our Lady the Convert",
+                                  "2012, acrylic, spray paint and paint marker on canvas, 84 x 60 inches"),
 
            Pagemaker::image_block('/images/past_10.jpg',
                                   "Diner Dinner",

@@ -8,11 +8,11 @@
   background-color: white;
   z-index: 10;
   opacity: 1;
-  transition: top 0.3s ease, opacity 0.3s ease; }
+  transition: opacity 0.3s ease; }
   #nav-toggle.hide {
-    top: -50px;
+    cursor: default;
     opacity: 0;
-    transition: top 0.3s ease, opacity 0.3s ease; }
+    transition: opacity 0.3s ease; }
   @media screen and (min-width: 800px) {
     #nav-toggle {
       top: 34px;
@@ -53,7 +53,9 @@
     bottom: -8px; }
 
 #nav-toggle.on {
-  background: none; }
+  background: none;
+  opacity: 1;
+  transition: opacity 0.3s ease; }
   #nav-toggle.on #nav-tog-button,
   #nav-toggle.on #nav-tog-button::before,
   #nav-toggle.on #nav-tog-button::after {
