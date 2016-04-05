@@ -4,6 +4,7 @@
   <title>Brooks Cashbaugh // Past Work</title>
   <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <script type="text/javascript" src="/js/ScrollMonitor.js"></script>
   <script type="text/javascript" src="/js/main.js"></script>
 </head>
   <body><div class="carapace">
@@ -60,7 +61,7 @@
                <div class="image-block">
   <div class="img-wrap">
     <img class="slide-img" src="/images/past_9.jpg" />
-    <p class="image-caption"><span class="img-capt-ttl">Our Lady</span>. <span class="img-capt-dtls">the Convert, 2012, acrylic, spray paint and paint marker on canvas, 84 x 60 inches</span>.</p>
+    <p class="image-caption"><span class="img-capt-ttl">Our Lady the Convert</span>. <span class="img-capt-dtls">2012, acrylic, spray paint and paint marker on canvas, 84 x 60 inches</span>.</p>
   </div>
 </div>
                <div class="image-block">
@@ -87,6 +88,41 @@
 <a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
   <div id="nav-tog-button"></div>
 </a>
+
+<script>
+var nav_pos_mon_top = new ScrollMonitor({
+    pos: 'top',
+    dist: 40,
+    func: showNavButton
+});
+
+var nav_pos_mon_bot = new ScrollMonitor({
+    pos: 'bot',
+    dist: (document.body.offsetHeight - 40),
+    func: hideNavButton
+});
+
+var nav_btn = document.getElementById('nav-toggle');
+
+function showNavButton(pos) {
+    var classes = nav_btn.getAttribute('class'),
+        old = classes.split(' '),
+        new = [ ];
+    for (var o = 0, m < old.length; o < m; o++) {
+        if (old[o] != 'hide') {
+            new.push(old[o]);
+        }
+    }
+    nav_btn.setAttribute('class', new.join(' '));
+}
+
+function hideNavButton(pos) {
+    var classes = nav_btn.getAttribute('classes');
+    if (classes.split(' ').indexOf('hide') == -1) {
+        nav_btn.setAttribute('class', classes+' hide');
+    }
+}
+</script>
 
 <div class="carapace footer-bar">
   <p class="copyright-line">&copy; 2012&ndash;2016 Brooks Cashbaugh. All rights reserved.</p>
