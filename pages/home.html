@@ -35,14 +35,14 @@ var nav_btn = document.getElementById('nav-toggle');
 
 function showNavButton(pos) {
     var classes = nav_btn.getAttribute('class'),
-        old = classes.split(' '),
-        new = [ ];
-    for (var o = 0, m < old.length; o < m; o++) {
-        if (old[o] != 'hide') {
-            new.push(old[o]);
+        _old = classes.split(' '),
+        _new = [ ];
+    for (var o = 0, m < _old.length; o < m; o++) {
+        if (_old[o] != 'hide') {
+            _new.push(_old[o]);
         }
     }
-    nav_btn.setAttribute('class', new.join(' '));
+    nav_btn.setAttribute('class', _new.join(' '));
 }
 
 function hideNavButton(pos) {
