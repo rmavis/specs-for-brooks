@@ -174,8 +174,6 @@ body {
   @media screen and (max-width: 400px) {
     .carapace {
       padding: 60px 0 0 0; }
-      .carapace.bordered {
-        border: 0; }
       .carapace.footer-bar {
         padding: 20px 10px 20px 10px; } }
   @media screen and (min-width: 400px) {
@@ -185,11 +183,8 @@ body {
   @media screen and (min-width: 800px) {
     .carapace {
       padding: 35px 0 0 0; }
-      .carapace.bordered {
-        border-left: 5px solid #3a1d2a;
-        border-right: 5px solid #3a1d2a; }
       .carapace.footer-bar {
-        padding: 40px 10px 40px 10px; } }
+        padding: 40px 10px 20px 10px; } }
 
 .footer-bar a {
   font-style: normal;
@@ -279,7 +274,7 @@ a {
 #home-bar-bot {
   position: fixed;
   width: 100%;
-  bottom: 20px; }
+  bottom: 0px; }
 
 .image-block {
   position: relative;

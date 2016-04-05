@@ -10,7 +10,7 @@ $opts = [
                    ],
 
          'body_wrap' => [
-                         'class' => 'carapace bordered',
+                         'class' => 'carapace',
                          ],
          ];
 
