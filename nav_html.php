@@ -22,8 +22,8 @@ var nav_pos_mon_bot = new ScrollMonitor({
 var nav_btn = document.getElementById('nav-toggle');
 
 function showNavButton(pos) {
-    var classes = nav_btn.getAttribute('class'),
-        _old = classes.split(' '),
+    var arr = nav_btn.getAttribute('class'),
+        _old = arr.split(' '),
         _new = [ ];
     for (var o = 0, m = _old.length; o < m; o++) {
         if (_old[o] != 'hide') {
@@ -34,9 +34,9 @@ function showNavButton(pos) {
 }
 
 function hideNavButton(pos) {
-    var classes = nav_btn.getAttribute('classes');
-    if (classes.split(' ').indexOf('hide') == -1) {
-        nav_btn.setAttribute('class', classes+' hide');
+    var arr = nav_btn.getAttribute('class');
+    if (arr.split(' ').indexOf('hide') == -1) {
+        nav_btn.setAttribute('class', arr+' hide');
     }
 }
 </script>
