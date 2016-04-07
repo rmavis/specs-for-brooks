@@ -28,7 +28,6 @@ $body['body'] = <<<HTML
               <h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
 
 <div class="text-block home-block">
-  <p>I've become a giant. I fill every street. I dwarf the rooftops, I hunchback the moon, stars dance at my feet.</p>
 </div>
 
 HTML;
