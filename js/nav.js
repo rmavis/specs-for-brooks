@@ -22,9 +22,11 @@ var Nav = (function () {
 
         if ((force) || (hidden != -1) || (-1 < menu_up)) {
             if (menu_up) {
+console.log("menu is up, hiding");
                 return hideMenu();
             }
             else {
+console.log("menu is down, showing");
                 return showMenu();
             }
         }
@@ -47,12 +49,15 @@ var Nav = (function () {
 
     function showMenu() {
         // Clattr.add($menu, 'y', 'active');
+console.log($btn);
         $menu.setAttribute('active', 'y');
         Clattr.replace($btn, 'off', 'on');
 		    return false;
     }
 
     function hideMenu() {
+console.log($menu);
+console.log($btn);
         Clattr.replace($menu, 'y', 'n', 'active');
         Clattr.replace($btn, 'on', 'off');
 		    return false;

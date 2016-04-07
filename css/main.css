@@ -319,7 +319,7 @@ a {
 .footer-menu-link {
   display: inline-block;
   font-size: 32px;
-  font-face: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
+  font-family: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
 
 .copyright-line {
