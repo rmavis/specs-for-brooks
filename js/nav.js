@@ -1,4 +1,4 @@
-(function Nav() {
+var Nav = (function () {
 
 		var $btn = document.getElementById('nav-toggle');
 
