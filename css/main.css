@@ -321,6 +321,9 @@ a {
   font-size: 32px;
   font-family: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
+  @media screen and (max-width: 400px) {
+    .footer-menu-link {
+      font-size: 27.2px; } }
 
 .copyright-line {
   padding: 40px 10px 20px 10px;

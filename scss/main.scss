@@ -283,6 +283,10 @@ a {
     font-size: font_size(2);
     font-family: $head_font;
     text-transform: uppercase;
+
+		@media screen and (max-width: scale_break(1)) {
+        font-size: font_size(1.7);
+		}
 }
 
 
