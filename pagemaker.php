@@ -228,7 +228,7 @@ HTML;
                                       trim($capt_html));
 
         $block = <<<HTML
-               <div class="image-block">
+<div class="image-block">
   <div class="img-wrap">
     <img class="slide-img" src="{$file}" />
     {$caption}
@@ -357,6 +357,13 @@ HTML;
                                                            '-',
                                                            trim($str)))),
                     '-');
+    }
+
+
+
+    public static function copyright_line() {
+        include(self::FOOTER_HTML_FILE);
+        return $copyright;
     }
 
 
