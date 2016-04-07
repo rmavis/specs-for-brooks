@@ -194,10 +194,10 @@ HTML;
 
         return self::html_element('body',
                                   $body['mods'],
+                                  self::nav_menu($navs).
                                   self::html_element('div',
                                                      $body['wrap'],
                                                      $body_html).
-                                  self::nav_menu($navs).
                                   $body['extra']);
     }
 
