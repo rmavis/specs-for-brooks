@@ -134,6 +134,7 @@ HTML;
   <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <script type="text/javascript" src="/js/ScrollMonitor.js"></script>
+  <script type="text/javascript" src="/js/Clattr.js"></script>
   <script type="text/javascript" src="/js/nav.js"></script>
 </head>
 HTML;

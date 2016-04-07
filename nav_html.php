@@ -2,7 +2,7 @@
 
 $html = <<<HTML
 
-<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
+<a id="nav-toggle" class="off" href="#" onclick="return Nav.toggle();">
   <div id="nav-tog-button"></div>
 </a>
 
@@ -10,8 +10,10 @@ $html = <<<HTML
 
 <script>
 
+// Initialize the Nav: make the button available.
 Nav.init();
 
+// Initialize the Scroll Monitor.
 var nav_pos_mon = new ScrollMonitor({
     pos: 'top',
     dist: 40,

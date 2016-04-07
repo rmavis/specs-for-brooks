@@ -5,6 +5,7 @@
   <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
   <script type="text/javascript" src="/js/ScrollMonitor.js"></script>
+  <script type="text/javascript" src="/js/Clattr.js"></script>
   <script type="text/javascript" src="/js/nav.js"></script>
 </head>
   <body><div class="carapace">
@@ -67,7 +68,7 @@
 
 <div class="text-block"></div>
 
-<a id="nav-toggle" class="off" href="#" onclick="return toggleNav();">
+<a id="nav-toggle" class="off" href="#" onclick="return Nav.toggle();">
   <div id="nav-tog-button"></div>
 </a>
 
@@ -75,8 +76,10 @@
 
 <script>
 
+// Initialize the Nav: make the button available.
 Nav.init();
 
+// Initialize the Scroll Monitor.
 var nav_pos_mon = new ScrollMonitor({
     pos: 'top',
     dist: 40,
@@ -85,6 +88,10 @@ var nav_pos_mon = new ScrollMonitor({
 });
 
 </script>
+
+<div class="carapace footer-menu-bar">
+    <a class="footer-menu-link" href="#" onclick="return Nav.toggle(true);">Return to Menu</a>
+</div>
 
 <div class="carapace footer-bar">
   <p class="copyright-line">&copy; 2012&ndash;2016 Brooks Cashbaugh. All rights reserved.</p>

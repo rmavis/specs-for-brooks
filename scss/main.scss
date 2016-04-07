@@ -57,7 +57,8 @@ body {
 
 
 
-.footer-bar {
+.footer-bar,
+.footer-menu-bar {
     & a {
         font-style: normal;
         font-weight: bold;
@@ -273,6 +274,14 @@ a {
     & .img-capt-dtls {
         font-weight: normal;
     }
+}
+
+
+
+.footer-menu-link {
+    display: inline-block;
+    font-size: font_size(2);
+    font-face: $head_font;
 }
 
 
