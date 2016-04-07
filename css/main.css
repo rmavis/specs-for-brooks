@@ -191,7 +191,7 @@ body {
 .footer-bar a, .footer-bar a:hover,
 .footer-menu-bar a,
 .footer-menu-bar a:hover {
-  color: #3a1d2a; }
+  color: #3B1C29; }
 .footer-bar a:active,
 .footer-menu-bar a:active {
   color: #c78aa8; }
@@ -319,7 +319,8 @@ a {
 .footer-menu-link {
   display: inline-block;
   font-size: 32px;
-  font-face: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif; }
+  font-face: Futura, Avenir, "Avenir Next", Verdana, Helvetica, Arial, sans-serif;
+  text-transform: uppercase; }
 
 .copyright-line {
   padding: 40px 10px 20px 10px;

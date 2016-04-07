@@ -66,7 +66,7 @@ body {
 
     & a,
     & a:hover {
-        color: $color_black;
+        color: $color_dark_red;
     }
 
     & a:active {
@@ -282,6 +282,7 @@ a {
     display: inline-block;
     font-size: font_size(2);
     font-face: $head_font;
+    text-transform: uppercase;
 }
 
 
