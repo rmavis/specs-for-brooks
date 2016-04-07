@@ -10,6 +10,8 @@ $html = <<<HTML
 
 <script>
 
+Nav.init();
+
 var nav_pos_mon = new ScrollMonitor({
     pos: 'top',
     dist: 40,

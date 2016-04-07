@@ -1,6 +1,13 @@
 var Nav = (function () {
 
-		var $btn = document.getElementById('nav-toggle');
+		var $btn = null;
+
+
+
+    function init() {
+        $btn = document.getElementById('nav-toggle');
+    }
+
 
 
     function show(pos) {
@@ -54,6 +61,7 @@ var Nav = (function () {
      * Public.
      */
     return {
+        init: init,
         toggle: toggle,
         show: show,
         hide: hide
