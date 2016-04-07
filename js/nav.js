@@ -16,12 +16,11 @@ var Nav = (function () {
     function toggle(force) {
         force = (typeof force == 'undefined') ? false : true;
 
-		    var arr = $btn.getAttribute('class').split(' '),
-            hidden = arr.indexOf('hide'),
-            menu_up = arr.indexOf('off');
+		    var hidden = Clattr.has($btn, 'hide'),
+            menu_up = Clattr.has($menu, 'y', 'active');
 
-        if ((force) || (hidden != -1) || (-1 < menu_up)) {
-            if (-1 < menu_up) {
+        if ((force) || (!hidden) || (menu_up)) {
+            if (menu_up) {
                 return hideMenu();
             }
             else {
