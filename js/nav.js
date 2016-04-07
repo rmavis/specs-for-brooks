@@ -21,7 +21,7 @@ var Nav = (function () {
             menu_up = arr.indexOf('on');
 
         if ((force) || (hidden != -1) || (-1 < menu_up)) {
-            if (menu_up) {
+            if (-1 < menu_up) {
 console.log("menu is up, hiding");
                 return hideMenu();
             }
