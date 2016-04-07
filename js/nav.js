@@ -18,15 +18,13 @@ var Nav = (function () {
 
 		    var arr = $btn.getAttribute('class').split(' '),
             hidden = arr.indexOf('hide'),
-            menu_up = arr.indexOf('on');
+            menu_up = arr.indexOf('off');
 
         if ((force) || (hidden != -1) || (-1 < menu_up)) {
             if (-1 < menu_up) {
-console.log("menu is up, hiding");
                 return hideMenu();
             }
             else {
-console.log("menu is down, showing");
                 return showMenu();
             }
         }
@@ -49,15 +47,12 @@ console.log("menu is down, showing");
 
     function showMenu() {
         // Clattr.add($menu, 'y', 'active');
-console.log($btn);
         $menu.setAttribute('active', 'y');
         Clattr.replace($btn, 'off', 'on');
 		    return false;
     }
 
     function hideMenu() {
-console.log($menu);
-console.log($btn);
         Clattr.replace($menu, 'y', 'n', 'active');
         Clattr.replace($btn, 'on', 'off');
 		    return false;
