@@ -268,13 +268,25 @@ HTML;
         $items = [ ];
 
         foreach ($parts as $part) {
-            $items[] = self::html_element('a',
-                                          [
-                                              'class' => 'nav-item',
-                                              'href' => $part['url']
-                                          ],
-                                          "<li>{$part['title']}</li>"
-            );
+            if ((array_key_exists('out', $part)) && ($part['out'])) {
+                $items[] = self::html_element('a',
+                                              [
+                                                  'class' => 'nav-item',
+                                                  'href' => $part['url'],
+                                                  'target' => '_blank',
+                                              ],
+                                              "<li>{$part['title']}</li>"
+                );
+            }
+            else {
+                $items[] = self::html_element('a',
+                                              [
+                                                  'class' => 'nav-item',
+                                                  'href' => $part['url'],
+                                              ],
+                                              "<li>{$part['title']}</li>"
+                );
+            }
         }
 
         $navs = implode("\n", $items);
