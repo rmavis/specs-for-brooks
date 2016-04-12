@@ -79,15 +79,6 @@ $body = <<<HTML
 </ul>
 
 
-<h3 class="head-section">2009</h3>
-<ul>
-  <li>Pulp: Works on Paper. Gallery Group. Bloomington, IN</li>
-  <li>BFA Painting. SoFA Gallery, Indiana University. Bloomington, IN</li>
-  <li>31st Elkhart Juried Regional Show. Midwest Museum of American Art. Elkhart, IN</li>
-  <li>BFA Painting. SoFA Gallery, Indiana University. Bloomington, IN</li>
-</ul>
-
-
 
 <h2 class="head-group">Education</h2>
 
