@@ -29,7 +29,7 @@ $body = <<<HTML
 
   <h3 class="head-section">2016</h3>
 <ul>
-  <li>(Upcoming) Untitled. Judy Ferrara Gallery. Three Oaks, MI</li>
+  <li>Archetypes Redux. Judy Ferrara Gallery. Three Oaks, MI</li>
 </ul>
 
 

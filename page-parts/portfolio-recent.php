@@ -59,7 +59,7 @@ $images = [
     Pagemaker::image_block(
         "/images/recent_6.jpg",
         "Goshen Farm",
-        "2014, acrylic, paint marker, acrylic transfer, and spray paint on aluminum, 6 x 5 inches"
+        "2015, acrylic, paint marker, acrylic transfer, and spray paint on aluminum, 6 x 5 inches"
     ),
 
     Pagemaker::image_block(
