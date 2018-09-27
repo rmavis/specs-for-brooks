@@ -1,22 +1,17 @@
 var Nav = (function () {
 
-
-		var $btn = null,
+	var $btn = null,
         $menu = null;
-
-
 
     function init() {
         $btn = document.getElementById('nav-toggle');
         $menu = document.getElementById('nav-screen');
     }
 
-
-
     function toggle(force) {
         force = (typeof force == 'undefined') ? false : true;
 
-		    var hidden = Clattr.has($btn, 'hide'),
+		var hidden = Clattr.has($btn, 'hide'),
             menu_up = Clattr.has($menu, 'y', 'active');
 
         if ((force) || (!hidden) || (menu_up)) {
@@ -32,8 +27,6 @@ var Nav = (function () {
         }
     }
 
-
-
     function show(pos) {
         Clattr.remove($btn, 'hide');
         return false;
@@ -48,17 +41,14 @@ var Nav = (function () {
         // Clattr.add($menu, 'y', 'active');
         $menu.setAttribute('active', 'y');
         Clattr.replace($btn, 'off', 'on');
-		    return false;
+		return false;
     }
 
     function hideMenu() {
         Clattr.replace($menu, 'y', 'n', 'active');
         Clattr.replace($btn, 'on', 'off');
-		    return false;
+		return false;
     }
-
-
-
 
 
     /*
