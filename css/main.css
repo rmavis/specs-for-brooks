@@ -94,8 +94,8 @@
   left: 0;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   text-align: center;
   color: rgba(203, 211, 210, 0); }
   #nav-screen[active=n] {
