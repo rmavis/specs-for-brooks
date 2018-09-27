@@ -2,16 +2,13 @@
 
 $opts = [
     'title' => 'Home',
-
     'nav' => [
         'url' => '/home',
         'order' => 0,
     ],
-
     'body_mods' => [
-        'class' => 'bg-body-wash',
+        'class' => 'bg-body-splash',
     ],
-
     'body_wrap' => [
         'class' => 'carapace',
     ],
@@ -20,20 +17,10 @@ $opts = [
 
 $body = [ ];
 
-
-
-
 $body['body'] = <<<HTML
-
-              <h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
-
-<div class="text-block home-block">
-</div>
-
+<h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
+<div class="text-block home-block"></div>
 HTML;
-
-
-
 
 $body['extra'] = Pagemaker::html_element(
     'div',

@@ -341,11 +341,9 @@ a {
     .fullscreen-slide {
       background: center top / cover fixed no-repeat; } }
 
-.bg-body-wash {
+.bg-body-splash {
   background: center bottom / cover fixed no-repeat;
-  background-image: url("/images/wash-pink-orange.png"); }
+  background-image: url("/images/background-service.jpg"); }
 
 #slide-apollo {
   background-image: url("/images/Apollo-1_Brooks-Cashbaugh.jpg"); }
-
-/*# sourceMappingURL=main.css.map */

@@ -9,7 +9,6 @@ class Pagemaker
     const NAV_HTML_FILE = "nav_html.php";
     const FOOTER_HTML_FILE = "footer_html.php";
 
-
     public static function make_all() {
         $nav_parts = [ ];
         $pages = [ ];
@@ -73,22 +72,16 @@ class Pagemaker
             file_put_contents($page['filename'],
                               $html);
         }
-
     }
-
-
 
     public static function add_nav_extras($navs) {
         include(self::NAV_ITEMS_FILE);
         return array_merge($navs, $nav_items);
     }
 
-
-
     public static function make_page($opts, $body, $navs) {
         $head = self::head_section($opts);
         $body = self::body_section($body, $navs);
-
         $html = <<<HTML
               <!DOCTYPE html>
 <html lang="en">
@@ -96,11 +89,8 @@ class Pagemaker
   {$body}
 </html>
 HTML;
-
         return $html;
     }
-
-
 
     public static function head_section($opts) {
         if (is_array($opts)) {
@@ -138,17 +128,12 @@ HTML;
   <script type="text/javascript" src="/js/nav.js"></script>
 </head>
 HTML;
-
         return $html;
     }
-
-
 
     public static function default_page_title() {
         return "Brooks Cashbaugh";
     }
-
-
 
     public static function default_body_wrap() {
         return [
@@ -156,13 +141,9 @@ HTML;
         ];
     }
 
-
-
     public static function default_body_mods() {
         return [ ];
     }
-
-
 
     public static function make_body_array($body_str) {
         $ret = [ ];
@@ -174,8 +155,6 @@ HTML;
 
         return $ret;
     }
-
-
 
     // Body blocks that have extra need to add their own footers.
     public static function body_section($body, $navs) {
@@ -200,8 +179,6 @@ HTML;
                                                      $body_html).
                                   $body['extra']);
     }
-
-
 
     public static function image_block($file, $title = false, $details = false) {
         $capt_parts = [ ];
@@ -239,8 +216,6 @@ HTML;
         return $block;
     }
 
-
-
     public static function html_element($tagname, $attributes, $body) {
         $elem = "<{$tagname}";
 
@@ -255,14 +230,10 @@ HTML;
         return $elem;
     }
 
-
-
     public static function nav_button() {
         include(self::NAV_HTML_FILE);
         return $html;
     }
-
-
 
     public static function nav_menu($parts) {
         $items = [ ];
@@ -301,8 +272,6 @@ HTML;
 
         return $menu;
     }
-
-
 
     public static function sort_on_key($key, $parts) {
         $keyed = [ ];
@@ -343,13 +312,9 @@ HTML;
         return $ret;
     }
 
-
-
     public static function make_filename($str) {
         return self::PAGES_TARGET_DIR.$str.'.html';
     }
-
-
 
     public static function clean_string_for_url($str) {
         return trim(preg_replace('/[^-A-Z0-9a-z_]/',
@@ -357,8 +322,6 @@ HTML;
                                  trim(strtolower($str))),
                     '-');
     }
-
-
 
     public static function clean_string_for_titlebar($str) {
         return trim(preg_replace('/[ ]+/',
@@ -371,14 +334,10 @@ HTML;
                     '-');
     }
 
-
-
     public static function copyright_line() {
         include(self::FOOTER_HTML_FILE);
         return $copyright;
     }
-
-
 
     public static function footer_section() {
         include(self::FOOTER_HTML_FILE);
@@ -386,6 +345,5 @@ HTML;
     }
 
 }
-
 
 Pagemaker::make_all();

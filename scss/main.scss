@@ -6,28 +6,28 @@
 
 
 * {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
 
 body {
-		position: relative;
-		width: 100%;
-		margin: 0;
-		padding: 0;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 
-		text-align: center;
+	text-align: center;
 
-		background-color: $color_white;
-		color: $color_black;
+	background-color: $color_white;
+	color: $color_black;
 
-		font: {
-				family: $font_stack;
-				size: font_size();
-		}
+	font: {
+		family: $font_stack;
+		size: font_size();
+	}
 
     line-height: font_size(1.45);
 }
@@ -35,24 +35,24 @@ body {
 
 
 .carapace {
-		position: relative;
-		margin: 0 auto;
-		width: 100%;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
 
-		text-align: center;
+	text-align: center;
 
-		@media screen and (max-width: scale_break(1)) {
+	@media screen and (max-width: scale_break(1)) {
         padding: block_spacing(6, 0, 0, 0);
-		}
+	}
 
-		@media screen and (min-width: scale_break(1)) {
-		    padding: block_spacing(6, 0, 0, 0);
-				max-width: scale_break(2);
-		}
+	@media screen and (min-width: scale_break(1)) {
+		padding: block_spacing(6, 0, 0, 0);
+		max-width: scale_break(2);
+	}
 
-		@media screen and (min-width: scale_break(2)) {
-		    padding: block_spacing(3.5, 0, 0, 0);
-		}
+	@media screen and (min-width: scale_break(2)) {
+		padding: block_spacing(3.5, 0, 0, 0);
+	}
 }
 
 
@@ -85,73 +85,73 @@ body {
 .head-section,
 #site-title,
 .nav-item {
-		display: block;
-		position: relative;
-		margin: block_spacing(0);
-		padding: block_spacing(0, 1);
+	display: block;
+	position: relative;
+	margin: block_spacing(0);
+	padding: block_spacing(0, 1);
 
-		line-height: 115%;
+	line-height: 115%;
 
     font-family: $head_font;
-		font-weight: bold;
-		text-transform: uppercase;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 
 
 #site-title {
-		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(3);
-				font-size: font-size(2.5);
-		}
+	@media screen and (max-width: scale_break(2)) {
+		margin-top: grid_spacing(3);
+		font-size: font-size(2.5);
+	}
 
-		@media screen and (min-width: scale_break(2)) {
-		    margin-top: grid_spacing(8);
-				font-size: font-size(4);
-		}
+	@media screen and (min-width: scale_break(2)) {
+		margin-top: grid_spacing(8);
+		font-size: font-size(4);
+	}
 }
 
 
 
 .page-head,
 .nav-item {
-		@media screen and (max-width: scale_break(2)) {
-		    margin-top: grid_spacing(1);
-				font-size: font-size(2);
-		}
+	@media screen and (max-width: scale_break(2)) {
+		margin-top: grid_spacing(1);
+		font-size: font-size(2);
+	}
 
-		@media screen and (min-width: scale_break(2)) {
-				font-size: 36px;
-		}
+	@media screen and (min-width: scale_break(2)) {
+		font-size: 36px;
+	}
 }
 
 
 
 .head-group {
-		margin-top: grid_spacing(6);
-		font-size: font-size(1.35);
+	margin-top: grid_spacing(6);
+	font-size: font-size(1.35);
 }
 
 
 
 .head-section {
-		margin-top: grid_spacing(3);
-		font-size: font-size(1);
+	margin-top: grid_spacing(3);
+	font-size: font-size(1);
 }
 
 
 
 .text-block {
-		position: relative;
-		margin: block_spacing(4, 0);
-		padding: block_spacing(0, 2);
+	position: relative;
+	margin: block_spacing(4, 0);
+	padding: block_spacing(0, 2);
 
     & p,
     & ul,
     & ol {
-		    max-width: grid_spacing(45);
-		    margin: block_spacing(1.5, auto);
-		    padding: 0;
+		max-width: grid_spacing(45);
+		margin: block_spacing(1.5, auto);
+		padding: 0;
 
         &:last-child {
             margin-bottom: 0;
@@ -160,14 +160,14 @@ body {
 
     & p,
     & li {
-		    text-align: justify;
-		    font-size: font_size();
+		text-align: justify;
+		font-size: font_size();
         line-height: font_size(1.45);
     }
 
     & ul,
     & ol {
-		    padding-left: grid_spacing(1.5);
+		padding-left: grid_spacing(1.5);
     }
 
     &:empty {
@@ -188,8 +188,8 @@ body {
 
 
 a {
-		text-decoration: none;
-		border: none;
+	text-decoration: none;
+	border: none;
 
     color: $color_cyan;
 
@@ -216,10 +216,10 @@ a {
 
 
 .image-block {
-		position: relative;
-		min-height: 100vh;
-		width: 100%;
-		margin: block_spacing(8, 0);
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	margin: block_spacing(8, 0);
 
     &:first-of-type {
         margin-top: grid_spacing(12);
@@ -229,29 +229,29 @@ a {
 
 
 .img-wrap {
-		// @include abs_cent;
-		width: 100%;
+	// @include abs_cent;
+	width: 100%;
 }
 
 
 
 .slide-img {
-		display: block;
+	display: block;
 
+	max-width: 90%;
+	max-height: 85vh;
+	margin: block_spacing(0, auto);
+	padding: 0;
+
+	text-align: center;
+
+	@media screen and (max-width: scale_break(2)) {
+		max-width: 100%;
+	}
+
+	@media screen and (min-width: scale_break(2)) {
 		max-width: 90%;
-		max-height: 85vh;
-		margin: block_spacing(0, auto);
-		padding: 0;
-
-		text-align: center;
-
-		@media screen and (max-width: scale_break(2)) {
-				max-width: 100%;
-		}
-
-		@media screen and (min-width: scale_break(2)) {
-				max-width: 90%;
-		}
+	}
 }
 
 
@@ -268,7 +268,7 @@ a {
     }
 
     & .img-capt-ttl {
-		    font-style: italic;
+		font-style: italic;
     }
 
     & .img-capt-dtls {
@@ -284,15 +284,15 @@ a {
     font-family: $head_font;
     text-transform: uppercase;
 
-		@media screen and (max-width: scale_break(1)) {
+	@media screen and (max-width: scale_break(1)) {
         font-size: font_size(1.7);
-		}
+	}
 }
 
 
 
 .copyright-line {
-		padding: block_spacing(4, 1, 2, 1);
+	padding: block_spacing(4, 1, 2, 1);
     font-size: font_size(0.85);
     font-style: normal;
 }
@@ -304,19 +304,19 @@ a {
     height: 100vh;
     width: 100vw;
 
-		@media screen and (max-width: scale_break(1)) {
+	@media screen and (max-width: scale_break(1)) {
         background: center center / cover no-repeat;
     }
 
-		@media screen and (min-width: scale_break(1)) {
+	@media screen and (min-width: scale_break(1)) {
         background: center top / cover fixed no-repeat;
     }
 }
 
 
-.bg-body-wash {
+.bg-body-splash {
     background: center bottom / cover fixed no-repeat;
-    background-image: url('/images/wash-pink-orange.png');
+    background-image: url('/images/background-service.jpg');
 }
 
 

@@ -1,50 +1,41 @@
 <?php
 
 $opts = [
-         'title' => "Brooks Cashbaugh<br />C.V.",
-
-         'nav' => [
-                   'title' => 'C.V.',
-                   'order' => 5,
-                   'url' => '/cv',
-                   ],
-
-         'body_wrap' => [
-                         'class' => 'carapace',
-                         ],
-         ];
+    'title' => "Brooks Cashbaugh<br />C.V.",
+    'nav' => [
+        'title' => 'C.V.',
+        'order' => 4,
+        'url' => '/cv',
+    ],
+    'body_wrap' => [
+        'class' => 'carapace',
+    ],
+];
 
 
 $body = [ ];
 
-
-
 $body = <<<HTML
-
 <h1 class="page-head">{$opts['title']}</h1>
 
 <div class="text-block">
   <h2 class="head-group">Exhibitions</h2>
-
 
   <h3 class="head-section">2016</h3>
 <ul>
   <li>Archetypes Redux. Judy Ferrara Gallery. Three Oaks, MI</li>
 </ul>
 
-
   <h3 class="head-section">2014</h3>
 <ul>
   <li>Over the Edge. Williamsburg Art and Historical Center. New York, NY</li>
 </ul>
-
 
 <h3 class="head-section">2013</h3>
 <ul>
   <li>Carte de Visite Part Deux. Gigantic Gallery. Portland, OR</li>
   <li>From the Well. Gigantic Gallery. Portland, OR</li>
 </ul>
-
 
 <h3 class="head-section">2012</h3>
 <ul>
@@ -54,7 +45,6 @@ $body = <<<HTML
   <li>Carte de Visite. Gigantic Gallery. Portland, OR</li>
   <li>Winter Show. Peter Miller Gallery. Chicago, IL</li>
 </ul>
-
 
 <h3 class="head-section">2011</h3>
 <ul>
@@ -68,7 +58,6 @@ $body = <<<HTML
   <li>Gender Matters/ Matters of Gender. Freedman Gallery. Reading, PA</li>
 </ul>
 
-
 <h3 class="head-section">2010</h3>
 <ul>
   <li>Monster Art Show. Paper Crane Gallery. Bloomington, IN</li>
@@ -79,11 +68,8 @@ $body = <<<HTML
 </ul>
 
 
-
 <h2 class="head-group">Education</h2>
 
 <p>2010 BFA, Indiana University, Bloomington, IN</p>
-
 </div>
-
 HTML;
