@@ -17,7 +17,7 @@ $images = [
     Pagemaker::image_block(
         "/images/A-Different-Track.jpg",
         "A Different Track",
-        "2015, acrylic, paint marker, ink, acrylic transfer, and spray paint on aluminum, 22 x 30 inches."
+        "2015, acrylic, paint marker, ink, acrylic transfer, and spray paint on aluminum, 22 x 30 inches"
     ),
     Pagemaker::image_block(
         '/images/recent_1.jpg',
