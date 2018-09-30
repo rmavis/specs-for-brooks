@@ -9,7 +9,6 @@ $html = <<<HTML
 
 
 <script>
-
 // Initialize the Nav: make the button available.
 Nav.init();
 
@@ -20,7 +19,14 @@ var nav_pos_mon = new ScrollMonitor({
     func_in: Nav.show,
     func_out: Nav.hide,
 });
-
 </script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126713655-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-126713655-1');
+</script>
 HTML;
