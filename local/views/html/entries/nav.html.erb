@@ -1,0 +1,11 @@
+<div id="nav-screen" active="n">
+    <ul id="nav-bar">
+        <% self._links.fields.each do |link| %>
+            <% if (link.type == :Link) %>
+                <a class="nav-item" href="<%= link._url.get_out_val %>" target="_blank"><li><%= link._text.get_out_val %></li></a>
+          <% else %>
+                <a class="nav-item" href="<%= link.public_path %><%= link.value.slug %>"><li><%= link.value._meta._title.get_out_val %></li></a>
+          <% end %>
+      <% end %>
+  </ul>
+</div>

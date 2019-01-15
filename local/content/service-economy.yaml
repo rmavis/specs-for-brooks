@@ -1,0 +1,51 @@
+---
+spec: Gallery
+meta:
+  title: Service Economy
+  live: true
+images:
+  -
+    image:
+      file: service_econ_1.jpg
+      title: Precarious Server
+      caption: 2018, acrylic, watercolor and acrylic transfer on wood panel, 12 x 9 inches
+  -
+    image:
+      file: service_econ_2.jpg
+      title: Reliable Exhaustion
+      caption: 2017, acrylic and acrylic transfer on aluminum panel, 30 x 22 inches
+  -
+    image:
+      file: service_econ_3.jpg
+      title: Flexible Hours
+      caption: 2017, acrylic and acrylic transfer on aluminum panel, 46 x 40 inches
+  -
+    image:
+      file: service_econ_4.jpg
+      title: Amortize
+      caption: 2017, acrylic and watercolor on birch panel, 24 x 20 inches
+  -
+    image:
+      file: service_econ_5.jpg
+      title: Pro Forma Patience
+      caption: 2017, acrylic and acrylic transfer on aluminum panel, 30 x 22 inches
+  -
+    image:
+      file: service_econ_6.jpg
+      title: Dignity through Distance
+      caption: 2017, acrylic and acrylic transfer on aluminum panel, 40 x 46 inches
+  -
+    image:
+      file: service_econ_7.jpg
+      title: Muscle Memory
+      caption: 2016, acrylic and acrylic transfer on aluminum panel, 30 x 26 inches
+  -
+    image:
+      file: service_econ_8.jpg
+      title: Practiced Precision
+      caption: 2017, acrylic and acrylic transfer on aluminum panel, 30 x 26 inches
+  -
+    image:
+      file: service_econ_9.jpg
+      title: Downward Pressure
+      caption: 2016, acrylic and acrylic transfer on aluminum panel, 30 x 22 inches

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brooks Cashbaugh // Brooks Cashbaugh</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, width=device-width" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+<script type="text/javascript" src="/js/ScrollMonitor.js"></script>
+<script type="text/javascript" src="/js/clattr.js"></script>
+<script type="text/javascript" src="/js/nav.js"></script>
+    </head>
+
+    <body class="bg-body-splash" style="background-image:('/img/')">
+        <div class="carapace">
+            <h1 id="site-title" class="page-head">Brooks Cashbaugh</h1>
+            <a id="nav-toggle" class="off" href="#" onclick="return Nav.toggle();">
+  <div id="nav-tog-button"></div>
+</a>
+        </div>
+
+        <div id="home-bar-bot">
+            <div class="carapace footer-bar">
+    <p class="copyright-line">&copy; 2012&ndash;<span id="copyright-current-year"></span>&nbsp;Brooks&nbsp;Cashbaugh. All&nbsp;rights&nbsp;reserved.</p>
+
+    <script>
+     document.getElementById('copyright-current-year').innerHTML = (new Date()).getFullYear();
+    </script>
+</div>
+        </div>
+
+        <div id="nav-screen" active="n">
+    <ul id="nav-bar">
+                                    <a class="nav-item" href="/home"><li>Brooks Cashbaugh</li></a>
+                                            <a class="nav-item" href="/service-economy"><li>Service Economy</li></a>
+                                            <a class="nav-item" href="/2014-2015"><li>2014–2015</li></a>
+                                            <a class="nav-item" href="/2012-2013"><li>2012–2013</li></a>
+                                            <a class="nav-item" href="https://www.instagram.com/brookscashbaugh/" target="_blank"><li>Instagram</li></a>
+                  </ul>
+</div>
+        <script>
+// Initialize the Nav: make the button available.
+Nav.init();
+
+// Initialize the Scroll Monitor.
+var nav_pos_mon = new ScrollMonitor({
+    pos: 'top',
+    dist: 40,
+    func_in: Nav.show,
+    func_out: Nav.hide,
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126713655-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-126713655-1');
+</script>
+    </body>
+</html>

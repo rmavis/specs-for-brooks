@@ -1,0 +1,6 @@
+<% if ((self.respond_to?(:_header)) && (self._header.get_out_val)) %>
+    <h2 class="head-group"><%= self._header.get_out_val %></h2>
+<% end %>
+<% self._blocks.fields.each do |block| %>
+    <%= block.to_view(:html) %>
+<% end %>

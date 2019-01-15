@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= self.render("#{DirMap.html_views}/snippets/head-base.html.erb") %>
+    </head>
+
+    <body>
+        <div class="carapace">
+            <h1 class="page-head">Brooks Cashbaugh<br /><%= self._meta._title.get_out_val %></h1>
+
+            <div class="text-block">
+                <% self._blocks.fields.each do |block| %>
+                    <%= block.to_view(:html) %>
+                <% end %>
+            </div>
+
+            <%= self.render("#{DirMap.html_views}/snippets/nav-button.html.erb") %>
+        </div>
+
+        <%= self.render("#{DirMap.html_views}/snippets/footer-copyright.html.erb") %>
+
+        <%= self.render("#{DirMap.html_views}/snippets/nav-list.html.erb") %>
+        <%= self.render("#{DirMap.html_views}/snippets/footer-misc.html.erb") %>
+    </body>
+</html>

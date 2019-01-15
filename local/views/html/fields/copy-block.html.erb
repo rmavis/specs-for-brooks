@@ -1,0 +1,4 @@
+<% if ((self.respond_to?(:_header)) && (self._header.get_out_val)) %>
+    <h3 class="head-section"><%= self._header.get_out_val %></h3>
+<% end %>
+<p><%= self._copy.get_out_val %>

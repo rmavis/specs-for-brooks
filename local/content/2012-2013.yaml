@@ -1,0 +1,66 @@
+---
+spec: Gallery
+meta:
+  title: 2012–2013
+  live: true
+images:
+  -
+    image:
+      file: past_1.jpg
+      title: Tecumseh
+      caption: 2012, acrylic, spray paint and paint marker on canvas, 72 x 48 inches
+  -
+    image:
+      file: past_2.jpg
+      title: Hostess
+      caption: 2012, acrylic, and paint marker on canvas, 46 x 40 inches
+  -
+    image:
+      file: past_3.jpg
+      title: Perennial Cornerstone
+      caption: 2012, acrylic and paint marker on birch panel, 26 x 20 inches
+  -
+    image:
+      file: past_4.jpg
+      title: Elizabeth Gurley Flynn
+      caption: 2012, acrylic, spray paint and paint marker on canvas, 24 x 18 inches
+  -
+    image:
+      file: past_5.jpg
+      title: Apollo 1
+      caption: 2012, acrylic, spray paint and paint marker on birch panel, 12 x 12 inches
+  -
+    image:
+      file: past_6.jpg
+      title: Departure Structure
+      caption: 2012, acrylic, spray paint and paint marker on mylar with salvaged wood frame, 72 x 48 inches
+  -
+    image:
+      file: past_7.jpg
+      title: PLSS
+      caption: 2012, acrylic, spray paint and paint marker on canvas, 24 x 18 inches
+  -
+    image:
+      file: past_8.jpg
+      title: Hobos
+      caption: 2012, acrylic, spray paint and paint marker on canvas, 60 x 48 inches
+  -
+    image:
+      file: past_9.jpg
+      title: Our Lady the Convert
+      caption: 2012, acrylic, spray paint and paint marker on canvas, 84 x 60 inches
+  -
+    image:
+      file: past_10.jpg
+      title: Diner Dinner
+      caption: 2013, ink on paper, 5.5 x 8.5 inches
+  -
+    image:
+      file: past_11.jpg
+      title: Mug
+      caption: 2013, ink on paper, 5.5 x 8.5 inches
+  -
+    image:
+      file: past_12.jpg
+      title: The View to the Kitchen
+      caption: 2013, ink on paper, 5.5 x 8.5 inches

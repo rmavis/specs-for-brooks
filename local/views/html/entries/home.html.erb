@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= self.render("#{DirMap.html_views}/snippets/head-base.html.erb") %>
+    </head>
+
+    <body class="bg-body-splash" style="background-image:('<%= self._background.get_out_val %>')">
+        <div class="carapace">
+            <h1 id="site-title" class="page-head"><%= self._meta._title.get_out_val %></h1>
+            <%= self.render("#{DirMap.html_views}/snippets/nav-button.html.erb") %>
+        </div>
+
+        <div id="home-bar-bot">
+            <%= self.render("#{DirMap.html_views}/snippets/footer-copyright.html.erb") %>
+        </div>
+
+        <%= self.render("#{DirMap.html_views}/snippets/nav-list.html.erb") %>
+        <%= self.render("#{DirMap.html_views}/snippets/footer-misc.html.erb") %>
+    </body>
+</html>

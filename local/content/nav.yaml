@@ -1,0 +1,15 @@
+---
+spec: Nav
+links:
+  -
+    local: home.yaml
+  -
+    local: service-economy
+  -
+    local: 2014-2015.yaml
+  -
+    local: 2012-2013
+  -
+    remote:
+      url: https://www.instagram.com/brookscashbaugh/
+      text: Instagram
