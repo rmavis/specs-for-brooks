@@ -9,6 +9,7 @@ module Local::Specs::Entries::Home
   def self.fields
     {
       :meta => :Meta,
+      :header => :PlainText,
       :background => :Image,
     }
   end

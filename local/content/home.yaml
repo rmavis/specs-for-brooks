@@ -1,6 +1,7 @@
 ---
 spec: Home
 meta:
-  title: Brooks Cashbaugh
+  title: Home
   live: true
-background: /img/background-service.jpg
+header: Brooks Cashbaugh
+background: background-service.jpg
