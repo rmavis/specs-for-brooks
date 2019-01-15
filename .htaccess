@@ -8,7 +8,7 @@ RewriteEngine On
 RewriteRule ^\.htaccess$ - [F]
 
 RewriteRule ^css/(.+)$ /public/css/$1 [NC]
-RewriteRule ^images/(.+)$ /public/images/$1 [NC]
+RewriteRule ^img/(.+)$ /public/img/$1 [NC]
 RewriteRule ^js/(.+)$ /public/js/$1 [NC]
 RewriteRule ^misc/(.+)$ /public/misc/$1 [NC]
 
