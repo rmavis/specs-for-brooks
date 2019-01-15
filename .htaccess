@@ -3,19 +3,14 @@ Options +FollowSymlinks
 DirectoryIndex /public/home.html
 ErrorDocument 404 /public/404.html
 
-
-
 RewriteEngine On
-
 
 RewriteRule ^\.htaccess$ - [F]
 
-# RewriteRule ^css/(.+)$ /public/css/$1 [NC]
-# RewriteRule ^images/(.+)$ /public/images/$1 [NC]
-# RewriteRule ^js/(.+)$ /public/js/$1 [NC]
-# RewriteRule ^misc/(.+)$ /public/misc/$1 [NC]
-
-
+RewriteRule ^css/(.+)$ /public/css/$1 [NC]
+RewriteRule ^images/(.+)$ /public/images/$1 [NC]
+RewriteRule ^js/(.+)$ /public/js/$1 [NC]
+RewriteRule ^misc/(.+)$ /public/misc/$1 [NC]
 
 # If it's not an existing directory...
 RewriteCond %{REQUEST_FILENAME} !-d
